@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <RootNamespace>Fern.Registry</RootNamespace>
+    <AssemblyName>Fern.Registry</AssemblyName>
+    <Description>Registry-B shared data-access substrate. Owns the current SQLite schema and initializes new Registry Homes.</Description>
+  </PropertyGroup>
+  <!-- The one reviewed schema travels inside the executable that consumes it. -->
+  <ItemGroup>
+    <EmbeddedResource Include="Schema.sql" LogicalName="fern.registry.schema.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Fern.Registry.Tests" />
+    <PackageReference Include="Apache.Arrow" />
+    <PackageReference Include="Dapper" />
+    <PackageReference Include="Microsoft.Data.Sqlite" />
+    <ProjectReference Include="..\Fern.Experiment\Fern.Experiment.csproj" />
+    <ProjectReference Include="..\Fern.RunData\Fern.RunData.csproj" />
+    <ProjectReference Include="..\Fern.Registry.Analyzer\Fern.Registry.Analyzer.csproj"
+                      OutputItemType="Analyzer"
+                      ReferenceOutputAssembly="false" />
+  </ItemGroup>
+</Project>

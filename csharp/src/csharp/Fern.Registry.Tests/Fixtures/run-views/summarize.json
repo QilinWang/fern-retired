@@ -1,0 +1,35 @@
+{
+  "groups": [
+    {
+      "artifacts": "full",
+      "count": 1,
+      "source": "recipe"
+    },
+    {
+      "artifacts": "none",
+      "count": 4,
+      "source": "recipe"
+    },
+    {
+      "artifacts": "slim",
+      "count": 1,
+      "source": "recipe"
+    },
+    {
+      "artifacts": "full",
+      "count": 1,
+      "source": "user_defined"
+    },
+    {
+      "artifacts": "none",
+      "count": 1,
+      "source": "user_defined"
+    },
+    {
+      "artifacts": "slim",
+      "count": 1,
+      "source": "user_defined"
+    }
+  ],
+  "schema": "fern.run_storage_summary.v1"
+}

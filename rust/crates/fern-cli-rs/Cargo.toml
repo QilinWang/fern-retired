@@ -1,0 +1,70 @@
+[package]
+name = "fern-cli-rs"
+version = "0.1.0"
+edition = "2024"
+description = "Rust command surface for Fern run utilities."
+license = "MIT"
+
+[[bin]]
+name = "fern-run"
+path = "src/main.rs"
+
+# The resident scheduler and Matrix worker are their own Cargo packages
+# (`fern-scheduler/`, `fern-worker/`). They compile the shared launch modules
+# from this tree but do not inherit this package's operator-only dependencies
+# (reqwest, nutype, or fern-evidence's parquet feature).
+# CHG 2026-08-28: reqwest and nutype are gone from this package with the `llm`
+# verb, their only user, and `fern-evidence` with the `evidence` verb. The
+# sentence above still records what the split is for; nothing operator-only is
+# left for it to exclude.
+
+[dependencies]
+anyhow = "1"
+thiserror = "2"
+# "env": --python defaults from $FERN_PYTHON when the flag is not passed.
+clap = { version = "4.5", features = ["derive", "env"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+strum = { version = "0.27", features = ["derive"] }
+fern-experiment-authoring = { path = "../crates/fern-experiment-authoring" }
+fern-recipes = { path = "../crates/fern-recipes" }
+ndarray = "0.17.2"
+safetensors = "0.8.0"
+# Residual diagnostics math (normality battery, joint MVN) for `diagnose`.
+# DB-independent: pulls in normality/statrs/ndarray/rayon, not the DB stack.
+# A profile changes with deployment; stable identity-bearing types do not. The
+# split keeps a RunPod path edit from recompiling the Diesel run engine.
+fern-execution-profile = { path = "../crates/fern-execution-profile" }
+fern-experiment-types = { path = "../crates/fern-experiment-types" }
+fern-json-contract = { path = "../crates/fern-json-contract" }
+fern-artifact = { path = "../crates/fern-artifact" }
+# Read-only run registry views for `show-run`, `list-runs`, and `compare-runs`.
+fern_run = { path = "../fern_run" }
+# Linux Attempt readers use openat2 with BENEATH + NO_SYMLINKS so checking and
+# opening a worker artifact are one kernel operation rather than a racy
+# `symlink_metadata`-then-`read` sequence. rustix is already in Cargo.lock via
+# the existing dependency graph; naming it here makes that security boundary
+# explicit and directly testable.
+rustix = { version = "1.1.4", features = ["fs"] }
+# Knowledge mutations stamp the user's local calendar date into the authored
+# change log. The leaf crate receives that date explicitly and remains free of
+# host-timezone policy.
+chrono = "0.4"
+tempfile = "3"
+# The resident scheduler must turn systemd's SIGTERM into an orderly,
+# fenced lease handoff instead of orphaning its current Plan until TTL expiry.
+signal-hook = "0.3"
+# LLM-native function tools: derive OpenAI-facing JSON Schema from Rust draft
+# structs, then refine them with typed constructors. nutype's schema feature is
+# currently schemars-0.8 based, so keep these versions compatible.
+# CHG 2026-08-28: nutype left with the `llm` verb. schemars stays and the 0.8
+# pin stays with it: ten crates in this workspace derive JsonSchema from it, so
+# the version is a workspace-wide contract rather than an LLM-tooling detail.
+schemars = { version = "0.8", features = ["derive"] }
+
+[dev-dependencies]
+# Tests only, since 2026-08-26. The seven statistics commands this binary used
+# to carry now live in `fern-stat`, where they belong: they compute a statistic
+# and admit it, and none of them launches or materializes anything. What is left
+# is one CLI-hygiene test that borrows the rule about scope-bearing arguments
+# never carrying a default. The shipped binary no longer links this crate.

@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>9999</WarningLevel>
+    <Deterministic>true</Deterministic>
+    <RootNamespace>Fern.Install</RootNamespace>
+    <AssemblyName>Fern.Install</AssemblyName>
+  </PropertyGroup>
+  <!--
+    Owner sentence: this project publishes and verifies the binaries a machine
+    runs, and nothing else. It builds one member from committed source, gives
+    it a content address, probes what it claims to be, writes the receipt,
+    records the set in its own SQLite inventory, and publishes or fetches a set
+    through a private release.
+
+    It reads the Registry only for the two things an installation is ABOUT: the
+    Home a set answers to, and the runtime selection a machine reads. It knows
+    nothing about studies, cells, attempts or placement, and no project it
+    depends on knows about it, so the dependency stays one way.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" />
+    <ProjectReference Include="..\Fern.Registry\Fern.Registry.csproj" />
+    <ProjectReference Include="..\Fern.Experiment\Fern.Experiment.csproj" />
+    <ProjectReference Include="..\Fern.Site\Fern.Site.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Fern.Install.Tests" />
+    <InternalsVisibleTo Include="Fern.Scheduler" />
+    <InternalsVisibleTo Include="Fern.Scheduler.Tests" />
+    <InternalsVisibleTo Include="Fern.Run.Cli" />
+  </ItemGroup>
+</Project>

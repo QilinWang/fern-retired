@@ -1,0 +1,33 @@
+{
+  "schema": "fern.stage_return_validation.v1",
+  "stage_attempt_id": "stage-attempt-1",
+  "plan_id": "plan-1",
+  "stage_plan_instance_id": "instance-1",
+  "stage_plan_digest": "sha256:77562433dd5ed47afd9c47c7d0752cd674829ae669d0a70b17557196e4b0d415",
+  "stage_id": "train",
+  "stage_spec_digest": "sha256:6a698c38d5c67d87332089dad4c8de27466a20b09843ca417c5dac1d9e80a167",
+  "execution_key": "sha256:22069dbc87210b5ea577c67c43ef9855030cf28571ac2448b13f279eb4e58b11",
+  "invocation_digest": "sha256:9da37e2f01943758b0511d58ed24d68e4545483d499db2c8049a48241da48471",
+  "transport_manifest_digest": "sha256:adb3499d4858a7f9e36dc106e2942b96d45179a849239bbd936cf499b86ef92c",
+  "scientific_result_digest": "sha256:b20ff6daeb2b6efb5bf50c2ccba9b963753bc2ce47867163a6244a5cfb61719e",
+  "checked_receipt_digest": "sha256:52c9ad007c21b578bc6d919b8252fe145ec110181756f6e11cbd29ebf28c0418",
+  "checked_receipt_transport_digest": "sha256:66a81289274a5cc620b53981d92f330c80c6f421748ab5b45429d1b87713d359",
+  "artifact_manifest_digest": "sha256:530f3189faad58d95b77b83c01add14511bb2fcbcdbb6deb6d4960099053e1c2",
+  "artifacts": [
+    {
+      "output_port": "raw_forecast",
+      "storage_site_id": "pod-a",
+      "relative_path": "attempt-1/raw.pt",
+      "byte_digest": "sha256:efd70c03f5adca201708f700ce9be6aa92e436b85c993f8e351b72a778465bff",
+      "byte_count": 34,
+      "references": [
+        {
+          "owner_kind": "stage_consumer",
+          "owner_id": "plan-1/instance-1/acceptance_score/raw_forecast",
+          "purpose": "stage_input",
+          "materialization_requirement": "bytes_required"
+        }
+      ]
+    }
+  ]
+}

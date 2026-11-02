@@ -1,0 +1,45 @@
+{
+  "binding_with_control_characters": {
+    "binding_id": "implementation-binding:4177ba70f181531706a80163e5b26957b8f3c5cff58d338616c917b1904de530",
+    "identity_preimage": "{\"implementation_id\":\"implementation:6df3bdb026144aaeff1e754e650ba71fb88104fc09510f1bb494b0d2fecfb510\",\"reason\":\"a literal \\\\ survives; newline\\nand tab\\tmust hash exactly\",\"research_design_id\":\"research-design:0123456789abcdef0123456789abcdef\",\"schema\":\"fern.implementation-binding.v2\",\"title\":\"path C:\\\\fern\\\\stage\\nsecond line\\tindented\"}",
+    "reason": "a literal \\ survives; newline\nand tab\tmust hash exactly",
+    "title": "path C:\\fern\\stage\nsecond line\tindented"
+  },
+  "binding_with_free_text": {
+    "binding_id": "implementation-binding:e4e04dc0cbb3cf561205102bbe8697091b02b1743883cab516ec8b694e4f981d",
+    "identity_preimage": "{\"implementation_id\":\"implementation:6df3bdb026144aaeff1e754e650ba71fb88104fc09510f1bb494b0d2fecfb510\",\"reason\":\"because \\\"état\\\" must survive the wire unescaped\",\"research_design_id\":\"research-design:0123456789abcdef0123456789abcdef\",\"schema\":\"fern.implementation-binding.v2\",\"title\":\"the \\\"wide\\\" scale placement — a dash and a quote\"}",
+    "reason": "because \"état\" must survive the wire unescaped",
+    "title": "the \"wide\" scale placement — a dash and a quote"
+  },
+  "implementation_with_entrypoint_contract_digest": {
+    "identity_preimage": "{\"build_contract_digest\":\"sha256:db48e070d8f2f5d154c335c183db263beaabd591ce6f2bbfb82fba80fb824c83\",\"capability_digest\":\"sha256:bundlecapability\",\"component_content_ids\":[\"source-content:23a22deeacb2c9dd1226144673e7934fb5a51dfacf4074f8d2ff2eda54cd2732\"],\"entrypoint_contract_digest\":\"sha256:entrypointcontract\",\"entrypoints\":{\"python_module\":\"fr_tr\",\"rust_binary\":\"fern-stage-runner\"},\"schema\":\"fern.source-implementation.v2\"}",
+    "implementation_id": "implementation:6df3bdb026144aaeff1e754e650ba71fb88104fc09510f1bb494b0d2fecfb510"
+  },
+  "implementation_without_entrypoint_contract_digest": {
+    "entrypoint_contract_digest_is_absent": true,
+    "identity_preimage": "{\"build_contract_digest\":\"sha256:db48e070d8f2f5d154c335c183db263beaabd591ce6f2bbfb82fba80fb824c83\",\"capability_digest\":\"sha256:df96b41f7969813f59490f10ea0e51f6c74a8132c6fc480e55204c638b357e98\",\"component_content_ids\":[\"source-content:23a22deeacb2c9dd1226144673e7934fb5a51dfacf4074f8d2ff2eda54cd2732\"],\"entrypoints\":{\"python_module\":\"fr_tr\",\"rust_binary\":\"fern-stage-runner\"},\"schema\":\"fern.source-implementation.v2\"}",
+    "implementation_id": "implementation:e4c609719dbe61cb6126bb927fbd7e2e383b7d7d4b6f7c6b3d1cc5c2aba7c78d"
+  },
+  "note": "every id is sha256 over canonical JSON -- keys SORTED at every depth, no whitespace, non-ASCII RAW. entrypoint_contract_digest is OMITTED when None, inside this sorted family. Preimages are given verbatim so a mismatch names its byte.",
+  "observation": {
+    "identity_preimage": "{\"observed\":{\"git_commit\":\"0000000000000000000000000000000000000000\",\"git_tree\":\"1111111111111111111111111111111111111111\",\"observation_kind\":\"exact_git\"},\"schema\":\"fern.source-observation.v2\",\"source_content_id\":\"source-content:23a22deeacb2c9dd1226144673e7934fb5a51dfacf4074f8d2ff2eda54cd2732\"}",
+    "observation_id": "source-observation:ac24f8a304fae953e2ed6932bfe362287233e6aad1b3b4631aeb521bce4c05b5"
+  },
+  "schema": "fern.source_content_identity_golden.v1",
+  "source_content": {
+    "files_after_sorting": [
+      "python/alpha.py",
+      "python/zeta.py",
+      "untracked/first.py",
+      "untracked/second.py"
+    ],
+    "identity_preimage": "{\"cargo_lock_byte_digest\":\"sha256:cacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacaca\",\"files\":[{\"byte_digest\":\"sha256:1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a\",\"bytes\":100,\"kind\":\"regular_file\",\"path\":\"python/alpha.py\"},{\"byte_digest\":\"sha256:2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b\",\"bytes\":200,\"kind\":\"regular_file\",\"path\":\"python/zeta.py\"},{\"byte_digest\":\"sha256:4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d\",\"bytes\":400,\"kind\":\"regular_file\",\"path\":\"untracked/first.py\"},{\"byte_digest\":\"sha256:3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c\",\"bytes\":300,\"kind\":\"regular_file\",\"path\":\"untracked/second.py\"}],\"recipe_catalog_source_digest\":\"sha256:1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c\",\"schema\":\"fern.source-content.v2\",\"untracked_paths\":[\"untracked/first.py\",\"untracked/second.py\"]}",
+    "source_content_id": "source-content:23a22deeacb2c9dd1226144673e7934fb5a51dfacf4074f8d2ff2eda54cd2732",
+    "source_tree_digest": "sha256:ad17e2e72feae32d778bb8eeaed8902ab6dddc7f79afe69fa56313121747f69a",
+    "tree_digest_preimage": "{\"files\":[{\"byte_digest\":\"sha256:1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a\",\"bytes\":100,\"kind\":\"regular_file\",\"path\":\"python/alpha.py\"},{\"byte_digest\":\"sha256:2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b\",\"bytes\":200,\"kind\":\"regular_file\",\"path\":\"python/zeta.py\"},{\"byte_digest\":\"sha256:4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d\",\"bytes\":400,\"kind\":\"regular_file\",\"path\":\"untracked/first.py\"},{\"byte_digest\":\"sha256:3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c\",\"bytes\":300,\"kind\":\"regular_file\",\"path\":\"untracked/second.py\"}],\"schema\":\"fern.source-tree.v2\"}",
+    "untracked_after_sorting": [
+      "untracked/first.py",
+      "untracked/second.py"
+    ]
+  }
+}

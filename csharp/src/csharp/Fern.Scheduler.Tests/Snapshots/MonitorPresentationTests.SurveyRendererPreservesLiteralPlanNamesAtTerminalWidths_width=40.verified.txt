@@ -1,0 +1,15 @@
+﻿╭───────┬───────┬───────┬───────┬──────╮
+│ State │ Plan  │ Id    │ Prof… │ Now  │
+├───────┼───────┼───────┼───────┼──────┤
+│ runni │ 研究  │ id-li │ local │ trai │
+│ ng    │ [red] │ ve    │ -4070 │ ning │
+│       │ live[ │       │       │      │
+│       │ /]    │       │       │      │
+│ compl │ done- │ id-do │ runpo │ no   │
+│ ete   │ plan  │ ne    │ d-a45 │ curr │
+│       │       │       │ 00    │ ent  │
+│       │       │       │       │ Cell │
+╰───────┴───────┴───────┴───────┴──────╯
+
+2 plan(s), 1 live. Detail: fern-run 
+monitor --plan <id>

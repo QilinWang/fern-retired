@@ -1,0 +1,31 @@
+<Project>
+  <PropertyGroup>
+    <!-- CHG 2026-09-10: preview language, for discriminated unions. A closed
+         abstract-record hierarchy can only make the compiler say "the pattern
+         '_' is not covered", so the cure is a discard — and a discard silences
+         it permanently, including for a case added later. A union names the
+         missing case, and TreatWarningsAsErrors below turns that into a build
+         failure. This SDK is itself a preview, so the language moves with it. -->
+    <LangVersion>preview</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>9999</WarningLevel>
+    <Deterministic>true</Deterministic>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(RestoreLockedMode)' == ''">true</RestoreLockedMode>
+    <NuGetLockFilePath Condition="'$(NuGetLockFilePath)' == ''">$(MSBuildProjectDirectory)/packages.lock.json</NuGetLockFilePath>
+    <!-- Single-file installation has a different implicit SDK dependency graph. -->
+    <NuGetLockFilePath Condition="'$(PublishSingleFile)' == 'true'">$(MSBuildProjectDirectory)/packages.publish.lock.json</NuGetLockFilePath>
+  </PropertyGroup>
+  <!-- NuGet locked mode alone creates a missing lock; a normal Fern restore must not. -->
+  <Target Name="FernRequireDependencyLock" BeforeTargets="CollectPackageReferences"
+          Condition="'$(RestoreLockedMode)' == 'true'">
+    <Error Condition="!Exists('$(NuGetLockFilePath)')" Code="FERNLOCK001"
+           Text="Missing dependency lock $(NuGetLockFilePath). Review the dependency change and explicitly restore with -p:RestoreLockedMode=false to create it." />
+  </Target>
+  <!-- CHG 2026-09-26: the workflow-contract analyzer (Fern.Workflow.Analyzer) and the two
+       documents it read as AdditionalFiles, docs/how-to/study-run.md and docs/how-to/README.md,
+       were removed on the owner's word ("another sha exercise"; consequences.md B23 in
+       docs/programs/2026-09-26-cards-without-hashes). No document is a build input any more. -->
+</Project>

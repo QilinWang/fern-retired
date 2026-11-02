@@ -1,0 +1,18 @@
+{
+  "canonical_bytes_len": {
+    "stage_plan_v1_canonical.json": 2018
+  },
+  "fixtures": {
+    "stage_pipeline_forecast_origin_v1.json": "sha256:f9e63e8a954a4e82b44b9a12399f17deb1ca26ed273e691800d785e640da6953",
+    "stage_plan_v1_canonical.json": "sha256:77562433dd5ed47afd9c47c7d0752cd674829ae669d0a70b17557196e4b0d415",
+    "stage_plan_v1_dlinear_forecast_origin_canary.json": "sha256:f4ff4b0a8390cd2b06b8ca3b8e6c585c5d81064e049550eeb8962daa639f4b2d"
+  },
+  "note": "digest = sha256 over canonical JSON: keys SORTED, no whitespace, non-ASCII raw",
+  "schema": "fern.stage_plan_identity_golden.v1",
+  "stage_ids": [
+    "train",
+    "acceptance_score",
+    "scientific_analysis"
+  ],
+  "re_recorded": "2026-09-04, the resolver cut: the stage template's dataset port is generated_dataset and the stage path adopted the v2 wire, so its digests moved once; the Rust value is in git history"
+}

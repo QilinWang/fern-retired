@@ -1,0 +1,62 @@
+{
+  "schema": "fern.registry-port.golden.v1",
+  "domain": "list-runs",
+  "captured_on": "2026-08-27",
+  "old_executable": "fern-home built with `go build -buildvcs=false ./cmd/fern-home` from `git archive 79af3ca5 tools/fern-control` exported to a scratch directory (clean committed bytes)",
+  "old_executable_commit": "79af3ca5",
+  "old_executable_sha256": "d1170e53bf0d3c0a20d5ff23fbd925f66b9d03e5e6b9597f8d38d0279a15cccd",
+  "fixture": "an empty file named fern.db migrated by `fern-home claim-scheduler` (the production chain), then fixture_sql applied with sqlite3; the five rows are registry/run_list_test.go's runListFixture, so every Go assertion in that file reads this same Home",
+  "fixture_sql": "INSERT INTO runs (\n    artifact_dir, dataset, dataset_id, model_type, seed, pred_len,\n    seq_len, noise_sigma, run_hash, status, source, artifacts, pinned,\n    error_msg, invocation_json, config_name, mse\n) VALUES\n ('done-z', 'alpha', 'alpha_id', 'z-model', 3, 8, 16, 1.0, 'done-z', 'done', 'user_defined', 'full', 0, NULL, NULL, NULL, 0.75),\n ('done-a', 'alpha', 'alpha_id', 'a-model', 4, 8, 16, 0.1, 'done-a', 'done', 'user_defined', 'full', 0, NULL, NULL, NULL, 0.25),\n ('pinned', 'beta', 'beta_id', 'fern', 42, 8, 16, 0.0, 'pinned-done', 'done', 'user_defined', 'full', 1, NULL, NULL, NULL, 0.5),\n ('failed', 'beta', 'beta_id', 'fern', 42, 8, 16, 0.0, 'failed', 'failed', 'user_defined', 'full', 0, 'OOM at epoch 5', NULL, NULL, NULL),\n ('pending', 'lorenz', 'lorenz_id', 'fern', 42, 8, 16, 0.1, 'reenrolled', 'pending', 'user_defined', 'full', 0, NULL, '{\"schema\":\"fern.run_invocation.v1\"}', 'lorenz', NULL);\n",
+  "invocations": {
+    "list-runs": {
+      "arguments": [
+        "list-runs",
+        "--db",
+        "<fixture>",
+        "--limit",
+        "0"
+      ],
+      "exit": 0,
+      "stdout": "{\"runs\":[{\"id\":2,\"artifact_dir\":\"done-a\",\"dataset\":\"alpha\",\"dataset_id\":\"alpha_id\",\"model_type\":\"a-model\",\"seed\":4,\"pred_len\":8,\"seq_len\":16,\"noise_sigma\":0.1,\"trajectory_draw_ordinal\":0,\"noise_draw_ordinal\":0,\"trajectory_seed_base\":42,\"noise_seed_base\":1000,\"trajectory_draw_seed\":42,\"noise_draw_seed\":1000,\"config_json\":null,\"config_hash\":null,\"invocation_json\":null,\"run_hash\":\"done-a\",\"success_hash\":null,\"config_name\":null,\"recipe_name\":null,\"recipe_hash\":null,\"run_note\":null,\"git_sha\":null,\"status\":\"done\",\"started_at\":null,\"finished_at\":null,\"error_msg\":null,\"source\":\"user_defined\",\"artifacts\":\"full\",\"pinned\":0,\"mse\":0.25,\"mae\":null,\"crps\":null,\"swd\":null,\"ept\":null,\"clean_target_mse\":null,\"injected_target_noise_mse\":null,\"noise_forecast_overlap\":null,\"baseline_constant_mse\":null,\"baseline_context_mean_mse\":null,\"baseline_last_value_mse\":null,\"template_id\":null,\"n_features\":null,\"code_fingerprint_json\":null,\"target_hash\":null},{\"id\":1,\"artifact_dir\":\"done-z\",\"dataset\":\"alpha\",\"dataset_id\":\"alpha_id\",\"model_type\":\"z-model\",\"seed\":3,\"pred_len\":8,\"seq_len\":16,\"noise_sigma\":1,\"trajectory_draw_ordinal\":0,\"noise_draw_ordinal\":0,\"trajectory_seed_base\":42,\"noise_seed_base\":1000,\"trajectory_draw_seed\":42,\"noise_draw_seed\":1000,\"config_json\":null,\"config_hash\":null,\"invocation_json\":null,\"run_hash\":\"done-z\",\"success_hash\":null,\"config_name\":null,\"recipe_name\":null,\"recipe_hash\":null,\"run_note\":null,\"git_sha\":null,\"status\":\"done\",\"started_at\":null,\"finished_at\":null,\"error_msg\":null,\"source\":\"user_defined\",\"artifacts\":\"full\",\"pinned\":0,\"mse\":0.75,\"mae\":null,\"crps\":null,\"swd\":null,\"ept\":null,\"clean_target_mse\":null,\"injected_target_noise_mse\":null,\"noise_forecast_overlap\":null,\"baseline_constant_mse\":null,\"baseline_context_mean_mse\":null,\"baseline_last_value_mse\":null,\"template_id\":null,\"n_features\":null,\"code_fingerprint_json\":null,\"target_hash\":null},{\"id\":3,\"artifact_dir\":\"pinned\",\"dataset\":\"beta\",\"dataset_id\":\"beta_id\",\"model_type\":\"fern\",\"seed\":42,\"pred_len\":8,\"seq_len\":16,\"noise_sigma\":0,\"trajectory_draw_ordinal\":0,\"noise_draw_ordinal\":0,\"trajectory_seed_base\":42,\"noise_seed_base\":1000,\"trajectory_draw_seed\":42,\"noise_draw_seed\":1000,\"config_json\":null,\"config_hash\":null,\"invocation_json\":null,\"run_hash\":\"pinned-done\",\"success_hash\":null,\"config_name\":null,\"recipe_name\":null,\"recipe_hash\":null,\"run_note\":null,\"git_sha\":null,\"status\":\"done\",\"started_at\":null,\"finished_at\":null,\"error_msg\":null,\"source\":\"user_defined\",\"artifacts\":\"full\",\"pinned\":1,\"mse\":0.5,\"mae\":null,\"crps\":null,\"swd\":null,\"ept\":null,\"clean_target_mse\":null,\"injected_target_noise_mse\":null,\"noise_forecast_overlap\":null,\"baseline_constant_mse\":null,\"baseline_context_mean_mse\":null,\"baseline_last_value_mse\":null,\"template_id\":null,\"n_features\":null,\"code_fingerprint_json\":null,\"target_hash\":null}],\"schema\":\"fern.run_list.v1\"}\n"
+    },
+    "list-runs --status pending": {
+      "arguments": [
+        "list-runs",
+        "--db",
+        "<fixture>",
+        "--limit",
+        "0",
+        "--status",
+        "pending"
+      ],
+      "exit": 0,
+      "stdout": "{\"runs\":[{\"id\":5,\"artifact_dir\":\"pending\",\"dataset\":\"lorenz\",\"dataset_id\":\"lorenz_id\",\"model_type\":\"fern\",\"seed\":42,\"pred_len\":8,\"seq_len\":16,\"noise_sigma\":0.1,\"trajectory_draw_ordinal\":0,\"noise_draw_ordinal\":0,\"trajectory_seed_base\":42,\"noise_seed_base\":1000,\"trajectory_draw_seed\":42,\"noise_draw_seed\":1000,\"config_json\":null,\"config_hash\":null,\"invocation_json\":\"{\\\"schema\\\":\\\"fern.run_invocation.v1\\\"}\",\"run_hash\":\"reenrolled\",\"success_hash\":null,\"config_name\":\"lorenz\",\"recipe_name\":null,\"recipe_hash\":null,\"run_note\":null,\"git_sha\":null,\"status\":\"pending\",\"started_at\":null,\"finished_at\":null,\"error_msg\":null,\"source\":\"user_defined\",\"artifacts\":\"full\",\"pinned\":0,\"mse\":null,\"mae\":null,\"crps\":null,\"swd\":null,\"ept\":null,\"clean_target_mse\":null,\"injected_target_noise_mse\":null,\"noise_forecast_overlap\":null,\"baseline_constant_mse\":null,\"baseline_context_mean_mse\":null,\"baseline_last_value_mse\":null,\"template_id\":null,\"n_features\":null,\"code_fingerprint_json\":null,\"target_hash\":null}],\"schema\":\"fern.run_list.v1\"}\n"
+    },
+    "list-runs --status failed": {
+      "arguments": [
+        "list-runs",
+        "--db",
+        "<fixture>",
+        "--limit",
+        "0",
+        "--status",
+        "failed"
+      ],
+      "exit": 0,
+      "stdout": "{\"runs\":[{\"id\":4,\"artifact_dir\":\"failed\",\"dataset\":\"beta\",\"dataset_id\":\"beta_id\",\"model_type\":\"fern\",\"seed\":42,\"pred_len\":8,\"seq_len\":16,\"noise_sigma\":0,\"trajectory_draw_ordinal\":0,\"noise_draw_ordinal\":0,\"trajectory_seed_base\":42,\"noise_seed_base\":1000,\"trajectory_draw_seed\":42,\"noise_draw_seed\":1000,\"config_json\":null,\"config_hash\":null,\"invocation_json\":null,\"run_hash\":\"failed\",\"success_hash\":null,\"config_name\":null,\"recipe_name\":null,\"recipe_hash\":null,\"run_note\":null,\"git_sha\":null,\"status\":\"failed\",\"started_at\":null,\"finished_at\":null,\"error_msg\":\"OOM at epoch 5\",\"source\":\"user_defined\",\"artifacts\":\"full\",\"pinned\":0,\"mse\":null,\"mae\":null,\"crps\":null,\"swd\":null,\"ept\":null,\"clean_target_mse\":null,\"injected_target_noise_mse\":null,\"noise_forecast_overlap\":null,\"baseline_constant_mse\":null,\"baseline_context_mean_mse\":null,\"baseline_last_value_mse\":null,\"template_id\":null,\"n_features\":null,\"code_fingerprint_json\":null,\"target_hash\":null}],\"schema\":\"fern.run_list.v1\"}\n"
+    },
+    "list-runs --dataset alpha --limit 1": {
+      "arguments": [
+        "list-runs",
+        "--db",
+        "<fixture>",
+        "--dataset",
+        "alpha",
+        "--limit",
+        "1"
+      ],
+      "exit": 0,
+      "stdout": "{\"runs\":[{\"id\":2,\"artifact_dir\":\"done-a\",\"dataset\":\"alpha\",\"dataset_id\":\"alpha_id\",\"model_type\":\"a-model\",\"seed\":4,\"pred_len\":8,\"seq_len\":16,\"noise_sigma\":0.1,\"trajectory_draw_ordinal\":0,\"noise_draw_ordinal\":0,\"trajectory_seed_base\":42,\"noise_seed_base\":1000,\"trajectory_draw_seed\":42,\"noise_draw_seed\":1000,\"config_json\":null,\"config_hash\":null,\"invocation_json\":null,\"run_hash\":\"done-a\",\"success_hash\":null,\"config_name\":null,\"recipe_name\":null,\"recipe_hash\":null,\"run_note\":null,\"git_sha\":null,\"status\":\"done\",\"started_at\":null,\"finished_at\":null,\"error_msg\":null,\"source\":\"user_defined\",\"artifacts\":\"full\",\"pinned\":0,\"mse\":0.25,\"mae\":null,\"crps\":null,\"swd\":null,\"ept\":null,\"clean_target_mse\":null,\"injected_target_noise_mse\":null,\"noise_forecast_overlap\":null,\"baseline_constant_mse\":null,\"baseline_context_mean_mse\":null,\"baseline_last_value_mse\":null,\"template_id\":null,\"n_features\":null,\"code_fingerprint_json\":null,\"target_hash\":null}],\"schema\":\"fern.run_list.v1\"}\n"
+    }
+  }
+}

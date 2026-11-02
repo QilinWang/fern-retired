@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- fern-run in C#: the operator command surface that replaces fern-cli-rs
+       verb by verb. Verbs are System.CommandLine commands; the typed work lives
+       in Fern.Registry, Fern.Experiment, Fern.Scheduler and Fern.RunData, and
+       this project only parses arguments, calls one owner, and writes bytes. -->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net11.0</TargetFramework>
+    <AssemblyName>fern-run</AssemblyName>
+    <RootNamespace>Fern.Run.Cli</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <!-- The version string enters every Worker Site capability digest (the
+         execution fingerprint's fern_version) and the fern-run version report.
+         Rust's crate was 0.1.0; keeping it preserves the digests of Sites the
+         Rust binary registered. Bump it only as a deliberate identity change. -->
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- fern-run directly names SqliteConnection in its read-only monitor and
+         migration-era adapters, so the dependency is explicit instead of
+         relying on Fern.Registry's transitive package graph. -->
+    <PackageReference Include="Microsoft.Data.Sqlite" />
+    <PackageReference Include="Spectre.Console" />
+    <PackageReference Include="System.CommandLine" />
+  </ItemGroup>
+
+  <!-- deploy's pure pieces (the profile cutover edit, the remote content path,
+       the sha256sum reader) are proved directly rather than only through the
+       process, because the Rust tests they port were unit tests. -->
+  <ItemGroup>
+    <InternalsVisibleTo Include="Fern.Scheduler.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fern.Install\Fern.Install.csproj" />
+    <ProjectReference Include="..\Fern.Registry\Fern.Registry.csproj" />
+    <ProjectReference Include="..\Fern.Experiment\Fern.Experiment.csproj" />
+    <ProjectReference Include="..\Fern.Scheduler\Fern.Scheduler.csproj" />
+    <ProjectReference Include="..\Fern.Site\Fern.Site.csproj" />
+    <ProjectReference Include="..\Fern.RunData\Fern.RunData.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\Fern.BuildIdentity.targets" />
+
+</Project>

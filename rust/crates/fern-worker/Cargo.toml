@@ -1,0 +1,41 @@
+[package]
+name = "fern-worker"
+version = "0.1.0"
+edition = "2024"
+description = "Immutable Fern Matrix execution binary. Separate from the operator CLI so HTTP, Parquet, and the LLM loop cannot enter this compile graph."
+license = "MIT"
+publish = false
+build = "../fern-cli-rs/build.rs"
+
+[[bin]]
+name = "fern-worker"
+path = "../fern-cli-rs/src/worker_main.rs"
+test = false
+bench = false
+
+[dependencies]
+anyhow = "1"
+thiserror = "2"
+clap = { version = "4.5", features = ["derive", "env"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+strum = { version = "0.27", features = ["derive"] }
+fern-experiment-authoring = { path = "../crates/fern-experiment-authoring" }
+fern-recipes = { path = "../crates/fern-recipes" }
+ndarray = "0.17.2"
+safetensors = "0.8.0"
+# implementation_snapshot stages a published source root through a temporary
+# directory before publishing it atomically.
+tempfile = "3"
+fern-execution-profile = { path = "../crates/fern-execution-profile" }
+fern-experiment-types = { path = "../crates/fern-experiment-types" }
+fern-json-contract = { path = "../crates/fern-json-contract" }
+fern-artifact = { path = "../crates/fern-artifact" }
+# No `parquet` feature. Evidence encode/decode stays on the operator CLI.
+fern-evidence = { path = "../crates/fern-evidence" }
+fern_run = { path = "../fern_run" }
+diesel = { version = "2.3.10", features = ["sqlite", "r2d2"] }
+rustix = { version = "1.1.4", features = ["fs"] }
+chrono = "0.4"
+signal-hook = "0.3"
+schemars = { version = "0.8", features = ["derive"] }

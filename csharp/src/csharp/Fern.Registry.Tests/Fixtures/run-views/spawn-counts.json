@@ -1,0 +1,10 @@
+{
+  "what": "fern-registry child processes counted per view, by putting a counting wrapper on FERN_REGISTRY and running target/debug/fern-run over rows/lane.sql. Measured 2026-08-28.",
+  "views": {
+    "audit-run-registry": { "spawns": 5, "operations": ["list-run-data"] },
+    "summarize-run-storage": { "spawns": 5, "operations": ["list-run-data"] },
+    "inspect-run-artifacts": { "spawns": 5, "operations": ["list-run-data"] },
+    "compare-runs": { "spawns": 1, "operations": ["compare-run-data"] }
+  },
+  "why_five": "run_views.rs reads the runs table once per status: audit-run-registry asks for done, failed and stale and then loops ABANDONABLE_STATUSES (pending, running); summarize-run-storage and inspect-run-artifacts loop LIFECYCLE_STATUSES (pending, running, done, failed, stale). Every one of those five children returns the full row set for its status, so the whole table crosses a pipe five times to produce one report."
+}

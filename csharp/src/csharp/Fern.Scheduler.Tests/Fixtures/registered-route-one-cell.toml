@@ -1,0 +1,98 @@
+# The smallest card that actually trains, used by RegisteredRouteTrainsOneCellTests
+# to prove that a study registered in a Registry Home reaches Python, trains on
+# this machine's GPU, and comes back as an accepted attempt. It is a wiring
+# proof, not science: one epoch, no patience, a 16-wide model and a few short
+# trajectories. No number it produces is evidence about a model.
+#
+# CHG 2026-09-12: the run took 2.5 minutes and 118 s of that was the one epoch,
+# although the model has 386 parameters. The cost is STEPS, not epochs: twenty
+# trajectories gave 6,734 training windows, and at batch 16 that is 421
+# optimizer steps, each rolling a one-step map over a 192-step horizon -- about
+# 80,000 sequential GPU launches for a model far too small to fill the card.
+# Eight trajectories and batch 128 leave about twenty steps, which exercises
+# the same trainer, the same rollout and the same unit document. Eight, not
+# four: the partitions are cut by trajectory, and four refuses by name --
+# "4 trajectories cannot be split 0.7/0.15 with a test partition left".
+#
+# Run by hand:
+#   python -m fern_analysis study compile src/csharp/Fern.Scheduler.Tests/Fixtures/registered-route-one-cell.toml --out /tmp/compiled.json
+
+[study]
+name = "registered-route-one-cell"
+question = "Does a registered study's cell train on this machine and return an accepted result through the registered route?"
+seed = 42
+
+[[stage]]
+stage = "data.raw_trajectories.v1"
+name = "controlled_lgssm"
+dataset = "controlled_lgssm.long"
+window_base = "residual_mlp.default"
+setting = "slow_decay"
+count = 8
+length = 1009
+seed = 42
+history = 336
+horizon = 192
+train_fraction = 0.7
+val_fraction = 0.15
+normalization = "standard"
+
+[[stage]]
+stage = "model.config.v1"
+name = "mlp"
+base = "residual_mlp.default"
+
+[[stage]]
+stage = "train.cell.v1"
+name = "one"
+model = "mlp"
+
+[[stage.changes]]
+field = "action"
+from = {kind = "state_only"}
+to = {kind = "global_action_vector", action_dim = 2, action_horizon = "past_and_future", handler = "fern.separate_tde", variant = "current_two_site"}
+reason = "residual_mlp rolls a one-step map over the future action span, so its cell is action-conditioned; the controlled LGSSM world drives two action channels."
+
+[[stage.changes]]
+field = "train.epochs"
+from = 50
+to = 1
+reason = "This card proves the route, not a model: one epoch is the shortest run that still writes a complete unit."
+
+[[stage.changes]]
+field = "train.grace_period"
+from = 1
+to = 0
+reason = "A one-epoch run must select a checkpoint before its final evaluation."
+
+[[stage.changes]]
+field = "train.patience"
+from = 5
+to = 0
+reason = "There is no second epoch to be patient for."
+
+[[stage.changes]]
+field = "train.batch_size"
+from = 95
+to = 128
+reason = "A 386-parameter model over 336-step windows is a few megabytes at this batch, and each step rolls the 192-step horizon whatever the batch is, so fewer larger steps is the same proof in a tenth of the time."
+
+[[stage.changes]]
+field = "model.knobs.hidden_dim"
+from = 64
+to = 16
+reason = "The narrowest model that still exercises the trainer."
+
+[[stage]]
+stage = "stitch.eval_windows.v1"
+name = "shared_windows"
+on = "eval_windows"
+
+[[stage]]
+stage = "score.cells.v1"
+name = "forecast_error"
+each = ["mse"]
+
+[[stage]]
+stage = "report.note_and_plots.v1"
+name = "report"

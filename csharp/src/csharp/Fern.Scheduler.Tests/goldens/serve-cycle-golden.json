@@ -1,0 +1,189 @@
+{
+  "schema": "fern.scheduler_serve_cycle_golden.v1",
+  "captured_on": "2026-08-28",
+  "what_this_is": "One serve cycle of the Go scheduler, captured from the old executable while it still runs, as the typed Registry effect it leaves behind. The C# scheduler must reproduce every field here from the same seeded fixture Home.",
+  "source": {
+    "executable": "fern-scheduler",
+    "language": "go",
+    "commit": "79af3ca5",
+    "built_from": "git archive 79af3ca5 tools/fern-control; go build ./cmd/fern-scheduler",
+    "binary_sha256": "da6b3f74c86a84ccf9c1c9ce8328bd0f7eb5bc1be5411ec6c990334c9b5d3478",
+    "installed_by": "fern-scheduler-cs install-scheduler-service, the ported C# installer, into a temporary deployment root",
+    "go_verifier_accepted_the_csharp_installation": true,
+    "note": "Go's own VerifyInstallation ran before its first Registry read and accepted the receipt the C# installer wrote. That is the old executable witnessing the install-gate port."
+  },
+  "fixture": {
+    "registry_home": "built by the production migration chain through the digest-fixed fern-home; 56 migrations applied, zero scheduler leases",
+    "seed_sql": "goldens/serve-cycle-seed.sql",
+    "paused_seed_sql": "goldens/serve-cycle-seed-paused.sql",
+    "seed_sha256": "403677a447e37fe010e2fb4d1ecd2835fd9639dea093413d1426ce871d5e4fcf",
+    "paused_seed_sha256": "a3ae19d498fbf3a777066264dee4bc18d9bd49ead476dc83f329cf4b647407eb"
+  },
+  "normalisation": {
+    "serve_actor": "<serve-actor>: the officer names itself with its own executable and pid; Go says fern-scheduler:serve:<pid> and C# says fern-scheduler-cs:serve:<pid>. Only the actor kind is compared.",
+    "identifiers": "<id> for a minted 32-hex identifier, <digest> for a 64-hex digest",
+    "clock": "<ms> for a Unix-millisecond reading, <time> for an ISO timestamp",
+    "intervals": "A dispatch block keeps retry_at_ms - blocked_at_ms, which is a declared interval and not a clock reading."
+  },
+  "unproven_seam": "A successful Plan claim and worker spawn. acquireChild hands off to the real fern-worker, a different executable and a different slice; here the worker is an identity probe, so the dispatch path ends in its durable refusal. The real claim and spawn are proved by the card Demo gate on local-4070, not by this golden.",
+  "cases": {
+    "paused": {
+      "go_invocation": [
+        "serve",
+        "--registry",
+        "<home>",
+        "--installation-receipt",
+        "<receipt>",
+        "--cycle-seconds",
+        "5",
+        "--once"
+      ],
+      "go_exit_code": 0,
+      "go_stdout": "",
+      "go_stderr": "",
+      "registry_effect": {
+        "row_counts": {
+          "accepted_results": 1,
+          "run_plan_attempts": 0,
+          "run_plan_leases": 0,
+          "scheduler_leases": 1,
+          "plan_dispatch_blocks": 0,
+          "coordinate_attempts": 1,
+          "artifact_snapshots": 1,
+          "scheduling_pauses": 1
+        },
+        "accepted_results": [
+          {
+            "coordinate_id": "coordinate-golden",
+            "attempt_id": "attempt-golden",
+            "run_hash": "run-golden",
+            "accepted_by": "<serve-actor>"
+          }
+        ],
+        "plan_dispatch_blocks": [],
+        "transition_receipts": [
+          {
+            "operation_name": "claim-scheduler-lease",
+            "object_kind": "scheduler",
+            "object_id": "registry-home",
+            "prior_state": null,
+            "next_state": "<id>",
+            "actor_kind": "scheduler",
+            "policy_revision": "fern.scheduler.v1",
+            "output_identity_json": "{\"expires_at_ms\":<ms>}"
+          },
+          {
+            "operation_name": "accept-sealed-candidate",
+            "object_kind": "evidence-candidate",
+            "object_id": "coordinate-golden",
+            "prior_state": "candidate",
+            "next_state": "accepted",
+            "actor_kind": "scheduler",
+            "policy_revision": "fern.scheduler.v1",
+            "output_identity_json": "{\"accepted_at\":\"<time>\",\"accepted_run_hash\":\"run-golden\",\"coordinate_id\":\"coordinate-golden\"}"
+          }
+        ],
+        "scheduler_leases": [
+          {
+            "fencing_epoch": 1,
+            "released": true
+          }
+        ]
+      }
+    },
+    "dispatching": {
+      "go_invocation": [
+        "serve",
+        "--registry",
+        "<home>",
+        "--installation-receipt",
+        "<receipt>",
+        "--cycle-seconds",
+        "5",
+        "--max-idle-hours",
+        "0.002"
+      ],
+      "go_exit_code": 0,
+      "go_stdout": "scheduler idle for <ms> ms; releasing office\n",
+      "go_stderr": "",
+      "registry_effect": {
+        "row_counts": {
+          "accepted_results": 1,
+          "run_plan_attempts": 0,
+          "run_plan_leases": 0,
+          "scheduler_leases": 1,
+          "plan_dispatch_blocks": 1,
+          "coordinate_attempts": 1,
+          "artifact_snapshots": 1,
+          "scheduling_pauses": 0
+        },
+        "accepted_results": [
+          {
+            "coordinate_id": "coordinate-golden",
+            "attempt_id": "attempt-golden",
+            "run_hash": "run-golden",
+            "accepted_by": "<serve-actor>"
+          }
+        ],
+        "plan_dispatch_blocks": [
+          {
+            "plan_id": "plan-golden",
+            "reason": "prepare-plan-child returned invalid JSON: json: unknown field \"role\"",
+            "blocked_by": "scheduler-serve:dispatch",
+            "retry_after_block_ms": 600000
+          }
+        ],
+        "transition_receipts": [
+          {
+            "operation_name": "claim-scheduler-lease",
+            "object_kind": "scheduler",
+            "object_id": "registry-home",
+            "prior_state": null,
+            "next_state": "<id>",
+            "actor_kind": "scheduler",
+            "policy_revision": "fern.scheduler.v1",
+            "output_identity_json": "{\"expires_at_ms\":<ms>}"
+          },
+          {
+            "operation_name": "accept-sealed-candidate",
+            "object_kind": "evidence-candidate",
+            "object_id": "coordinate-golden",
+            "prior_state": "candidate",
+            "next_state": "accepted",
+            "actor_kind": "scheduler",
+            "policy_revision": "fern.scheduler.v1",
+            "output_identity_json": "{\"accepted_at\":\"<time>\",\"accepted_run_hash\":\"run-golden\",\"coordinate_id\":\"coordinate-golden\"}"
+          }
+        ],
+        "scheduler_leases": [
+          {
+            "fencing_epoch": 1,
+            "released": true
+          }
+        ]
+      }
+    }
+  },
+  "declared_differences": [
+    {
+      "field": "cases.*.registry_effect.plan_dispatch_blocks[].reason",
+      "difference": "The block records why the dispatch failed, in the failing implementation's own words. Go says its worker returned invalid JSON; C# names its own refusal. Compared as non-empty, not verbatim."
+    },
+    {
+      "field": "cases.dispatching.registry_effect.row_counts.run_plan_attempts and .run_plan_leases",
+      "difference": "Go asks a worker subprocess (prepare-plan-child) to claim the Plan and hand back a permit, so a worker that cannot answer leaves zero Attempts. C# claims the Plan in this process through the Registry writer and then spawns the supervisor directly; there is no hand-off subprocess. The card scope declares that design. So the dispatching case compares the observation half exactly and the claim half by contract: no accepted work is lost, and a Plan that cannot run leaves one durable dispatch block naming scheduler-serve:dispatch."
+    },
+    {
+      "field": "cases.*.registry_effect.accepted_results[].accepted_by",
+      "difference": "Each officer names itself with its own executable and pid. Normalised to <serve-actor>; the actor kind is compared instead."
+    },
+    {
+      "field": "cases.dispatching.registry_effect.plan_dispatch_blocks[].blocked_by",
+      "difference": "Go blocks at scheduler-serve:dispatch, where its worker subprocess refused the hand-off. C# claims the Plan itself and spawns the supervisor, so its block arrives one cycle later from scheduler-serve:supervision, when that child exits non-zero. Both are one durable block on the same Plan with the same retry interval; the prefix is compared, the stage is not."
+    },
+    {
+      "field": "accepted_results.accepted_at and the acceptance receipt that repeats it",
+      "difference": "Both write Go's RFC3339Nano shape: UTC, trailing Z, fractional zeros trimmed. The remaining difference is clock resolution, not format: Go offers nanoseconds and .NET hundreds of nanoseconds, so C# never writes the last two digits. Normalised to <time>."
+    }
+  ]
+}

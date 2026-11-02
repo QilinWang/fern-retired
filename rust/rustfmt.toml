@@ -1,0 +1,20 @@
+# One formatter contract for every Rust crate in this workspace. Do not pass an
+# `--edition` flag to rustfmt: a command-line value overrides this file and can
+# make the same source oscillate between two valid layouts.
+edition = "2024"
+style_edition = "2024"
+max_width = 120            # Allows longer lines before wrapping
+hard_tabs = false          # Uses spaces instead of tabs
+tab_spaces = 4             # Matches your Python indentation
+
+# ── Teaching annotations (fern_dash "pointer" style) ───────────────────────────
+# Some modules explain code with aligned pointer comments: a code line, then
+# `//  │` / `//  └─` blocks lined up under the exact tokens they describe (see
+# fern_dash/src/lib.rs and the RunRow struct in fern_run/src/db.rs).
+#
+# rustfmt leaves `//` comment TEXT alone, but it can re-wrap the CODE line a
+# pointer targets and shift the `│` columns out of alignment. There is no stable
+# global "ignore annotated blocks" option, so the supported mechanism is per item:
+# mark any function/struct/block carrying these aligned annotations with
+# `#[rustfmt::skip]` to freeze its layout. Convention: if you see the `│`/`└─`
+# pointer comments, the enclosing item must carry `#[rustfmt::skip]`.

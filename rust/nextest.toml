@@ -1,0 +1,23 @@
+[profile.default]
+# Keep local Fern test runs inside workstation memory. Individual Rust tests can
+# still use internal threads, so two nextest processes is the practical default.
+test-threads = 2
+
+# CHG 2026-08-28 (later): the agent profile below was deleted by mistake when the
+# retired-crate overrides were removed; restored from dbc58501^. It is what
+# `fern-go lane cargo -- nextest run` selects (AGENTS.md, CLAUDE.md).
+[profile.agent]
+test-threads = 2
+status-level = "fail"
+final-status-level = "fail"
+success-output = "never"
+failure-output = "final"
+
+[test-groups]
+
+# (the [[profile.default.overrides]] entry for package(fern-cli-rs) and its
+# test-group left with the crate on 2026-08-28; see the note below)
+
+# (the [[profile.default.overrides]] entry for package(fern_run) left with the crate on 2026-08-28)
+
+# (the [[profile.agent.overrides]] entry for package(fern_run) left with the crate on 2026-08-28)

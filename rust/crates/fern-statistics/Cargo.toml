@@ -1,0 +1,47 @@
+[package]
+name = "fern-statistics"
+version = "0.1.0"
+edition = "2024"
+description = "Campaign statistics: the ordered refresh chain and the checks over its outputs."
+license = "MIT"
+
+[lib]
+name = "fern_statistics"
+path = "src/lib.rs"
+
+[[bin]]
+name = "fern-stat"
+path = "src/main.rs"
+required-features = ["registry"]
+
+[features]
+default = ["registry"]
+# Live Registry Home: freeze accepted rows, register findings, summarise
+# campaigns. The library can be built without this so an analysis box does
+# not compile Diesel. Operator `fern-stat` and `fern-run` keep the default.
+registry = ["dep:fern_run"]
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+schemars = { version = "0.8", features = ["derive"] }
+sha2 = "0.10"
+# The designed grid by LINK (boundary_surgery step 2): the catalog crate
+# answers "what does this preset expand to" typed. The subprocess remains
+# behind --fern-run as the operational cross-check against the DEPLOYED
+# launcher's catalog, which a link cannot see.
+fern-recipes = { path = "../fern-recipes" }
+ndarray = "0.17.2"
+arrow-array = "56"
+arrow-ipc = "56"
+arrow-schema = "56"
+arrow-select = "56"
+# Read-only over the lane databases, for grid coverage. `bundled` because no
+# system libsqlite3-dev is installed and a workspace build unifies onto one copy.
+# The retained per-window fan, read to judge whether a mean describes its cell.
+safetensors = "0.8.0"
+fern_post = { path = "../../fern_post" }
+fern_run = { path = "../../fern_run", optional = true }
+fern-json-contract = { path = "../fern-json-contract" }
+fern-experiment-types = { path = "../fern-experiment-types" }

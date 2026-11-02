@@ -1,0 +1,38 @@
+{
+  "parameter_count": 2224118,
+  "parameter_groups": [
+    {
+      "name": "model.action_extension.",
+      "parameter_count": 2102
+    },
+    {
+      "name": "model.enc_layers.",
+      "parameter_count": 1182720
+    },
+    {
+      "name": "model.proc_layers.",
+      "parameter_count": 930560
+    },
+    {
+      "name": "model.dec_coupling.",
+      "parameter_count": 108736
+    }
+  ],
+  "seam_version": 1,
+  "slots": {
+    "action": {
+      "kind": "fern.action.separate_tde",
+      "parameter_groups": [
+        {
+          "name": "future_action_response.",
+          "parameter_count": 48
+        },
+        {
+          "name": "past_action_conditioner.",
+          "parameter_count": 2054
+        }
+      ],
+      "variant": "current_two_site"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "cases": [
+    {
+      "length": 600,
+      "median_over_mean_squared_error": 0.9003780730919125,
+      "mse": 62.59812499999998,
+      "tail_ratio": 0.7831439659314797,
+      "target_variance": 49.038137326388885,
+      "top_percent_share": 0.019750242119871808,
+      "variance_ratio": 1.2765192238717857,
+      "warnings": [
+        "leaves 1.28 of the target's variance; predicting the mean would score 1.00"
+      ],
+      "windows": 100
+    },
+    {
+      "length": 600,
+      "median_over_mean_squared_error": 0.9646105614185728,
+      "mse": 62.598125,
+      "tail_ratio": 0.7831439659314797,
+      "target_variance": 49.038137326388885,
+      "top_percent_share": 0.024055982108090297,
+      "variance_ratio": 1.2765192238717862,
+      "warnings": [
+        "leaves 1.28 of the target's variance; predicting the mean would score 1.00"
+      ],
+      "windows": 60
+    },
+    {
+      "length": 256,
+      "median_over_mean_squared_error": 0.9624344448574803,
+      "mse": 59.27301025390625,
+      "tail_ratio": 0.7706369199725832,
+      "target_variance": 48.97200679779053,
+      "top_percent_share": 0.08124461322852061,
+      "variance_ratio": 1.2103447281351858,
+      "warnings": [
+        "leaves 1.21 of the target's variance; predicting the mean would score 1.00"
+      ],
+      "windows": 16
+    },
+    {
+      "length": 100,
+      "median_over_mean_squared_error": 0.7318543141305098,
+      "mse": 58.8509375,
+      "tail_ratio": 0.7858783831830909,
+      "target_variance": 49.894225,
+      "top_percent_share": 0.03330448219282828,
+      "variance_ratio": 1.1795140118921579,
+      "warnings": [
+        "leaves 1.18 of the target's variance; predicting the mean would score 1.00"
+      ],
+      "windows": 100
+    },
+    {
+      "length": 99,
+      "median_over_mean_squared_error": 0.9829872041428065,
+      "mse": 59.360331632653065,
+      "tail_ratio": 0.786352098039073,
+      "target_variance": 49.95439400249895,
+      "top_percent_share": 0.16950750453925245,
+      "variance_ratio": 1.1882904961209935,
+      "warnings": [
+        "leaves 1.19 of the target's variance; predicting the mean would score 1.00"
+      ],
+      "windows": 7
+    },
+    {
+      "length": 1000,
+      "median_over_mean_squared_error": 0.912548425778271,
+      "mse": 62.57159375,
+      "tail_ratio": 0.7872509504334351,
+      "target_variance": 49.04163943750002,
+      "top_percent_share": 0.017701972390626538,
+      "variance_ratio": 1.2758870720409525,
+      "warnings": [
+        "leaves 1.28 of the target's variance; predicting the mean would score 1.00"
+      ],
+      "windows": 250
+    },
+    {
+      "constant_target": 2.5,
+      "length": 400,
+      "mse": 27.297578125,
+      "tail_ratio_is_nan": true,
+      "target_variance": 0.0,
+      "top_percent_share": 0.025966703776949075,
+      "variance_ratio_is_nan": true,
+      "windows": 50
+    }
+  ],
+  "refusals": {
+    "empty_inputs": true,
+    "more_windows_than_values": true,
+    "zero_windows": true
+  },
+  "schema": "fern.metric_scale_golden.v1",
+  "thresholds": {
+    "tail_ratio_warn": 1.5,
+    "top_fraction": 0.01,
+    "top_percent_share_warn": 0.2,
+    "variance_ratio_warn": 0.9
+  }
+}

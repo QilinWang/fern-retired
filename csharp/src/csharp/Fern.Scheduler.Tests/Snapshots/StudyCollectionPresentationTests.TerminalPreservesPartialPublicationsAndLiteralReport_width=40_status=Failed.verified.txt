@@ -1,0 +1,14 @@
+﻿collect-study: failed; study=研究 
+[red]literal[/]; plan=plan-id
+units: 1 published, 1 reused, 1 missing;
+into=/units
+missing: third: no committed unit
+problem: [blue]problem[/]
+
+╭────────────┬────────────┬────────────╮
+│ Cell       │ Collection │ Artifacts  │
+├────────────┼────────────┼────────────┤
+│ z-cell     │ published  │ unit_resul │
+│ [red]一[/] │            │ ts         │
+│ a-cell     │ reused     │            │
+╰────────────┴────────────┴────────────╯

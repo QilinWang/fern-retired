@@ -1,0 +1,19 @@
+{
+  "schema": "fern.reported_stage_result.v1",
+  "invocation_digest": "sha256:9da37e2f01943758b0511d58ed24d68e4545483d499db2c8049a48241da48471",
+  "execution_key": "sha256:22069dbc87210b5ea577c67c43ef9855030cf28571ac2448b13f279eb4e58b11",
+  "implementation_digest": "sha256:b2bc461a2517a6c44fb6c6b77a33a5d4dd31b397cd6a9c4deb6a650b04e9b8dc",
+  "outputs": {
+    "raw_forecast": {
+      "schema": "fern.reported_artifact.v1",
+      "artifact_key": "artifact:train-raw-forecast",
+      "role": "raw_forecast",
+      "media_type": "application/octet-stream",
+      "byte_count": 34,
+      "byte_digest": "sha256:efd70c03f5adca201708f700ce9be6aa92e436b85c993f8e351b72a778465bff",
+      "content_digest": "sha256:31fbe8a9fd9b2610da5b7fb3a465e19a57c552237078b9a919586dcd7777fc16",
+      "tensor_layout": null,
+      "reported_forecast_meaning": null
+    }
+  }
+}

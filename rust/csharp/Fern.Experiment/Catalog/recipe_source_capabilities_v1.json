@@ -1,0 +1,5961 @@
+{
+  "catalog_artifact": {
+    "catalog_count": 506,
+    "schema": "fern.recipe-catalog.v1",
+    "sha256": "03969224a996a38ed48adef8387006017658627732043c2beb53324672b3e861",
+    "source_path": "csharp/Fern.Experiment/Catalog/recipe_catalog_v1.json"
+  },
+  "catalog_cases": {
+    "every_catalog_recipe_is_nameable_by_its_own_capabilities": {
+      "checked_count": 506,
+      "rows_with_missing_handlers": []
+    },
+    "every_current_recipe_projects_to_a_valid_external_extension": {
+      "validated_count": 506
+    },
+    "external_source_group_and_grid_need_no_compiled_enum_variant": {
+      "extension": {
+        "belongs_to": "research-design:fixture",
+        "extension_id": "recipe-extension:lgssm-fern-clean-h64",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "lg_ssm",
+              "lg_ssm_switch"
+            ],
+            "eval": "huber",
+            "family": "counterfactual_pair",
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 1,
+            "n_trajectory_draws": 1,
+            "name": "counterfactual_pair_fern_huber_p70_20_10_none_bs95_action_probe_h48_h96",
+            "noise_levels": [
+              0.0,
+              0.20000000298023224
+            ],
+            "plan": "action_probe_h48_h96",
+            "pred_lens": [
+              48,
+              96
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": false,
+            "seeds": [
+              42
+            ],
+            "seq_len": 192,
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "234102f7e7452051",
+        "schema": "fern.recipe-extension.v1",
+        "title": "LGSSM Fern clean H64"
+      },
+      "missing": [],
+      "reconstructed_identity": {
+        "recipe": {
+          "cells": [
+            "lg_ssm",
+            "lg_ssm_switch"
+          ],
+          "eval": "huber",
+          "family": "counterfactual_pair",
+          "loader": "p70_20_10_none_bs95",
+          "model": "fern",
+          "n_noise_draws": 1,
+          "n_trajectory_draws": 1,
+          "name": "counterfactual_pair_fern_huber_p70_20_10_none_bs95_action_probe_h48_h96",
+          "noise_levels": [
+            0.0,
+            0.20000000298023224
+          ],
+          "plan": "action_probe_h48_h96",
+          "pred_lens": [
+            48,
+            96
+          ],
+          "run_rewind": false,
+          "run_whiten": false,
+          "scale_noise_by_std": false,
+          "seeds": [
+            42
+          ],
+          "seq_len": 192,
+          "train": "default_train"
+        },
+        "schema": "fern.recipe_blueprint.rust.v1"
+      },
+      "stale_identity": {
+        "recipe": {
+          "cells": [
+            "lg_ssm",
+            "lg_ssm_switch"
+          ],
+          "eval": "huber",
+          "family": "counterfactual_pair",
+          "loader": "p70_20_10_none_bs95",
+          "model": "fern",
+          "n_noise_draws": 1,
+          "n_trajectory_draws": 1,
+          "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64",
+          "noise_levels": [
+            0.0,
+            0.20000000298023224
+          ],
+          "plan": "action_probe_h48_h96",
+          "pred_lens": [
+            48,
+            96
+          ],
+          "run_rewind": false,
+          "run_whiten": false,
+          "scale_noise_by_std": false,
+          "seeds": [
+            42
+          ],
+          "seq_len": 192,
+          "train": "default_train"
+        },
+        "schema": "fern.recipe_blueprint.rust.v1"
+      },
+      "stale_name_error": "identity.recipe.name \"lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64\" disagrees with the name derived from its fields \"counterfactual_pair_fern_huber_p70_20_10_none_bs95_action_probe_h48_h96\""
+    },
+    "omitting_the_base_cloud_width_moves_no_existing_recipe": {
+      "eligible_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479,
+        480,
+        481,
+        482,
+        483,
+        484,
+        485,
+        486,
+        487,
+        488,
+        489,
+        490,
+        491,
+        492,
+        493,
+        494,
+        495,
+        496,
+        497,
+        498,
+        499,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505
+      ],
+      "serialized_member_present_indices": []
+    }
+  },
+  "entries": [
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"lg_ssm\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"lg_ssm_base\",\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":4,\"n_trajectory_draws\":4,\"name\":\"lg_ssm_base_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_titration_h64_relative_doses_noise_matched_retraining\",\"noise_levels\":[0.0,0.0625,0.125,0.25,0.5,1.0,2.0],\"plan\":\"titration_h64_relative_doses\",\"pred_lens\":[64],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:298cb412be6d49b449d18761",
+        "extension_id": "recipe-extension:radial-nll-lgssm-h64",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "lg_ssm"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "lg_ssm_base",
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 4,
+            "n_trajectory_draws": 4,
+            "name": "lg_ssm_base_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_titration_h64_relative_doses_noise_matched_retraining",
+            "noise_levels": [
+              0.0,
+              0.0625,
+              0.125,
+              0.25,
+              0.5,
+              1.0,
+              2.0
+            ],
+            "plan": "titration_h64_relative_doses",
+            "pred_lens": [
+              64
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "07358cab08fcfaac",
+        "schema": "fern.recipe-extension.v1",
+        "title": "LGSSM H64 Fern proper-score calibration"
+      },
+      "label": "docs/recipes/2026-08-15-radial-nll-lgssm-h64.json",
+      "recipe_identity_sha256": "sha256:55ccbc2900472a089e55748ee7f5e87894d97012385dbf2fddff3acbc95d6af5"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"lg_ssm\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"lg_ssm_base\",\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":2,\"n_trajectory_draws\":2,\"name\":\"lg_ssm_base_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_ablation_clean_h64_draws2_noise_matched_retraining\",\"noise_levels\":[0.0],\"plan\":\"radial_ablation_clean_h64_draws2\",\"pred_lens\":[64],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:109de10b28ac7c5a1689e7f0",
+        "extension_id": "recipe-extension:radial-head-off-lgssm-clean-draws2",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "lg_ssm"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "lg_ssm_base",
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 2,
+            "n_trajectory_draws": 2,
+            "name": "lg_ssm_base_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_ablation_clean_h64_draws2_noise_matched_retraining",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "radial_ablation_clean_h64_draws2",
+            "pred_lens": [
+              64
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "fdad7d89eb72646e",
+        "schema": "fern.recipe-extension.v1",
+        "title": "LGSSM clean two-draw radial-head-off control"
+      },
+      "label": "docs/recipes/2026-08-17-radial-head-off-lgssm-clean-draws2.json",
+      "recipe_identity_sha256": "sha256:ba58be851fb5a0ccb40158d138237072e74a1a7d6d2a158b2d141a4b4a94840b"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"lg_ssm\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"lg_ssm_base\",\"fern_radial_head\":true,\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":2,\"n_trajectory_draws\":2,\"name\":\"lg_ssm_base_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_ablation_clean_h64_draws2_noise_matched_retraining_radial_head\",\"noise_levels\":[0.0],\"plan\":\"radial_ablation_clean_h64_draws2\",\"pred_lens\":[64],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:109de10b28ac7c5a1689e7f0",
+        "extension_id": "recipe-extension:radial-head-on-lgssm-clean-draws2",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "lg_ssm"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "lg_ssm_base",
+            "fern_radial_head": true,
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 2,
+            "n_trajectory_draws": 2,
+            "name": "lg_ssm_base_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_ablation_clean_h64_draws2_noise_matched_retraining_radial_head",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "radial_ablation_clean_h64_draws2",
+            "pred_lens": [
+              64
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "502e2565b58d5911",
+        "schema": "fern.recipe-extension.v1",
+        "title": "LGSSM clean two-draw n-plus-one radial-head treatment"
+      },
+      "label": "docs/recipes/2026-08-17-radial-head-on-lgssm-clean-draws2.json",
+      "recipe_identity_sha256": "sha256:e6207c5c8330a1fb13dc055db8b822b108962270b8cbec4a813d8d6dc23d93d8"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"lg_ssm\"],\"eval\":\"huber\",\"family\":\"lg_ssm_base\",\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":4,\"n_trajectory_draws\":4,\"name\":\"lg_ssm_base_fern_huber_p70_20_10_none_bs95_titration_h64_relative_doses_noise_matched_retraining\",\"noise_levels\":[0.0,0.0625,0.125,0.25,0.5,1.0,2.0],\"plan\":\"titration_h64_relative_doses\",\"pred_lens\":[64],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:298cb412be6d49b449d18761",
+        "extension_id": "recipe-extension:radial-huber-lgssm-h64",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "lg_ssm"
+            ],
+            "eval": "huber",
+            "family": "lg_ssm_base",
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 4,
+            "n_trajectory_draws": 4,
+            "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_titration_h64_relative_doses_noise_matched_retraining",
+            "noise_levels": [
+              0.0,
+              0.0625,
+              0.125,
+              0.25,
+              0.5,
+              1.0,
+              2.0
+            ],
+            "plan": "titration_h64_relative_doses",
+            "pred_lens": [
+              64
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "5fef225ef6e5cf0b",
+        "schema": "fern.recipe-extension.v1",
+        "title": "LGSSM H64 Fern Huber control for proper-score calibration"
+      },
+      "label": "docs/recipes/2026-08-17-radial-huber-lgssm-h64.json",
+      "recipe_identity_sha256": "sha256:6285b8cf493e0a5a11f81b5c99a503b929f86696cdc07a305709d0b24b5b24d5"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"radial_attenuation_gamma4\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"radial_attenuation_gamma4\",\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":2,\"n_trajectory_draws\":2,\"name\":\"radial_attenuation_gamma4_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gamma4_h24_draws2_noise_matched_retraining\",\"noise_levels\":[0.0],\"plan\":\"radial_gamma4_h24_draws2\",\"pred_lens\":[24],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:5afdfc9cb3d5712d7df03d9c",
+        "extension_id": "recipe-extension:radial-head-off-gamma4-attenuation-h24-draws2",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "radial_attenuation_gamma4"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "radial_attenuation_gamma4",
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 2,
+            "n_trajectory_draws": 2,
+            "name": "radial_attenuation_gamma4_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gamma4_h24_draws2_noise_matched_retraining",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "radial_gamma4_h24_draws2",
+            "pred_lens": [
+              24
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "c764fb962372cfba",
+        "schema": "fern.recipe-extension.v1",
+        "title": "Action-free Gamma(4,4) attenuation H24 radial-head-off control"
+      },
+      "label": "docs/recipes/2026-08-18-radial-head-off-gamma4-attenuation-h24-draws2.json",
+      "recipe_identity_sha256": "sha256:c3f850a762d9b24788624a9cd11f4d7dbb1c3ee455ef39a3f473bed0f305c1fc"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"radial_attenuation_gamma4\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"radial_attenuation_gamma4\",\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":2,\"n_trajectory_draws\":2,\"name\":\"radial_attenuation_gamma4_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gamma4_h8_draws2_noise_matched_retraining\",\"noise_levels\":[0.0],\"plan\":\"radial_gamma4_h8_draws2\",\"pred_lens\":[8],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:109de10b28ac7c5a1689e7f0",
+        "extension_id": "recipe-extension:radial-head-off-gamma4-attenuation-h8-draws2",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "radial_attenuation_gamma4"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "radial_attenuation_gamma4",
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 2,
+            "n_trajectory_draws": 2,
+            "name": "radial_attenuation_gamma4_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gamma4_h8_draws2_noise_matched_retraining",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "radial_gamma4_h8_draws2",
+            "pred_lens": [
+              8
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "6f8fa7d9d159501a",
+        "schema": "fern.recipe-extension.v1",
+        "title": "Action-free Gamma(4,4) attenuation radial-head-off control"
+      },
+      "label": "docs/recipes/2026-08-18-radial-head-off-gamma4-attenuation-h8-draws2.json",
+      "recipe_identity_sha256": "sha256:6a4a30202dddeb0a42069a7bff6378533a289591cfb1f85e3c13661da9ea6d88"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"radial_attenuation_gaussian\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"radial_attenuation_gaussian\",\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":2,\"n_trajectory_draws\":2,\"name\":\"radial_attenuation_gaussian_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gaussian_h24_draws2_noise_matched_retraining\",\"noise_levels\":[0.0],\"plan\":\"radial_gaussian_h24_draws2\",\"pred_lens\":[24],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:5afdfc9cb3d5712d7df03d9c",
+        "extension_id": "recipe-extension:radial-head-off-gaussian-attenuation-h24-draws2",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "radial_attenuation_gaussian"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "radial_attenuation_gaussian",
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 2,
+            "n_trajectory_draws": 2,
+            "name": "radial_attenuation_gaussian_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gaussian_h24_draws2_noise_matched_retraining",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "radial_gaussian_h24_draws2",
+            "pred_lens": [
+              24
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "bfbed7197774d435",
+        "schema": "fern.recipe-extension.v1",
+        "title": "Action-free Gaussian attenuation H24 radial-head-off control"
+      },
+      "label": "docs/recipes/2026-08-18-radial-head-off-gaussian-attenuation-h24-draws2.json",
+      "recipe_identity_sha256": "sha256:81e5cb5328c4b159b496d507420976c4f9707cadfed10ee5747a080e4e633326"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"radial_attenuation_gaussian\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"radial_attenuation_gaussian\",\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":2,\"n_trajectory_draws\":2,\"name\":\"radial_attenuation_gaussian_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gaussian_h8_draws2_noise_matched_retraining\",\"noise_levels\":[0.0],\"plan\":\"radial_gaussian_h8_draws2\",\"pred_lens\":[8],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:109de10b28ac7c5a1689e7f0",
+        "extension_id": "recipe-extension:radial-head-off-gaussian-attenuation-h8-draws2",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "radial_attenuation_gaussian"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "radial_attenuation_gaussian",
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 2,
+            "n_trajectory_draws": 2,
+            "name": "radial_attenuation_gaussian_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gaussian_h8_draws2_noise_matched_retraining",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "radial_gaussian_h8_draws2",
+            "pred_lens": [
+              8
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "aa98f225708a232f",
+        "schema": "fern.recipe-extension.v1",
+        "title": "Action-free Gaussian attenuation radial-head-off control"
+      },
+      "label": "docs/recipes/2026-08-18-radial-head-off-gaussian-attenuation-h8-draws2.json",
+      "recipe_identity_sha256": "sha256:7ee1bdd093a837cb50fb51efd4e6e706ac6d0a7d11cd307ac31510dc84cf0c32"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"radial_attenuation_gamma4\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"radial_attenuation_gamma4\",\"fern_radial_head\":true,\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":2,\"n_trajectory_draws\":2,\"name\":\"radial_attenuation_gamma4_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gamma4_h24_draws2_noise_matched_retraining_radial_head\",\"noise_levels\":[0.0],\"plan\":\"radial_gamma4_h24_draws2\",\"pred_lens\":[24],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:5afdfc9cb3d5712d7df03d9c",
+        "extension_id": "recipe-extension:radial-head-on-gamma4-attenuation-h24-draws2",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "radial_attenuation_gamma4"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "radial_attenuation_gamma4",
+            "fern_radial_head": true,
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 2,
+            "n_trajectory_draws": 2,
+            "name": "radial_attenuation_gamma4_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gamma4_h24_draws2_noise_matched_retraining_radial_head",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "radial_gamma4_h24_draws2",
+            "pred_lens": [
+              24
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "ff6a14f66c1c5dd4",
+        "schema": "fern.recipe-extension.v1",
+        "title": "Action-free Gamma(4,4) attenuation H24 radial-head treatment"
+      },
+      "label": "docs/recipes/2026-08-18-radial-head-on-gamma4-attenuation-h24-draws2.json",
+      "recipe_identity_sha256": "sha256:629493e1785cdbc0993515b158fcf7879f2204452dc4af4841c1dbcbeff1c0af"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"radial_attenuation_gamma4\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"radial_attenuation_gamma4\",\"fern_radial_head\":true,\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":2,\"n_trajectory_draws\":2,\"name\":\"radial_attenuation_gamma4_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gamma4_h8_draws2_noise_matched_retraining_radial_head\",\"noise_levels\":[0.0],\"plan\":\"radial_gamma4_h8_draws2\",\"pred_lens\":[8],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:109de10b28ac7c5a1689e7f0",
+        "extension_id": "recipe-extension:radial-head-on-gamma4-attenuation-h8-draws2",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "radial_attenuation_gamma4"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "radial_attenuation_gamma4",
+            "fern_radial_head": true,
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 2,
+            "n_trajectory_draws": 2,
+            "name": "radial_attenuation_gamma4_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gamma4_h8_draws2_noise_matched_retraining_radial_head",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "radial_gamma4_h8_draws2",
+            "pred_lens": [
+              8
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "1da7e4493b48ee47",
+        "schema": "fern.recipe-extension.v1",
+        "title": "Action-free Gamma(4,4) attenuation n-plus-one radial-head treatment"
+      },
+      "label": "docs/recipes/2026-08-18-radial-head-on-gamma4-attenuation-h8-draws2.json",
+      "recipe_identity_sha256": "sha256:07acfab4613a2c587ba175b6392ce640d0e593da277f993391730c591e8daa95"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"radial_attenuation_gaussian\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"radial_attenuation_gaussian\",\"fern_radial_head\":true,\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":2,\"n_trajectory_draws\":2,\"name\":\"radial_attenuation_gaussian_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gaussian_h24_draws2_noise_matched_retraining_radial_head\",\"noise_levels\":[0.0],\"plan\":\"radial_gaussian_h24_draws2\",\"pred_lens\":[24],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:5afdfc9cb3d5712d7df03d9c",
+        "extension_id": "recipe-extension:radial-head-on-gaussian-attenuation-h24-draws2",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "radial_attenuation_gaussian"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "radial_attenuation_gaussian",
+            "fern_radial_head": true,
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 2,
+            "n_trajectory_draws": 2,
+            "name": "radial_attenuation_gaussian_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gaussian_h24_draws2_noise_matched_retraining_radial_head",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "radial_gaussian_h24_draws2",
+            "pred_lens": [
+              24
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "cc63794b316e1d70",
+        "schema": "fern.recipe-extension.v1",
+        "title": "Action-free Gaussian attenuation H24 radial-head treatment"
+      },
+      "label": "docs/recipes/2026-08-18-radial-head-on-gaussian-attenuation-h24-draws2.json",
+      "recipe_identity_sha256": "sha256:937f6782b32449436a6cb90808b4782599d07599e26752afed6ee2585cbdae07"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"radial_attenuation_gaussian\"],\"eval\":\"eig_nll_s16e32_no_swd\",\"family\":\"radial_attenuation_gaussian\",\"fern_radial_head\":true,\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":2,\"n_trajectory_draws\":2,\"name\":\"radial_attenuation_gaussian_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gaussian_h8_draws2_noise_matched_retraining_radial_head\",\"noise_levels\":[0.0],\"plan\":\"radial_gaussian_h8_draws2\",\"pred_lens\":[8],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":true,\"seeds\":[42],\"seq_len\":336,\"split_treatment_scheme\":\"noise_matched_retraining\",\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:109de10b28ac7c5a1689e7f0",
+        "extension_id": "recipe-extension:radial-head-on-gaussian-attenuation-h8-draws2",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "radial_attenuation_gaussian"
+            ],
+            "eval": "eig_nll_s16e32_no_swd",
+            "family": "radial_attenuation_gaussian",
+            "fern_radial_head": true,
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 2,
+            "n_trajectory_draws": 2,
+            "name": "radial_attenuation_gaussian_fern_eig_nll_s16e32_no_swd_p70_20_10_none_bs95_radial_gaussian_h8_draws2_noise_matched_retraining_radial_head",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "radial_gaussian_h8_draws2",
+            "pred_lens": [
+              8
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": true,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "split_treatment_scheme": "noise_matched_retraining",
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "e5c4fbe8410370c9",
+        "schema": "fern.recipe-extension.v1",
+        "title": "Action-free Gaussian attenuation n-plus-one radial-head treatment"
+      },
+      "label": "docs/recipes/2026-08-18-radial-head-on-gaussian-attenuation-h8-draws2.json",
+      "recipe_identity_sha256": "sha256:b18dc5d0d71c2fb550df54aa9bb6629f0a39bc32397db83de9d5a70b5b5daf29"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"lg_ssm\"],\"eval\":\"huber\",\"family\":\"lg_ssm_base\",\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":1,\"n_trajectory_draws\":1,\"name\":\"lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_src_3p75\",\"noise_levels\":[0.0],\"plan\":\"clean_h64\",\"pred_lens\":[64],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":false,\"seeds\":[42],\"seq_len\":336,\"source_std\":3.75,\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:fixture",
+        "extension_id": "recipe-extension:unseen-source-std",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "lg_ssm"
+            ],
+            "eval": "huber",
+            "family": "lg_ssm_base",
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 1,
+            "n_trajectory_draws": 1,
+            "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_src_3p75",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "clean_h64",
+            "pred_lens": [
+              64
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": false,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "source_std": 3.75,
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "10b82dff751cc05a",
+        "schema": "fern.recipe-extension.v1",
+        "title": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_src_3p75"
+      },
+      "label": "generated/unseen-source-std-3.75",
+      "recipe_identity_sha256": "sha256:3aac00a9e178e7b88048d82dc452feea845b21c7bfd864a6e72aa8a145d15b4d"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"lg_ssm\"],\"eval\":\"huber\",\"family\":\"lg_ssm_base\",\"fern_density\":{\"component_count\":3,\"variant\":\"bounded_mdn\"},\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":1,\"n_trajectory_draws\":1,\"name\":\"lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_bounded_mdn_k3\",\"noise_levels\":[0.0],\"plan\":\"clean_h64\",\"pred_lens\":[64],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":false,\"seeds\":[42],\"seq_len\":336,\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:fixture",
+        "extension_id": "recipe-extension:bounded_mdn",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "lg_ssm"
+            ],
+            "eval": "huber",
+            "family": "lg_ssm_base",
+            "fern_density": {
+              "component_count": 3,
+              "variant": "bounded_mdn"
+            },
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 1,
+            "n_trajectory_draws": 1,
+            "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_bounded_mdn_k3",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "clean_h64",
+            "pred_lens": [
+              64
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": false,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "5dd3eed627e6bbfd",
+        "schema": "fern.recipe-extension.v1",
+        "title": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_bounded_mdn_k3"
+      },
+      "label": "generated/density/bounded_mdn",
+      "recipe_identity_sha256": "sha256:86bb31fa11424a339742a23908f3887af0641d6403c5724e39eb3d9618ac25b4"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"lg_ssm\"],\"eval\":\"huber\",\"family\":\"lg_ssm_base\",\"fern_density\":{\"component_count\":4,\"sparse_active_component_count\":2,\"variant\":\"sparse_moe\"},\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":1,\"n_trajectory_draws\":1,\"name\":\"lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_sparse_moe_k4_r2\",\"noise_levels\":[0.0],\"plan\":\"clean_h64\",\"pred_lens\":[64],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":false,\"seeds\":[42],\"seq_len\":336,\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:fixture",
+        "extension_id": "recipe-extension:sparse_moe",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "lg_ssm"
+            ],
+            "eval": "huber",
+            "family": "lg_ssm_base",
+            "fern_density": {
+              "component_count": 4,
+              "sparse_active_component_count": 2,
+              "variant": "sparse_moe"
+            },
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 1,
+            "n_trajectory_draws": 1,
+            "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_sparse_moe_k4_r2",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "clean_h64",
+            "pred_lens": [
+              64
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": false,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "443d8fbc1d7aee7f",
+        "schema": "fern.recipe-extension.v1",
+        "title": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_sparse_moe_k4_r2"
+      },
+      "label": "generated/density/sparse_moe",
+      "recipe_identity_sha256": "sha256:ee4d9a673ed05274de4c97bdab2ce3c258f7b6738a8237728756a262b2b00936"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"lg_ssm\"],\"eval\":\"huber\",\"family\":\"lg_ssm_base\",\"fern_density\":{\"component_count\":3,\"variant\":\"shared_transport_mixture_source\"},\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":1,\"n_trajectory_draws\":1,\"name\":\"lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_shared_transport_mixture_source_k3\",\"noise_levels\":[0.0],\"plan\":\"clean_h64\",\"pred_lens\":[64],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":false,\"seeds\":[42],\"seq_len\":336,\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:fixture",
+        "extension_id": "recipe-extension:shared_transport_mixture_source",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "lg_ssm"
+            ],
+            "eval": "huber",
+            "family": "lg_ssm_base",
+            "fern_density": {
+              "component_count": 3,
+              "variant": "shared_transport_mixture_source"
+            },
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 1,
+            "n_trajectory_draws": 1,
+            "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_shared_transport_mixture_source_k3",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "clean_h64",
+            "pred_lens": [
+              64
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": false,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "fce9ba11eb143861",
+        "schema": "fern.recipe-extension.v1",
+        "title": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_shared_transport_mixture_source_k3"
+      },
+      "label": "generated/density/shared_transport_mixture_source",
+      "recipe_identity_sha256": "sha256:be4d561970973e94a53d4686756a146ec852070eabb304e2fb4e17620d430c89"
+    },
+    {
+      "canonical_identity_json": "{\"recipe\":{\"cells\":[\"lg_ssm\"],\"eval\":\"huber\",\"family\":\"lg_ssm_base\",\"fern_density\":{\"component_count\":3,\"variant\":\"mixture_of_fern_transports\"},\"loader\":\"p70_20_10_none_bs95\",\"model\":\"fern\",\"n_noise_draws\":1,\"n_trajectory_draws\":1,\"name\":\"lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_mixture_of_fern_transports_k3\",\"noise_levels\":[0.0],\"plan\":\"clean_h64\",\"pred_lens\":[64],\"run_rewind\":false,\"run_whiten\":false,\"scale_noise_by_std\":false,\"seeds\":[42],\"seq_len\":336,\"train\":\"default_train\"},\"schema\":\"fern.recipe_blueprint.rust.v1\"}",
+      "extension": {
+        "belongs_to": "research-design:fixture",
+        "extension_id": "recipe-extension:mixture_of_fern_transports",
+        "identity": {
+          "recipe": {
+            "cells": [
+              "lg_ssm"
+            ],
+            "eval": "huber",
+            "family": "lg_ssm_base",
+            "fern_density": {
+              "component_count": 3,
+              "variant": "mixture_of_fern_transports"
+            },
+            "loader": "p70_20_10_none_bs95",
+            "model": "fern",
+            "n_noise_draws": 1,
+            "n_trajectory_draws": 1,
+            "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_mixture_of_fern_transports_k3",
+            "noise_levels": [
+              0.0
+            ],
+            "plan": "clean_h64",
+            "pred_lens": [
+              64
+            ],
+            "run_rewind": false,
+            "run_whiten": false,
+            "scale_noise_by_std": false,
+            "seeds": [
+              42
+            ],
+            "seq_len": 336,
+            "train": "default_train"
+          },
+          "schema": "fern.recipe_blueprint.rust.v1"
+        },
+        "recipe_hash": "1221349867f94d49",
+        "schema": "fern.recipe-extension.v1",
+        "title": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_mixture_of_fern_transports_k3"
+      },
+      "label": "generated/density/mixture_of_fern_transports",
+      "recipe_identity_sha256": "sha256:632ae7f4b2cf6c6b7ed8e9bd0c8a43eef55a91c0dca2fa86fe4947db0815c33d"
+    }
+  ],
+  "handler_capability_cases": {
+    "a_handler_the_other_binary_lacks_is_named_before_dispatch": {
+      "capabilities": {
+        "checkpoint_reuse_policies": [
+          "clean_validation_best",
+          "noise_matched_clean_validation_best",
+          "noise_matched_dose_validation_best"
+        ],
+        "evals": [
+          "huber",
+          "huber_proj500",
+          "nll_s16e32",
+          "eig_nll_s4e32",
+          "huber_eval_crps",
+          "huber_crps",
+          "crps_s4e48",
+          "huber_eval_crps_e32_no_swd",
+          "eig_nll_s16e32_no_swd",
+          "eig_nll_s1e1"
+        ],
+        "families": [
+          {
+            "cells": [
+              "lorenz",
+              "lorenz_param_shock",
+              "lorenz_state_shock",
+              "lorenz_switch"
+            ],
+            "name": "lorenz"
+          },
+          {
+            "cells": [
+              "rossler",
+              "rossler_param_shock"
+            ],
+            "name": "rossler"
+          },
+          {
+            "cells": [
+              "lorenz96",
+              "lorenz96_switch"
+            ],
+            "name": "lorenz96"
+          },
+          {
+            "cells": [
+              "chua",
+              "chua_param_shock",
+              "chua_switch"
+            ],
+            "name": "chua"
+          },
+          {
+            "cells": [
+              "ou",
+              "ou_param_shock"
+            ],
+            "name": "ou"
+          },
+          {
+            "cells": [
+              "slds",
+              "slds_param_shock",
+              "slds_switch"
+            ],
+            "name": "slds"
+          },
+          {
+            "cells": [
+              "doublewell",
+              "doublewell_param_shock",
+              "doublewell_switch"
+            ],
+            "name": "doublewell"
+          },
+          {
+            "cells": [
+              "seasonal_ar",
+              "seasonal_ar_param_shock"
+            ],
+            "name": "seasonal_ar"
+          },
+          {
+            "cells": [
+              "ou"
+            ],
+            "name": "ou_base"
+          },
+          {
+            "cells": [
+              "doublewell"
+            ],
+            "name": "doublewell_base"
+          },
+          {
+            "cells": [
+              "doublewell",
+              "doublewell_barrier_collapse"
+            ],
+            "name": "doublewell_barrier_collapse"
+          },
+          {
+            "cells": [
+              "lorenz"
+            ],
+            "name": "lorenz_base"
+          },
+          {
+            "cells": [
+              "lorenz_param_shock"
+            ],
+            "name": "lorenz_param_shock"
+          },
+          {
+            "cells": [
+              "rossler"
+            ],
+            "name": "rossler_base"
+          },
+          {
+            "cells": [
+              "rossler_ic_holdout_0",
+              "rossler_ic_holdout_1",
+              "rossler_ic_holdout_2",
+              "rossler_ic_holdout_3",
+              "rossler_ic_holdout_4",
+              "rossler_ic_holdout_5",
+              "rossler_ic_holdout_6",
+              "rossler_ic_holdout_7"
+            ],
+            "name": "rossler_initial_condition_holdout"
+          },
+          {
+            "cells": [
+              "rossler_ic_random_0",
+              "rossler_ic_random_1",
+              "rossler_ic_random_2",
+              "rossler_ic_random_3",
+              "rossler_ic_random_4",
+              "rossler_ic_random_5",
+              "rossler_ic_random_6",
+              "rossler_ic_random_7",
+              "rossler_ic_random_8",
+              "rossler_ic_random_9",
+              "rossler_ic_random_10",
+              "rossler_ic_random_11",
+              "rossler_ic_random_12",
+              "rossler_ic_random_13",
+              "rossler_ic_random_14",
+              "rossler_ic_random_15"
+            ],
+            "name": "rossler_initial_condition_random"
+          },
+          {
+            "cells": [
+              "lorenz_ic_0",
+              "lorenz_ic_1",
+              "lorenz_ic_2",
+              "lorenz_ic_3",
+              "lorenz_ic_4",
+              "lorenz_ic_5",
+              "lorenz_ic_6",
+              "lorenz_ic_7",
+              "lorenz_ic_8",
+              "lorenz_ic_9",
+              "lorenz_ic_10",
+              "lorenz_ic_11",
+              "lorenz_ic_12",
+              "lorenz_ic_13",
+              "lorenz_ic_14",
+              "lorenz_ic_15"
+            ],
+            "name": "lorenz_initial_condition_random"
+          },
+          {
+            "cells": [
+              "rossler_param_shock"
+            ],
+            "name": "rossler_param_shock"
+          },
+          {
+            "cells": [
+              "lg_ssm"
+            ],
+            "name": "lg_ssm_base"
+          },
+          {
+            "cells": [
+              "lg_ssm_switch"
+            ],
+            "name": "lg_ssm_switch"
+          },
+          {
+            "cells": [
+              "lg_ssm_regime_switch"
+            ],
+            "name": "lg_ssm_regime_switch"
+          },
+          {
+            "cells": [
+              "hugadb_accel_emg"
+            ],
+            "name": "hugadb_accel_emg"
+          },
+          {
+            "cells": [
+              "hugadb_walk_bicycling_switch"
+            ],
+            "name": "hugadb_switch"
+          },
+          {
+            "cells": [
+              "hugadb_walk_run_natural"
+            ],
+            "name": "hugadb_walk_run_natural"
+          },
+          {
+            "cells": [
+              "hugadb_walk_only_natural"
+            ],
+            "name": "hugadb_walk_only_natural"
+          },
+          {
+            "cells": [
+              "solar_energy"
+            ],
+            "name": "solar_energy"
+          },
+          {
+            "cells": [
+              "solar_energy_subset"
+            ],
+            "name": "solar_energy_subset"
+          },
+          {
+            "cells": [
+              "chua",
+              "rossler",
+              "lorenz",
+              "etth1",
+              "ettm1"
+            ],
+            "name": "icml_main"
+          },
+          {
+            "cells": [
+              "etth1"
+            ],
+            "name": "icml_main_etth1_s336_h96"
+          },
+          {
+            "cells": [
+              "etth1"
+            ],
+            "name": "icml_main_etth1_s336_h336"
+          },
+          {
+            "cells": [
+              "lorenz"
+            ],
+            "name": "icml_main_lorenz_s336_h336"
+          },
+          {
+            "cells": [
+              "hugadb_accel_emg"
+            ],
+            "name": "icml_main_hugadb_generic"
+          },
+          {
+            "cells": [
+              "hugadb_walk_bicycling_switch"
+            ],
+            "name": "icml_main_hugadb_splice"
+          },
+          {
+            "cells": [
+              "lorenz",
+              "lorenz_param_shock",
+              "lorenz_state_shock",
+              "lorenz_switch",
+              "rossler",
+              "rossler_param_shock",
+              "lorenz96",
+              "lorenz96_switch",
+              "chua",
+              "chua_param_shock",
+              "chua_switch",
+              "ou",
+              "ou_param_shock",
+              "slds",
+              "slds_param_shock",
+              "slds_switch",
+              "doublewell",
+              "doublewell_param_shock",
+              "doublewell_switch",
+              "seasonal_ar",
+              "seasonal_ar_param_shock"
+            ],
+            "name": "icml_shock_8"
+          }
+        ],
+        "fern_architectures": [
+          "current",
+          "icml_pinned",
+          "interleaved_unclamped_wide",
+          "all_complex_clamped_wide",
+          "all_complex_unclamped_paper_brenier",
+          "interleaved_clamped_wide",
+          "interleaved_unclamped_paper_brenier",
+          "all_complex_clamped_paper_brenier",
+          "current_wide_scale"
+        ],
+        "fern_densities": [
+          "single_gaussian",
+          "bounded_mdn",
+          "sparse_moe",
+          "shared_transport_mixture_source",
+          "mixture_of_fern_transports",
+          "mixture_source_shared_hidden",
+          "mixture_fern_transports_shared_hidden"
+        ],
+        "legacy_identity_schema": "fern.recipe_blueprint.rust.v1",
+        "loaders": [
+          "p70_20_10_none_bs95",
+          "p70_20_10_standard_bs95",
+          "p70_20_10_standard_bs24",
+          "p70_10_20_none_bs128",
+          "p70_10_20_robust_mad_bs128"
+        ],
+        "models": [
+          {
+            "fits_weights": true,
+            "name": "fern_icml_pinned"
+          },
+          {
+            "fits_weights": true,
+            "name": "fern_wide_scale"
+          },
+          {
+            "fits_weights": true,
+            "name": "dlinear"
+          },
+          {
+            "fits_weights": true,
+            "name": "duet"
+          },
+          {
+            "fits_weights": true,
+            "name": "patchtst"
+          },
+          {
+            "fits_weights": true,
+            "name": "timemixer"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos_bolt_base"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos_bolt_small"
+          },
+          {
+            "fits_weights": false,
+            "name": "zeus"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos2"
+          },
+          {
+            "fits_weights": false,
+            "name": "tirex"
+          },
+          {
+            "fits_weights": false,
+            "name": "timesfm_2p5_200m"
+          }
+        ],
+        "noise_kinds": [
+          "gaussian",
+          "laplace",
+          "student_t3",
+          "contaminated"
+        ],
+        "plans": [
+          {
+            "name": "clean_h64",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h96",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              96
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h192",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h336",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              336
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h64_h192",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              64,
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h96_h192_h336_h720",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              96,
+              192,
+              336,
+              720
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h192_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_h192_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64,
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_relative_doses",
+            "noise_levels": [
+              0.0,
+              0.0625,
+              0.125,
+              0.25,
+              0.5,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_primary_doses",
+            "noise_levels": [
+              0.0,
+              0.125,
+              0.5,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "rossler_ic_holdout_h64",
+            "noise_levels": [
+              0.0,
+              0.125
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          }
+        ],
+        "recipe_extension_schema": "fern.recipe-extension.v1",
+        "schema": "fern.recipe-handler-capabilities.v1",
+        "sources": [
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_barrier_collapse"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "etth1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "etth2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "ettm1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "ettm2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "garch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "garch_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_accel_emg"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_bicycling_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_only_natural"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_run_natural"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ks"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ks_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm_regime_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz96"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz96_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30000,
+            "source_name": "lorenz_ic_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30001,
+            "source_name": "lorenz_ic_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30010,
+            "source_name": "lorenz_ic_10"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30011,
+            "source_name": "lorenz_ic_11"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30012,
+            "source_name": "lorenz_ic_12"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30013,
+            "source_name": "lorenz_ic_13"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30014,
+            "source_name": "lorenz_ic_14"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30015,
+            "source_name": "lorenz_ic_15"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30002,
+            "source_name": "lorenz_ic_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30003,
+            "source_name": "lorenz_ic_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30004,
+            "source_name": "lorenz_ic_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30005,
+            "source_name": "lorenz_ic_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30006,
+            "source_name": "lorenz_ic_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30007,
+            "source_name": "lorenz_ic_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30008,
+            "source_name": "lorenz_ic_8"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30009,
+            "source_name": "lorenz_ic_9"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_state_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ou"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ou_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "rossler"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10000,
+            "source_name": "rossler_ic_holdout_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10001,
+            "source_name": "rossler_ic_holdout_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10002,
+            "source_name": "rossler_ic_holdout_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10003,
+            "source_name": "rossler_ic_holdout_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10004,
+            "source_name": "rossler_ic_holdout_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10005,
+            "source_name": "rossler_ic_holdout_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10006,
+            "source_name": "rossler_ic_holdout_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10007,
+            "source_name": "rossler_ic_holdout_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20000,
+            "source_name": "rossler_ic_random_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20001,
+            "source_name": "rossler_ic_random_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20010,
+            "source_name": "rossler_ic_random_10"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20011,
+            "source_name": "rossler_ic_random_11"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20012,
+            "source_name": "rossler_ic_random_12"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20013,
+            "source_name": "rossler_ic_random_13"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20014,
+            "source_name": "rossler_ic_random_14"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20015,
+            "source_name": "rossler_ic_random_15"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20002,
+            "source_name": "rossler_ic_random_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20003,
+            "source_name": "rossler_ic_random_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20004,
+            "source_name": "rossler_ic_random_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20005,
+            "source_name": "rossler_ic_random_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20006,
+            "source_name": "rossler_ic_random_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20007,
+            "source_name": "rossler_ic_random_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20008,
+            "source_name": "rossler_ic_random_8"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20009,
+            "source_name": "rossler_ic_random_9"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "rossler_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "seasonal_ar"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "seasonal_ar_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "solar_energy"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "solar_energy_subset"
+          }
+        ],
+        "split_treatment_schemes": [
+          "noise_matched_retraining",
+          "clean_train_clean_select_test_titration",
+          "noise_train_noise_select_clean_test"
+        ],
+        "trains": [
+          "default_train",
+          "lr9e4_ep50_pat5_grace0",
+          "lr3e4_ep50_pat5_grace3"
+        ]
+      },
+      "identity": {
+        "recipe": {
+          "cells": [
+            "lg_ssm"
+          ],
+          "eval": "huber",
+          "family": "lg_ssm_base",
+          "loader": "p70_20_10_none_bs95",
+          "model": "fern",
+          "n_noise_draws": 1,
+          "n_trajectory_draws": 1,
+          "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64",
+          "noise_levels": [
+            0.0
+          ],
+          "plan": "clean_h64",
+          "pred_lens": [
+            64
+          ],
+          "run_rewind": false,
+          "run_whiten": false,
+          "scale_noise_by_std": false,
+          "seeds": [
+            42
+          ],
+          "seq_len": 336,
+          "train": "default_train"
+        },
+        "schema": "fern.recipe_blueprint.rust.v1"
+      },
+      "missing": [
+        "model: \"fern\""
+      ]
+    },
+    "an_unknown_world_cell_is_refused_before_dispatch": {
+      "identity": {
+        "recipe": {
+          "cells": [
+            "world_handler_not_installed"
+          ],
+          "eval": "huber",
+          "family": "future_world_group",
+          "loader": "p70_20_10_none_bs95",
+          "model": "fern",
+          "n_noise_draws": 1,
+          "n_trajectory_draws": 1,
+          "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64",
+          "noise_levels": [
+            0.0
+          ],
+          "plan": "clean_h64",
+          "pred_lens": [
+            64
+          ],
+          "run_rewind": false,
+          "run_whiten": false,
+          "scale_noise_by_std": false,
+          "seeds": [
+            42
+          ],
+          "seq_len": 336,
+          "train": "default_train"
+        },
+        "schema": "fern.recipe_blueprint.rust.v1"
+      },
+      "missing": [
+        "cell: \"world_handler_not_installed\""
+      ]
+    },
+    "dispatcher_capabilities_name_the_density_a_recipe_requires": {
+      "capabilities": {
+        "checkpoint_reuse_policies": [
+          "clean_validation_best",
+          "noise_matched_clean_validation_best",
+          "noise_matched_dose_validation_best"
+        ],
+        "evals": [
+          "huber",
+          "huber_proj500",
+          "nll_s16e32",
+          "eig_nll_s4e32",
+          "huber_eval_crps",
+          "huber_crps",
+          "crps_s4e48",
+          "huber_eval_crps_e32_no_swd",
+          "eig_nll_s16e32_no_swd",
+          "eig_nll_s1e1"
+        ],
+        "families": [
+          {
+            "cells": [
+              "lorenz",
+              "lorenz_param_shock",
+              "lorenz_state_shock",
+              "lorenz_switch"
+            ],
+            "name": "lorenz"
+          },
+          {
+            "cells": [
+              "rossler",
+              "rossler_param_shock"
+            ],
+            "name": "rossler"
+          },
+          {
+            "cells": [
+              "lorenz96",
+              "lorenz96_switch"
+            ],
+            "name": "lorenz96"
+          },
+          {
+            "cells": [
+              "chua",
+              "chua_param_shock",
+              "chua_switch"
+            ],
+            "name": "chua"
+          },
+          {
+            "cells": [
+              "ou",
+              "ou_param_shock"
+            ],
+            "name": "ou"
+          },
+          {
+            "cells": [
+              "slds",
+              "slds_param_shock",
+              "slds_switch"
+            ],
+            "name": "slds"
+          },
+          {
+            "cells": [
+              "doublewell",
+              "doublewell_param_shock",
+              "doublewell_switch"
+            ],
+            "name": "doublewell"
+          },
+          {
+            "cells": [
+              "seasonal_ar",
+              "seasonal_ar_param_shock"
+            ],
+            "name": "seasonal_ar"
+          },
+          {
+            "cells": [
+              "ou"
+            ],
+            "name": "ou_base"
+          },
+          {
+            "cells": [
+              "doublewell"
+            ],
+            "name": "doublewell_base"
+          },
+          {
+            "cells": [
+              "doublewell",
+              "doublewell_barrier_collapse"
+            ],
+            "name": "doublewell_barrier_collapse"
+          },
+          {
+            "cells": [
+              "lorenz"
+            ],
+            "name": "lorenz_base"
+          },
+          {
+            "cells": [
+              "lorenz_param_shock"
+            ],
+            "name": "lorenz_param_shock"
+          },
+          {
+            "cells": [
+              "rossler"
+            ],
+            "name": "rossler_base"
+          },
+          {
+            "cells": [
+              "rossler_ic_holdout_0",
+              "rossler_ic_holdout_1",
+              "rossler_ic_holdout_2",
+              "rossler_ic_holdout_3",
+              "rossler_ic_holdout_4",
+              "rossler_ic_holdout_5",
+              "rossler_ic_holdout_6",
+              "rossler_ic_holdout_7"
+            ],
+            "name": "rossler_initial_condition_holdout"
+          },
+          {
+            "cells": [
+              "rossler_ic_random_0",
+              "rossler_ic_random_1",
+              "rossler_ic_random_2",
+              "rossler_ic_random_3",
+              "rossler_ic_random_4",
+              "rossler_ic_random_5",
+              "rossler_ic_random_6",
+              "rossler_ic_random_7",
+              "rossler_ic_random_8",
+              "rossler_ic_random_9",
+              "rossler_ic_random_10",
+              "rossler_ic_random_11",
+              "rossler_ic_random_12",
+              "rossler_ic_random_13",
+              "rossler_ic_random_14",
+              "rossler_ic_random_15"
+            ],
+            "name": "rossler_initial_condition_random"
+          },
+          {
+            "cells": [
+              "lorenz_ic_0",
+              "lorenz_ic_1",
+              "lorenz_ic_2",
+              "lorenz_ic_3",
+              "lorenz_ic_4",
+              "lorenz_ic_5",
+              "lorenz_ic_6",
+              "lorenz_ic_7",
+              "lorenz_ic_8",
+              "lorenz_ic_9",
+              "lorenz_ic_10",
+              "lorenz_ic_11",
+              "lorenz_ic_12",
+              "lorenz_ic_13",
+              "lorenz_ic_14",
+              "lorenz_ic_15"
+            ],
+            "name": "lorenz_initial_condition_random"
+          },
+          {
+            "cells": [
+              "rossler_param_shock"
+            ],
+            "name": "rossler_param_shock"
+          },
+          {
+            "cells": [
+              "lg_ssm"
+            ],
+            "name": "lg_ssm_base"
+          },
+          {
+            "cells": [
+              "lg_ssm_switch"
+            ],
+            "name": "lg_ssm_switch"
+          },
+          {
+            "cells": [
+              "lg_ssm_regime_switch"
+            ],
+            "name": "lg_ssm_regime_switch"
+          },
+          {
+            "cells": [
+              "hugadb_accel_emg"
+            ],
+            "name": "hugadb_accel_emg"
+          },
+          {
+            "cells": [
+              "hugadb_walk_bicycling_switch"
+            ],
+            "name": "hugadb_switch"
+          },
+          {
+            "cells": [
+              "hugadb_walk_run_natural"
+            ],
+            "name": "hugadb_walk_run_natural"
+          },
+          {
+            "cells": [
+              "hugadb_walk_only_natural"
+            ],
+            "name": "hugadb_walk_only_natural"
+          },
+          {
+            "cells": [
+              "solar_energy"
+            ],
+            "name": "solar_energy"
+          },
+          {
+            "cells": [
+              "solar_energy_subset"
+            ],
+            "name": "solar_energy_subset"
+          },
+          {
+            "cells": [
+              "chua",
+              "rossler",
+              "lorenz",
+              "etth1",
+              "ettm1"
+            ],
+            "name": "icml_main"
+          },
+          {
+            "cells": [
+              "etth1"
+            ],
+            "name": "icml_main_etth1_s336_h96"
+          },
+          {
+            "cells": [
+              "etth1"
+            ],
+            "name": "icml_main_etth1_s336_h336"
+          },
+          {
+            "cells": [
+              "lorenz"
+            ],
+            "name": "icml_main_lorenz_s336_h336"
+          },
+          {
+            "cells": [
+              "hugadb_accel_emg"
+            ],
+            "name": "icml_main_hugadb_generic"
+          },
+          {
+            "cells": [
+              "hugadb_walk_bicycling_switch"
+            ],
+            "name": "icml_main_hugadb_splice"
+          },
+          {
+            "cells": [
+              "lorenz",
+              "lorenz_param_shock",
+              "lorenz_state_shock",
+              "lorenz_switch",
+              "rossler",
+              "rossler_param_shock",
+              "lorenz96",
+              "lorenz96_switch",
+              "chua",
+              "chua_param_shock",
+              "chua_switch",
+              "ou",
+              "ou_param_shock",
+              "slds",
+              "slds_param_shock",
+              "slds_switch",
+              "doublewell",
+              "doublewell_param_shock",
+              "doublewell_switch",
+              "seasonal_ar",
+              "seasonal_ar_param_shock"
+            ],
+            "name": "icml_shock_8"
+          }
+        ],
+        "fern_architectures": [
+          "current",
+          "icml_pinned",
+          "interleaved_unclamped_wide",
+          "all_complex_clamped_wide",
+          "all_complex_unclamped_paper_brenier",
+          "interleaved_clamped_wide",
+          "interleaved_unclamped_paper_brenier",
+          "all_complex_clamped_paper_brenier",
+          "current_wide_scale"
+        ],
+        "fern_densities": [
+          "single_gaussian",
+          "sparse_moe",
+          "shared_transport_mixture_source",
+          "mixture_of_fern_transports",
+          "mixture_source_shared_hidden",
+          "mixture_fern_transports_shared_hidden"
+        ],
+        "legacy_identity_schema": "fern.recipe_blueprint.rust.v1",
+        "loaders": [
+          "p70_20_10_none_bs95",
+          "p70_20_10_standard_bs95",
+          "p70_20_10_standard_bs24",
+          "p70_10_20_none_bs128",
+          "p70_10_20_robust_mad_bs128"
+        ],
+        "models": [
+          {
+            "fits_weights": true,
+            "name": "fern"
+          },
+          {
+            "fits_weights": true,
+            "name": "fern_icml_pinned"
+          },
+          {
+            "fits_weights": true,
+            "name": "fern_wide_scale"
+          },
+          {
+            "fits_weights": true,
+            "name": "dlinear"
+          },
+          {
+            "fits_weights": true,
+            "name": "duet"
+          },
+          {
+            "fits_weights": true,
+            "name": "patchtst"
+          },
+          {
+            "fits_weights": true,
+            "name": "timemixer"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos_bolt_base"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos_bolt_small"
+          },
+          {
+            "fits_weights": false,
+            "name": "zeus"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos2"
+          },
+          {
+            "fits_weights": false,
+            "name": "tirex"
+          },
+          {
+            "fits_weights": false,
+            "name": "timesfm_2p5_200m"
+          }
+        ],
+        "noise_kinds": [
+          "gaussian",
+          "laplace",
+          "student_t3",
+          "contaminated"
+        ],
+        "plans": [
+          {
+            "name": "clean_h64",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h96",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              96
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h192",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h336",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              336
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h64_h192",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              64,
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h96_h192_h336_h720",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              96,
+              192,
+              336,
+              720
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h192_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_h192_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64,
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_relative_doses",
+            "noise_levels": [
+              0.0,
+              0.0625,
+              0.125,
+              0.25,
+              0.5,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_primary_doses",
+            "noise_levels": [
+              0.0,
+              0.125,
+              0.5,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "rossler_ic_holdout_h64",
+            "noise_levels": [
+              0.0,
+              0.125
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          }
+        ],
+        "recipe_extension_schema": "fern.recipe-extension.v1",
+        "schema": "fern.recipe-handler-capabilities.v1",
+        "sources": [
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_barrier_collapse"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "etth1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "etth2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "ettm1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "ettm2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "garch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "garch_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_accel_emg"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_bicycling_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_only_natural"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_run_natural"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ks"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ks_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm_regime_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz96"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz96_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30000,
+            "source_name": "lorenz_ic_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30001,
+            "source_name": "lorenz_ic_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30010,
+            "source_name": "lorenz_ic_10"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30011,
+            "source_name": "lorenz_ic_11"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30012,
+            "source_name": "lorenz_ic_12"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30013,
+            "source_name": "lorenz_ic_13"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30014,
+            "source_name": "lorenz_ic_14"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30015,
+            "source_name": "lorenz_ic_15"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30002,
+            "source_name": "lorenz_ic_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30003,
+            "source_name": "lorenz_ic_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30004,
+            "source_name": "lorenz_ic_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30005,
+            "source_name": "lorenz_ic_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30006,
+            "source_name": "lorenz_ic_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30007,
+            "source_name": "lorenz_ic_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30008,
+            "source_name": "lorenz_ic_8"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30009,
+            "source_name": "lorenz_ic_9"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_state_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ou"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ou_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "rossler"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10000,
+            "source_name": "rossler_ic_holdout_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10001,
+            "source_name": "rossler_ic_holdout_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10002,
+            "source_name": "rossler_ic_holdout_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10003,
+            "source_name": "rossler_ic_holdout_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10004,
+            "source_name": "rossler_ic_holdout_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10005,
+            "source_name": "rossler_ic_holdout_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10006,
+            "source_name": "rossler_ic_holdout_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10007,
+            "source_name": "rossler_ic_holdout_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20000,
+            "source_name": "rossler_ic_random_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20001,
+            "source_name": "rossler_ic_random_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20010,
+            "source_name": "rossler_ic_random_10"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20011,
+            "source_name": "rossler_ic_random_11"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20012,
+            "source_name": "rossler_ic_random_12"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20013,
+            "source_name": "rossler_ic_random_13"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20014,
+            "source_name": "rossler_ic_random_14"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20015,
+            "source_name": "rossler_ic_random_15"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20002,
+            "source_name": "rossler_ic_random_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20003,
+            "source_name": "rossler_ic_random_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20004,
+            "source_name": "rossler_ic_random_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20005,
+            "source_name": "rossler_ic_random_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20006,
+            "source_name": "rossler_ic_random_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20007,
+            "source_name": "rossler_ic_random_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20008,
+            "source_name": "rossler_ic_random_8"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20009,
+            "source_name": "rossler_ic_random_9"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "rossler_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "seasonal_ar"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "seasonal_ar_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "solar_energy"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "solar_energy_subset"
+          }
+        ],
+        "split_treatment_schemes": [
+          "noise_matched_retraining",
+          "clean_train_clean_select_test_titration",
+          "noise_train_noise_select_clean_test"
+        ],
+        "trains": [
+          "default_train",
+          "lr9e4_ep50_pat5_grace0",
+          "lr3e4_ep50_pat5_grace3"
+        ]
+      },
+      "identity": {
+        "recipe": {
+          "cells": [
+            "lg_ssm"
+          ],
+          "eval": "huber",
+          "family": "lg_ssm_base",
+          "fern_density": {
+            "component_count": 3,
+            "variant": "bounded_mdn"
+          },
+          "loader": "p70_20_10_none_bs95",
+          "model": "fern",
+          "n_noise_draws": 1,
+          "n_trajectory_draws": 1,
+          "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64_density_bounded_mdn_k3",
+          "noise_levels": [
+            0.0
+          ],
+          "plan": "clean_h64",
+          "pred_lens": [
+            64
+          ],
+          "run_rewind": false,
+          "run_whiten": false,
+          "scale_noise_by_std": false,
+          "seeds": [
+            42
+          ],
+          "seq_len": 336,
+          "train": "default_train"
+        },
+        "schema": "fern.recipe_blueprint.rust.v1"
+      },
+      "missing": [
+        "fern_density: \"bounded_mdn\""
+      ]
+    },
+    "handler_capabilities_are_derived_from_executable_semantics": {
+      "capabilities": {
+        "checkpoint_reuse_policies": [
+          "clean_validation_best",
+          "noise_matched_clean_validation_best",
+          "noise_matched_dose_validation_best"
+        ],
+        "evals": [
+          "huber",
+          "huber_proj500",
+          "nll_s16e32",
+          "eig_nll_s4e32",
+          "huber_eval_crps",
+          "huber_crps",
+          "crps_s4e48",
+          "huber_eval_crps_e32_no_swd",
+          "eig_nll_s16e32_no_swd",
+          "eig_nll_s1e1"
+        ],
+        "families": [
+          {
+            "cells": [
+              "lorenz",
+              "lorenz_param_shock",
+              "lorenz_state_shock",
+              "lorenz_switch"
+            ],
+            "name": "lorenz"
+          },
+          {
+            "cells": [
+              "rossler",
+              "rossler_param_shock"
+            ],
+            "name": "rossler"
+          },
+          {
+            "cells": [
+              "lorenz96",
+              "lorenz96_switch"
+            ],
+            "name": "lorenz96"
+          },
+          {
+            "cells": [
+              "chua",
+              "chua_param_shock",
+              "chua_switch"
+            ],
+            "name": "chua"
+          },
+          {
+            "cells": [
+              "ou",
+              "ou_param_shock"
+            ],
+            "name": "ou"
+          },
+          {
+            "cells": [
+              "slds",
+              "slds_param_shock",
+              "slds_switch"
+            ],
+            "name": "slds"
+          },
+          {
+            "cells": [
+              "doublewell",
+              "doublewell_param_shock",
+              "doublewell_switch"
+            ],
+            "name": "doublewell"
+          },
+          {
+            "cells": [
+              "seasonal_ar",
+              "seasonal_ar_param_shock"
+            ],
+            "name": "seasonal_ar"
+          },
+          {
+            "cells": [
+              "ou"
+            ],
+            "name": "ou_base"
+          },
+          {
+            "cells": [
+              "doublewell"
+            ],
+            "name": "doublewell_base"
+          },
+          {
+            "cells": [
+              "doublewell",
+              "doublewell_barrier_collapse"
+            ],
+            "name": "doublewell_barrier_collapse"
+          },
+          {
+            "cells": [
+              "lorenz"
+            ],
+            "name": "lorenz_base"
+          },
+          {
+            "cells": [
+              "lorenz_param_shock"
+            ],
+            "name": "lorenz_param_shock"
+          },
+          {
+            "cells": [
+              "rossler"
+            ],
+            "name": "rossler_base"
+          },
+          {
+            "cells": [
+              "rossler_ic_holdout_0",
+              "rossler_ic_holdout_1",
+              "rossler_ic_holdout_2",
+              "rossler_ic_holdout_3",
+              "rossler_ic_holdout_4",
+              "rossler_ic_holdout_5",
+              "rossler_ic_holdout_6",
+              "rossler_ic_holdout_7"
+            ],
+            "name": "rossler_initial_condition_holdout"
+          },
+          {
+            "cells": [
+              "rossler_ic_random_0",
+              "rossler_ic_random_1",
+              "rossler_ic_random_2",
+              "rossler_ic_random_3",
+              "rossler_ic_random_4",
+              "rossler_ic_random_5",
+              "rossler_ic_random_6",
+              "rossler_ic_random_7",
+              "rossler_ic_random_8",
+              "rossler_ic_random_9",
+              "rossler_ic_random_10",
+              "rossler_ic_random_11",
+              "rossler_ic_random_12",
+              "rossler_ic_random_13",
+              "rossler_ic_random_14",
+              "rossler_ic_random_15"
+            ],
+            "name": "rossler_initial_condition_random"
+          },
+          {
+            "cells": [
+              "lorenz_ic_0",
+              "lorenz_ic_1",
+              "lorenz_ic_2",
+              "lorenz_ic_3",
+              "lorenz_ic_4",
+              "lorenz_ic_5",
+              "lorenz_ic_6",
+              "lorenz_ic_7",
+              "lorenz_ic_8",
+              "lorenz_ic_9",
+              "lorenz_ic_10",
+              "lorenz_ic_11",
+              "lorenz_ic_12",
+              "lorenz_ic_13",
+              "lorenz_ic_14",
+              "lorenz_ic_15"
+            ],
+            "name": "lorenz_initial_condition_random"
+          },
+          {
+            "cells": [
+              "rossler_param_shock"
+            ],
+            "name": "rossler_param_shock"
+          },
+          {
+            "cells": [
+              "lg_ssm"
+            ],
+            "name": "lg_ssm_base"
+          },
+          {
+            "cells": [
+              "lg_ssm_switch"
+            ],
+            "name": "lg_ssm_switch"
+          },
+          {
+            "cells": [
+              "lg_ssm_regime_switch"
+            ],
+            "name": "lg_ssm_regime_switch"
+          },
+          {
+            "cells": [
+              "hugadb_accel_emg"
+            ],
+            "name": "hugadb_accel_emg"
+          },
+          {
+            "cells": [
+              "hugadb_walk_bicycling_switch"
+            ],
+            "name": "hugadb_switch"
+          },
+          {
+            "cells": [
+              "hugadb_walk_run_natural"
+            ],
+            "name": "hugadb_walk_run_natural"
+          },
+          {
+            "cells": [
+              "hugadb_walk_only_natural"
+            ],
+            "name": "hugadb_walk_only_natural"
+          },
+          {
+            "cells": [
+              "solar_energy"
+            ],
+            "name": "solar_energy"
+          },
+          {
+            "cells": [
+              "solar_energy_subset"
+            ],
+            "name": "solar_energy_subset"
+          },
+          {
+            "cells": [
+              "chua",
+              "rossler",
+              "lorenz",
+              "etth1",
+              "ettm1"
+            ],
+            "name": "icml_main"
+          },
+          {
+            "cells": [
+              "etth1"
+            ],
+            "name": "icml_main_etth1_s336_h96"
+          },
+          {
+            "cells": [
+              "etth1"
+            ],
+            "name": "icml_main_etth1_s336_h336"
+          },
+          {
+            "cells": [
+              "lorenz"
+            ],
+            "name": "icml_main_lorenz_s336_h336"
+          },
+          {
+            "cells": [
+              "hugadb_accel_emg"
+            ],
+            "name": "icml_main_hugadb_generic"
+          },
+          {
+            "cells": [
+              "hugadb_walk_bicycling_switch"
+            ],
+            "name": "icml_main_hugadb_splice"
+          },
+          {
+            "cells": [
+              "lorenz",
+              "lorenz_param_shock",
+              "lorenz_state_shock",
+              "lorenz_switch",
+              "rossler",
+              "rossler_param_shock",
+              "lorenz96",
+              "lorenz96_switch",
+              "chua",
+              "chua_param_shock",
+              "chua_switch",
+              "ou",
+              "ou_param_shock",
+              "slds",
+              "slds_param_shock",
+              "slds_switch",
+              "doublewell",
+              "doublewell_param_shock",
+              "doublewell_switch",
+              "seasonal_ar",
+              "seasonal_ar_param_shock"
+            ],
+            "name": "icml_shock_8"
+          }
+        ],
+        "fern_architectures": [
+          "current",
+          "icml_pinned",
+          "interleaved_unclamped_wide",
+          "all_complex_clamped_wide",
+          "all_complex_unclamped_paper_brenier",
+          "interleaved_clamped_wide",
+          "interleaved_unclamped_paper_brenier",
+          "all_complex_clamped_paper_brenier",
+          "current_wide_scale"
+        ],
+        "fern_densities": [
+          "single_gaussian",
+          "bounded_mdn",
+          "sparse_moe",
+          "shared_transport_mixture_source",
+          "mixture_of_fern_transports",
+          "mixture_source_shared_hidden",
+          "mixture_fern_transports_shared_hidden"
+        ],
+        "legacy_identity_schema": "fern.recipe_blueprint.rust.v1",
+        "loaders": [
+          "p70_20_10_none_bs95",
+          "p70_20_10_standard_bs95",
+          "p70_20_10_standard_bs24",
+          "p70_10_20_none_bs128",
+          "p70_10_20_robust_mad_bs128"
+        ],
+        "models": [
+          {
+            "fits_weights": true,
+            "name": "fern"
+          },
+          {
+            "fits_weights": true,
+            "name": "fern_icml_pinned"
+          },
+          {
+            "fits_weights": true,
+            "name": "fern_wide_scale"
+          },
+          {
+            "fits_weights": true,
+            "name": "dlinear"
+          },
+          {
+            "fits_weights": true,
+            "name": "duet"
+          },
+          {
+            "fits_weights": true,
+            "name": "patchtst"
+          },
+          {
+            "fits_weights": true,
+            "name": "timemixer"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos_bolt_base"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos_bolt_small"
+          },
+          {
+            "fits_weights": false,
+            "name": "zeus"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos2"
+          },
+          {
+            "fits_weights": false,
+            "name": "tirex"
+          },
+          {
+            "fits_weights": false,
+            "name": "timesfm_2p5_200m"
+          }
+        ],
+        "noise_kinds": [
+          "gaussian",
+          "laplace",
+          "student_t3",
+          "contaminated"
+        ],
+        "plans": [
+          {
+            "name": "clean_h64",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h96",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              96
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h192",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h336",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              336
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h64_h192",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              64,
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h96_h192_h336_h720",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              96,
+              192,
+              336,
+              720
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h192_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_h192_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64,
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_relative_doses",
+            "noise_levels": [
+              0.0,
+              0.0625,
+              0.125,
+              0.25,
+              0.5,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_primary_doses",
+            "noise_levels": [
+              0.0,
+              0.125,
+              0.5,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "rossler_ic_holdout_h64",
+            "noise_levels": [
+              0.0,
+              0.125
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          }
+        ],
+        "recipe_extension_schema": "fern.recipe-extension.v1",
+        "schema": "fern.recipe-handler-capabilities.v1",
+        "sources": [
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_barrier_collapse"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "etth1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "etth2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "ettm1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "ettm2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "garch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "garch_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_accel_emg"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_bicycling_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_only_natural"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_run_natural"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ks"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ks_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm_regime_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz96"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz96_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30000,
+            "source_name": "lorenz_ic_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30001,
+            "source_name": "lorenz_ic_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30010,
+            "source_name": "lorenz_ic_10"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30011,
+            "source_name": "lorenz_ic_11"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30012,
+            "source_name": "lorenz_ic_12"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30013,
+            "source_name": "lorenz_ic_13"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30014,
+            "source_name": "lorenz_ic_14"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30015,
+            "source_name": "lorenz_ic_15"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30002,
+            "source_name": "lorenz_ic_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30003,
+            "source_name": "lorenz_ic_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30004,
+            "source_name": "lorenz_ic_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30005,
+            "source_name": "lorenz_ic_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30006,
+            "source_name": "lorenz_ic_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30007,
+            "source_name": "lorenz_ic_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30008,
+            "source_name": "lorenz_ic_8"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30009,
+            "source_name": "lorenz_ic_9"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_state_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ou"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ou_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "rossler"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10000,
+            "source_name": "rossler_ic_holdout_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10001,
+            "source_name": "rossler_ic_holdout_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10002,
+            "source_name": "rossler_ic_holdout_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10003,
+            "source_name": "rossler_ic_holdout_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10004,
+            "source_name": "rossler_ic_holdout_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10005,
+            "source_name": "rossler_ic_holdout_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10006,
+            "source_name": "rossler_ic_holdout_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10007,
+            "source_name": "rossler_ic_holdout_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20000,
+            "source_name": "rossler_ic_random_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20001,
+            "source_name": "rossler_ic_random_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20010,
+            "source_name": "rossler_ic_random_10"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20011,
+            "source_name": "rossler_ic_random_11"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20012,
+            "source_name": "rossler_ic_random_12"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20013,
+            "source_name": "rossler_ic_random_13"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20014,
+            "source_name": "rossler_ic_random_14"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20015,
+            "source_name": "rossler_ic_random_15"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20002,
+            "source_name": "rossler_ic_random_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20003,
+            "source_name": "rossler_ic_random_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20004,
+            "source_name": "rossler_ic_random_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20005,
+            "source_name": "rossler_ic_random_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20006,
+            "source_name": "rossler_ic_random_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20007,
+            "source_name": "rossler_ic_random_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20008,
+            "source_name": "rossler_ic_random_8"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20009,
+            "source_name": "rossler_ic_random_9"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "rossler_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "seasonal_ar"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "seasonal_ar_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "solar_energy"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "solar_energy_subset"
+          }
+        ],
+        "split_treatment_schemes": [
+          "noise_matched_retraining",
+          "clean_train_clean_select_test_titration",
+          "noise_train_noise_select_clean_test"
+        ],
+        "trains": [
+          "default_train",
+          "lr9e4_ep50_pat5_grace0",
+          "lr3e4_ep50_pat5_grace3"
+        ]
+      }
+    },
+    "unused_extra_capability_is_not_a_mismatch": {
+      "current_missing": [],
+      "identity": {
+        "recipe": {
+          "cells": [
+            "lg_ssm"
+          ],
+          "eval": "huber",
+          "family": "lg_ssm_base",
+          "loader": "p70_20_10_none_bs95",
+          "model": "fern",
+          "n_noise_draws": 1,
+          "n_trajectory_draws": 1,
+          "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64",
+          "noise_levels": [
+            0.0
+          ],
+          "plan": "clean_h64",
+          "pred_lens": [
+            64
+          ],
+          "run_rewind": false,
+          "run_whiten": false,
+          "scale_noise_by_std": false,
+          "seeds": [
+            42
+          ],
+          "seq_len": 336,
+          "train": "default_train"
+        },
+        "schema": "fern.recipe_blueprint.rust.v1"
+      },
+      "wider_capabilities": {
+        "checkpoint_reuse_policies": [
+          "clean_validation_best",
+          "noise_matched_clean_validation_best",
+          "noise_matched_dose_validation_best"
+        ],
+        "evals": [
+          "huber",
+          "huber_proj500",
+          "nll_s16e32",
+          "eig_nll_s4e32",
+          "huber_eval_crps",
+          "huber_crps",
+          "crps_s4e48",
+          "huber_eval_crps_e32_no_swd",
+          "eig_nll_s16e32_no_swd",
+          "eig_nll_s1e1",
+          "an_evaluator_this_recipe_never_names"
+        ],
+        "families": [
+          {
+            "cells": [
+              "lorenz",
+              "lorenz_param_shock",
+              "lorenz_state_shock",
+              "lorenz_switch"
+            ],
+            "name": "lorenz"
+          },
+          {
+            "cells": [
+              "rossler",
+              "rossler_param_shock"
+            ],
+            "name": "rossler"
+          },
+          {
+            "cells": [
+              "lorenz96",
+              "lorenz96_switch"
+            ],
+            "name": "lorenz96"
+          },
+          {
+            "cells": [
+              "chua",
+              "chua_param_shock",
+              "chua_switch"
+            ],
+            "name": "chua"
+          },
+          {
+            "cells": [
+              "ou",
+              "ou_param_shock"
+            ],
+            "name": "ou"
+          },
+          {
+            "cells": [
+              "slds",
+              "slds_param_shock",
+              "slds_switch"
+            ],
+            "name": "slds"
+          },
+          {
+            "cells": [
+              "doublewell",
+              "doublewell_param_shock",
+              "doublewell_switch"
+            ],
+            "name": "doublewell"
+          },
+          {
+            "cells": [
+              "seasonal_ar",
+              "seasonal_ar_param_shock"
+            ],
+            "name": "seasonal_ar"
+          },
+          {
+            "cells": [
+              "ou"
+            ],
+            "name": "ou_base"
+          },
+          {
+            "cells": [
+              "doublewell"
+            ],
+            "name": "doublewell_base"
+          },
+          {
+            "cells": [
+              "doublewell",
+              "doublewell_barrier_collapse"
+            ],
+            "name": "doublewell_barrier_collapse"
+          },
+          {
+            "cells": [
+              "lorenz"
+            ],
+            "name": "lorenz_base"
+          },
+          {
+            "cells": [
+              "lorenz_param_shock"
+            ],
+            "name": "lorenz_param_shock"
+          },
+          {
+            "cells": [
+              "rossler"
+            ],
+            "name": "rossler_base"
+          },
+          {
+            "cells": [
+              "rossler_ic_holdout_0",
+              "rossler_ic_holdout_1",
+              "rossler_ic_holdout_2",
+              "rossler_ic_holdout_3",
+              "rossler_ic_holdout_4",
+              "rossler_ic_holdout_5",
+              "rossler_ic_holdout_6",
+              "rossler_ic_holdout_7"
+            ],
+            "name": "rossler_initial_condition_holdout"
+          },
+          {
+            "cells": [
+              "rossler_ic_random_0",
+              "rossler_ic_random_1",
+              "rossler_ic_random_2",
+              "rossler_ic_random_3",
+              "rossler_ic_random_4",
+              "rossler_ic_random_5",
+              "rossler_ic_random_6",
+              "rossler_ic_random_7",
+              "rossler_ic_random_8",
+              "rossler_ic_random_9",
+              "rossler_ic_random_10",
+              "rossler_ic_random_11",
+              "rossler_ic_random_12",
+              "rossler_ic_random_13",
+              "rossler_ic_random_14",
+              "rossler_ic_random_15"
+            ],
+            "name": "rossler_initial_condition_random"
+          },
+          {
+            "cells": [
+              "lorenz_ic_0",
+              "lorenz_ic_1",
+              "lorenz_ic_2",
+              "lorenz_ic_3",
+              "lorenz_ic_4",
+              "lorenz_ic_5",
+              "lorenz_ic_6",
+              "lorenz_ic_7",
+              "lorenz_ic_8",
+              "lorenz_ic_9",
+              "lorenz_ic_10",
+              "lorenz_ic_11",
+              "lorenz_ic_12",
+              "lorenz_ic_13",
+              "lorenz_ic_14",
+              "lorenz_ic_15"
+            ],
+            "name": "lorenz_initial_condition_random"
+          },
+          {
+            "cells": [
+              "rossler_param_shock"
+            ],
+            "name": "rossler_param_shock"
+          },
+          {
+            "cells": [
+              "lg_ssm"
+            ],
+            "name": "lg_ssm_base"
+          },
+          {
+            "cells": [
+              "lg_ssm_switch"
+            ],
+            "name": "lg_ssm_switch"
+          },
+          {
+            "cells": [
+              "lg_ssm_regime_switch"
+            ],
+            "name": "lg_ssm_regime_switch"
+          },
+          {
+            "cells": [
+              "hugadb_accel_emg"
+            ],
+            "name": "hugadb_accel_emg"
+          },
+          {
+            "cells": [
+              "hugadb_walk_bicycling_switch"
+            ],
+            "name": "hugadb_switch"
+          },
+          {
+            "cells": [
+              "hugadb_walk_run_natural"
+            ],
+            "name": "hugadb_walk_run_natural"
+          },
+          {
+            "cells": [
+              "hugadb_walk_only_natural"
+            ],
+            "name": "hugadb_walk_only_natural"
+          },
+          {
+            "cells": [
+              "solar_energy"
+            ],
+            "name": "solar_energy"
+          },
+          {
+            "cells": [
+              "solar_energy_subset"
+            ],
+            "name": "solar_energy_subset"
+          },
+          {
+            "cells": [
+              "chua",
+              "rossler",
+              "lorenz",
+              "etth1",
+              "ettm1"
+            ],
+            "name": "icml_main"
+          },
+          {
+            "cells": [
+              "etth1"
+            ],
+            "name": "icml_main_etth1_s336_h96"
+          },
+          {
+            "cells": [
+              "etth1"
+            ],
+            "name": "icml_main_etth1_s336_h336"
+          },
+          {
+            "cells": [
+              "lorenz"
+            ],
+            "name": "icml_main_lorenz_s336_h336"
+          },
+          {
+            "cells": [
+              "hugadb_accel_emg"
+            ],
+            "name": "icml_main_hugadb_generic"
+          },
+          {
+            "cells": [
+              "hugadb_walk_bicycling_switch"
+            ],
+            "name": "icml_main_hugadb_splice"
+          },
+          {
+            "cells": [
+              "lorenz",
+              "lorenz_param_shock",
+              "lorenz_state_shock",
+              "lorenz_switch",
+              "rossler",
+              "rossler_param_shock",
+              "lorenz96",
+              "lorenz96_switch",
+              "chua",
+              "chua_param_shock",
+              "chua_switch",
+              "ou",
+              "ou_param_shock",
+              "slds",
+              "slds_param_shock",
+              "slds_switch",
+              "doublewell",
+              "doublewell_param_shock",
+              "doublewell_switch",
+              "seasonal_ar",
+              "seasonal_ar_param_shock"
+            ],
+            "name": "icml_shock_8"
+          }
+        ],
+        "fern_architectures": [
+          "current",
+          "icml_pinned",
+          "interleaved_unclamped_wide",
+          "all_complex_clamped_wide",
+          "all_complex_unclamped_paper_brenier",
+          "interleaved_clamped_wide",
+          "interleaved_unclamped_paper_brenier",
+          "all_complex_clamped_paper_brenier",
+          "current_wide_scale"
+        ],
+        "fern_densities": [
+          "single_gaussian",
+          "bounded_mdn",
+          "sparse_moe",
+          "shared_transport_mixture_source",
+          "mixture_of_fern_transports",
+          "mixture_source_shared_hidden",
+          "mixture_fern_transports_shared_hidden"
+        ],
+        "legacy_identity_schema": "fern.recipe_blueprint.rust.v1",
+        "loaders": [
+          "p70_20_10_none_bs95",
+          "p70_20_10_standard_bs95",
+          "p70_20_10_standard_bs24",
+          "p70_10_20_none_bs128",
+          "p70_10_20_robust_mad_bs128"
+        ],
+        "models": [
+          {
+            "fits_weights": true,
+            "name": "fern"
+          },
+          {
+            "fits_weights": true,
+            "name": "fern_icml_pinned"
+          },
+          {
+            "fits_weights": true,
+            "name": "fern_wide_scale"
+          },
+          {
+            "fits_weights": true,
+            "name": "dlinear"
+          },
+          {
+            "fits_weights": true,
+            "name": "duet"
+          },
+          {
+            "fits_weights": true,
+            "name": "patchtst"
+          },
+          {
+            "fits_weights": true,
+            "name": "timemixer"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos_bolt_base"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos_bolt_small"
+          },
+          {
+            "fits_weights": false,
+            "name": "zeus"
+          },
+          {
+            "fits_weights": false,
+            "name": "chronos2"
+          },
+          {
+            "fits_weights": false,
+            "name": "tirex"
+          },
+          {
+            "fits_weights": false,
+            "name": "timesfm_2p5_200m"
+          }
+        ],
+        "noise_kinds": [
+          "gaussian",
+          "laplace",
+          "student_t3",
+          "contaminated"
+        ],
+        "plans": [
+          {
+            "name": "clean_h64",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h96",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              96
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h192",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h336",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              336
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h64_h192",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              64,
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "clean_h96_h192_h336_h720",
+            "noise_levels": [
+              0.0
+            ],
+            "pred_lens": [
+              96,
+              192,
+              336,
+              720
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h192_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_h192_sigmas",
+            "noise_levels": [
+              0.0,
+              0.25,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64,
+              192
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_relative_doses",
+            "noise_levels": [
+              0.0,
+              0.0625,
+              0.125,
+              0.25,
+              0.5,
+              1.0,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "titration_h64_primary_doses",
+            "noise_levels": [
+              0.0,
+              0.125,
+              0.5,
+              2.0
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          },
+          {
+            "name": "rossler_ic_holdout_h64",
+            "noise_levels": [
+              0.0,
+              0.125
+            ],
+            "pred_lens": [
+              64
+            ],
+            "seq_len": 336
+          }
+        ],
+        "recipe_extension_schema": "fern.recipe-extension.v1",
+        "schema": "fern.recipe-handler-capabilities.v1",
+        "sources": [
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "chua_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_barrier_collapse"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "doublewell_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "etth1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "etth2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "ettm1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "ettm2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "garch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "garch_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_accel_emg"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_bicycling_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_only_natural"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "hugadb_walk_run_natural"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ks"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ks_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm_regime_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lg_ssm_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz96"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz96_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30000,
+            "source_name": "lorenz_ic_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30001,
+            "source_name": "lorenz_ic_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30010,
+            "source_name": "lorenz_ic_10"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30011,
+            "source_name": "lorenz_ic_11"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30012,
+            "source_name": "lorenz_ic_12"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30013,
+            "source_name": "lorenz_ic_13"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30014,
+            "source_name": "lorenz_ic_14"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30015,
+            "source_name": "lorenz_ic_15"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30002,
+            "source_name": "lorenz_ic_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30003,
+            "source_name": "lorenz_ic_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30004,
+            "source_name": "lorenz_ic_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30005,
+            "source_name": "lorenz_ic_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30006,
+            "source_name": "lorenz_ic_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30007,
+            "source_name": "lorenz_ic_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30008,
+            "source_name": "lorenz_ic_8"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 30009,
+            "source_name": "lorenz_ic_9"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_state_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "lorenz_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ou"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "ou_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "rossler"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10000,
+            "source_name": "rossler_ic_holdout_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10001,
+            "source_name": "rossler_ic_holdout_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10002,
+            "source_name": "rossler_ic_holdout_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10003,
+            "source_name": "rossler_ic_holdout_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10004,
+            "source_name": "rossler_ic_holdout_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10005,
+            "source_name": "rossler_ic_holdout_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10006,
+            "source_name": "rossler_ic_holdout_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 10007,
+            "source_name": "rossler_ic_holdout_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20000,
+            "source_name": "rossler_ic_random_0"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20001,
+            "source_name": "rossler_ic_random_1"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20010,
+            "source_name": "rossler_ic_random_10"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20011,
+            "source_name": "rossler_ic_random_11"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20012,
+            "source_name": "rossler_ic_random_12"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20013,
+            "source_name": "rossler_ic_random_13"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20014,
+            "source_name": "rossler_ic_random_14"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20015,
+            "source_name": "rossler_ic_random_15"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20002,
+            "source_name": "rossler_ic_random_2"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20003,
+            "source_name": "rossler_ic_random_3"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20004,
+            "source_name": "rossler_ic_random_4"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20005,
+            "source_name": "rossler_ic_random_5"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20006,
+            "source_name": "rossler_ic_random_6"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20007,
+            "source_name": "rossler_ic_random_7"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20008,
+            "source_name": "rossler_ic_random_8"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": 20009,
+            "source_name": "rossler_ic_random_9"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "deterministic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "rossler_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "seasonal_ar"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "seasonal_ar_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds_param_shock"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "stochastic_trajectory",
+            "noise_seed_offset": null,
+            "source_name": "slds_switch"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "solar_energy"
+          },
+          {
+            "data_engine": "serie_py",
+            "draw_kind": "known_data",
+            "noise_seed_offset": null,
+            "source_name": "solar_energy_subset"
+          }
+        ],
+        "split_treatment_schemes": [
+          "noise_matched_retraining",
+          "clean_train_clean_select_test_titration",
+          "noise_train_noise_select_clean_test"
+        ],
+        "trains": [
+          "default_train",
+          "lr9e4_ep50_pat5_grace0",
+          "lr3e4_ep50_pat5_grace3"
+        ]
+      },
+      "wider_missing": []
+    }
+  },
+  "note": "RecipeExtensionV1 validated by the Rust executable. recipe_hash = first 16 lowercase hex of sha256 over canonical_identity_json, where serde_json::Value sorts object keys.",
+  "oracle": {
+    "crate": "fern-recipes",
+    "extension_source_sha256": "61b6a868021894bb244c6a07ca4fdcda8b0cbf85d7e52c77f4ee2a9f461464ed",
+    "source_commit": "15989d5f2584e3ded5bcfe28755ae6aadec5b9cb",
+    "test": "write_recipe_extension_v1_golden_for_csharp"
+  },
+  "refusals": {
+    "explicit_legacy_defaults_and_unknown_fields_are_refused": {
+      "explicit_default": {
+        "error": "identity.recipe.noise_kind=gaussian is noncanonical; omit the legacy default",
+        "extension": {
+          "belongs_to": "research-design:fixture",
+          "extension_id": "recipe-extension:lgssm-fern-clean-h64",
+          "identity": {
+            "recipe": {
+              "cells": [
+                "lg_ssm"
+              ],
+              "eval": "huber",
+              "family": "lg_ssm_base",
+              "loader": "p70_20_10_none_bs95",
+              "model": "fern",
+              "n_noise_draws": 1,
+              "n_trajectory_draws": 1,
+              "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64",
+              "noise_kind": "gaussian",
+              "noise_levels": [
+                0.0
+              ],
+              "plan": "clean_h64",
+              "pred_lens": [
+                64
+              ],
+              "run_rewind": false,
+              "run_whiten": false,
+              "scale_noise_by_std": false,
+              "seeds": [
+                42
+              ],
+              "seq_len": 336,
+              "train": "default_train"
+            },
+            "schema": "fern.recipe_blueprint.rust.v1"
+          },
+          "recipe_hash": "279191e322d52799",
+          "schema": "fern.recipe-extension.v1",
+          "title": "LGSSM Fern clean H64"
+        }
+      },
+      "repeated_seed": {
+        "error": "identity.recipe.seeds must not repeat a model seed",
+        "extension": {
+          "belongs_to": "research-design:fixture",
+          "extension_id": "recipe-extension:lgssm-fern-clean-h64",
+          "identity": {
+            "recipe": {
+              "cells": [
+                "lg_ssm"
+              ],
+              "eval": "huber",
+              "family": "lg_ssm_base",
+              "loader": "p70_20_10_none_bs95",
+              "model": "fern",
+              "n_noise_draws": 1,
+              "n_trajectory_draws": 1,
+              "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64",
+              "noise_levels": [
+                0.0
+              ],
+              "plan": "clean_h64",
+              "pred_lens": [
+                64
+              ],
+              "run_rewind": false,
+              "run_whiten": false,
+              "scale_noise_by_std": false,
+              "seeds": [
+                42,
+                42
+              ],
+              "seq_len": 336,
+              "train": "default_train"
+            },
+            "schema": "fern.recipe_blueprint.rust.v1"
+          },
+          "recipe_hash": "85b7418e51654b88",
+          "schema": "fern.recipe-extension.v1",
+          "title": "LGSSM Fern clean H64"
+        }
+      },
+      "unknown_field": {
+        "error": "unknown field `invented`, expected one of `schema`, `extension_id`, `title`, `belongs_to`, `recipe_hash`, `identity`",
+        "extension": {
+          "belongs_to": "research-design:fixture",
+          "extension_id": "recipe-extension:lgssm-fern-clean-h64",
+          "identity": {
+            "recipe": {
+              "cells": [
+                "lg_ssm"
+              ],
+              "eval": "huber",
+              "family": "lg_ssm_base",
+              "loader": "p70_20_10_none_bs95",
+              "model": "fern",
+              "n_noise_draws": 1,
+              "n_trajectory_draws": 1,
+              "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64",
+              "noise_levels": [
+                0.0
+              ],
+              "plan": "clean_h64",
+              "pred_lens": [
+                64
+              ],
+              "run_rewind": false,
+              "run_whiten": false,
+              "scale_noise_by_std": false,
+              "seeds": [
+                42
+              ],
+              "seq_len": 336,
+              "train": "default_train"
+            },
+            "schema": "fern.recipe_blueprint.rust.v1"
+          },
+          "invented": true,
+          "recipe_hash": "279191e322d52799",
+          "schema": "fern.recipe-extension.v1",
+          "title": "LGSSM Fern clean H64"
+        }
+      }
+    },
+    "identity_or_claimed_hash_drift_is_refused": {
+      "changed_identity": {
+        "error": "recipe_hash \"279191e322d52799\" disagrees with the legacy identity preimage; expected 1697590f51f6ecd8",
+        "extension": {
+          "belongs_to": "research-design:fixture",
+          "extension_id": "recipe-extension:lgssm-fern-clean-h64",
+          "identity": {
+            "recipe": {
+              "cells": [
+                "lg_ssm"
+              ],
+              "eval": "huber",
+              "family": "lg_ssm_base",
+              "loader": "p70_20_10_none_bs95",
+              "model": "fern",
+              "n_noise_draws": 2,
+              "n_trajectory_draws": 1,
+              "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64",
+              "noise_levels": [
+                0.0
+              ],
+              "plan": "clean_h64",
+              "pred_lens": [
+                64
+              ],
+              "run_rewind": false,
+              "run_whiten": false,
+              "scale_noise_by_std": false,
+              "seeds": [
+                42
+              ],
+              "seq_len": 336,
+              "train": "default_train"
+            },
+            "schema": "fern.recipe_blueprint.rust.v1"
+          },
+          "recipe_hash": "279191e322d52799",
+          "schema": "fern.recipe-extension.v1",
+          "title": "LGSSM Fern clean H64"
+        }
+      },
+      "wrong_hash": {
+        "error": "recipe_hash \"0000000000000000\" disagrees with the legacy identity preimage; expected 279191e322d52799",
+        "extension": {
+          "belongs_to": "research-design:fixture",
+          "extension_id": "recipe-extension:lgssm-fern-clean-h64",
+          "identity": {
+            "recipe": {
+              "cells": [
+                "lg_ssm"
+              ],
+              "eval": "huber",
+              "family": "lg_ssm_base",
+              "loader": "p70_20_10_none_bs95",
+              "model": "fern",
+              "n_noise_draws": 1,
+              "n_trajectory_draws": 1,
+              "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64",
+              "noise_levels": [
+                0.0
+              ],
+              "plan": "clean_h64",
+              "pred_lens": [
+                64
+              ],
+              "run_rewind": false,
+              "run_whiten": false,
+              "scale_noise_by_std": false,
+              "seeds": [
+                42
+              ],
+              "seq_len": 336,
+              "train": "default_train"
+            },
+            "schema": "fern.recipe_blueprint.rust.v1"
+          },
+          "recipe_hash": "0000000000000000",
+          "schema": "fern.recipe-extension.v1",
+          "title": "LGSSM Fern clean H64"
+        }
+      }
+    },
+    "required_handler_names_are_validated_at_the_file_boundary": {
+      "unknown_eval": {
+        "error": "unknown eval \"future_eval_not_compiled\"; valid: huber, huber_proj500, nll_s16e32, eig_nll_s4e32, huber_eval_crps, huber_crps, crps_s4e48, huber_eval_crps_e32_no_swd, eig_nll_s16e32_no_swd, eig_nll_s1e1",
+        "extension": {
+          "belongs_to": "research-design:fixture",
+          "extension_id": "recipe-extension:lgssm-fern-clean-h64",
+          "identity": {
+            "recipe": {
+              "cells": [
+                "lg_ssm"
+              ],
+              "eval": "future_eval_not_compiled",
+              "family": "lg_ssm_base",
+              "loader": "p70_20_10_none_bs95",
+              "model": "fern",
+              "n_noise_draws": 1,
+              "n_trajectory_draws": 1,
+              "name": "lg_ssm_base_fern_huber_p70_20_10_none_bs95_clean_h64",
+              "noise_levels": [
+                0.0
+              ],
+              "plan": "clean_h64",
+              "pred_lens": [
+                64
+              ],
+              "run_rewind": false,
+              "run_whiten": false,
+              "scale_noise_by_std": false,
+              "seeds": [
+                42
+              ],
+              "seq_len": 336,
+              "train": "default_train"
+            },
+            "schema": "fern.recipe_blueprint.rust.v1"
+          },
+          "recipe_hash": "cdbb4a64d3aebcd5",
+          "schema": "fern.recipe-extension.v1",
+          "title": "LGSSM Fern clean H64"
+        }
+      }
+    }
+  },
+  "schema": "fern.recipe_extension_v1_rust_golden.v1",
+  "source_tests": [
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "every_current_recipe_projects_to_a_valid_external_extension"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "identity_or_claimed_hash_drift_is_refused"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "explicit_legacy_defaults_and_unknown_fields_are_refused"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "required_handler_names_are_validated_at_the_file_boundary"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "handler_capabilities_are_derived_from_executable_semantics"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "a_handler_the_other_binary_lacks_is_named_before_dispatch"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "an_unseen_base_cloud_width_arrives_as_data_and_round_trips"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "omitting_the_base_cloud_width_moves_no_existing_recipe"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "all_four_finite_density_routes_round_trip_as_recipe_data"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "dispatcher_capabilities_name_the_density_a_recipe_requires"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "unused_extra_capability_is_not_a_mismatch"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "external_source_group_and_grid_need_no_compiled_enum_variant"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "an_unknown_world_cell_is_refused_before_dispatch"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/extension.rs",
+      "test_name": "every_catalog_recipe_is_nameable_by_its_own_capabilities"
+    }
+  ]
+}

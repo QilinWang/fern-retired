@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>9999</WarningLevel>
+    <Deterministic>true</Deterministic>
+    <RootNamespace>Fern.Site</RootNamespace>
+    <AssemblyName>Fern.Site</AssemblyName>
+  </PropertyGroup>
+  <!--
+    No Registry reference and no database package on purpose. The Worker Site
+    verifies bytes and runs processes; it never opens a Home. Adding a data
+    dependency here would be the first step back to the shape this port exists
+    to remove.
+  -->
+  <ItemGroup>
+    <InternalsVisibleTo Include="Fern.Site.Tests" />
+    <InternalsVisibleTo Include="fern-site" />
+  </ItemGroup>
+</Project>

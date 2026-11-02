@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net11.0</TargetFramework>
+    <RootNamespace>Fern.Registry.Cli</RootNamespace>
+    <AssemblyName>fern-registry</AssemblyName>
+    <Description>Private Registry subprocess for Task operations: typed JSON on stdin, receipt bytes on stdout, meaningful exit status.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fern.Registry\Fern.Registry.csproj" />
+    <ProjectReference Include="..\Fern.RunData\Fern.RunData.csproj" />
+  </ItemGroup>
+  <Import Project="..\Fern.BuildIdentity.targets" />
+</Project>

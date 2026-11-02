@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net11.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>9999</WarningLevel>
+    <Deterministic>true</Deterministic>
+    <RootNamespace>Fern.Site.Cli</RootNamespace>
+    <!--
+      The executable is named for the contract, not for the project: the
+      scheduler spawns `fern-site`, and it must keep spawning `fern-site`
+      whichever language answers.
+    -->
+    <AssemblyName>fern-site</AssemblyName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Fern.Site.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fern.Site\Fern.Site.csproj" />
+  </ItemGroup>
+</Project>

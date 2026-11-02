@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <RootNamespace>Fern.Registry.Tests</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fern.Registry\Fern.Registry.csproj" />
+    <ProjectReference Include="..\Fern.Registry.Analyzer\Fern.Registry.Analyzer.csproj" />
+    <ProjectReference Include="..\Fern.RunData\Fern.RunData.csproj" />
+  </ItemGroup>
+  <Target Name="BuildFernRegistryCliForProcessContracts" BeforeTargets="Build">
+    <MSBuild Projects="..\Fern.Registry.Cli\Fern.Registry.Cli.csproj"
+             Targets="Restore;Build"
+             Properties="Configuration=$(Configuration)" />
+  </Target>
+</Project>

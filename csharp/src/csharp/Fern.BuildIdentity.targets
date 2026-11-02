@@ -1,0 +1,35 @@
+<Project>
+  <!-- A generated binary carries its provenance: the commit it was built
+       from and whether that tree was dirty, stamped at build time and read
+       back by `fern-run version`. Same facts the Rust build_identity embeds. -->
+  <!-- CHG: Registry and Run import one build-time stamping owner. -->
+  <Target Name="FernStampBuildIdentity" BeforeTargets="GetAssemblyAttributes">
+    <!-- CHG: an installer builds verified committed bytes outside Git. Its
+         fixed source identity replaces neither the development tree's dirty
+         report nor the bootstrap binary's own provenance. -->
+    <Error Condition="'$(FernCommittedSourceRevision)' != '' and '$(FernCommittedSourceRevision.Length)' != '40'" Text="Installer source requires a full commit." />
+    <!-- CHG 2026-09-09: a clean build must still carry its archive digest; a
+         dirty one must NOT, because there is no committed archive to name. -->
+    <Error Condition="'$(FernCommittedSourceRevision)' != '' and '$(FernSourceWasDirty)' != '1' and '$(FernCommittedSourceArchiveSha256.Length)' != '64'" Text="Committed source requires an archive SHA-256." />
+    <Error Condition="'$(FernSourceWasDirty)' == '1' and '$(FernCommittedSourceArchiveSha256)' != ''" Text="A dirty build must not claim a committed-source archive digest." />
+    <!-- CHG 2026-09-09: an installer may build the working tree deliberately.
+         It says so with FernSourceWasDirty, and the stamp tells the truth
+         instead of reporting every installed binary as clean. -->
+    <PropertyGroup Condition="'$(FernCommittedSourceRevision)' != ''">
+      <FernBuiltFromCommit>$(FernCommittedSourceRevision)</FernBuiltFromCommit>
+      <FernDirtyTreeLines Condition="'$(FernSourceWasDirty)' == '1'">built from a dirty working tree</FernDirtyTreeLines>
+      <FernDirtyTreeLines Condition="'$(FernSourceWasDirty)' != '1'"></FernDirtyTreeLines>
+    </PropertyGroup>
+    <Exec Condition="'$(FernCommittedSourceRevision)' == ''" Command="git rev-parse HEAD" ConsoleToMSBuild="true" StandardOutputImportance="low" ContinueOnError="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="FernBuiltFromCommit" />
+    </Exec>
+    <Exec Condition="'$(FernCommittedSourceRevision)' == ''" Command="git status --porcelain --untracked-files=no" ConsoleToMSBuild="true" StandardOutputImportance="low" ContinueOnError="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="FernDirtyTreeLines" />
+    </Exec>
+    <ItemGroup>
+      <AssemblyMetadata Include="FernBuiltFromCommit" Value="$(FernBuiltFromCommit)" />
+      <AssemblyMetadata Include="FernBuiltFromDirtyTree" Value="$([System.String]::new('$(FernDirtyTreeLines)').Trim().Length.ToString())" />
+      <AssemblyMetadata Include="FernCommittedSourceArchiveSha256" Value="$(FernCommittedSourceArchiveSha256)" Condition="'$(FernCommittedSourceRevision)' != ''" />
+    </ItemGroup>
+  </Target>
+</Project>

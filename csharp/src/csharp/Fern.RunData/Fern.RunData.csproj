@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <RootNamespace>Fern.RunData</RootNamespace>
+    <AssemblyName>Fern.RunData</AssemblyName>
+    <Description>Read-only typed projections over explicit Fern per-lane run-result databases.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" />
+    <PackageReference Include="Dapper" />
+  </ItemGroup>
+</Project>

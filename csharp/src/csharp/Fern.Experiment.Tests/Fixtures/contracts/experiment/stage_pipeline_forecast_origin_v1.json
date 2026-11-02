@@ -1,0 +1,141 @@
+{
+  "schema": "fern.stage_pipeline_template.v1",
+  "stages": [
+    {
+      "id": "materialize",
+      "handler": "serie.materialize.cell",
+      "runner": "python_module",
+      "entrypoint": "fr_tr",
+      "parameters": {},
+      "inputs": {
+        "training_worker_request": {
+          "source": { "kind": "external_artifact" },
+          "materialization_requirement": "bytes_required",
+          "role": "training_worker_request",
+          "schema_id": "fern.training_worker_request.v1"
+        },
+        "generated_dataset": {
+          "source": { "kind": "external_artifact" },
+          "materialization_requirement": "bytes_required",
+          "role": "generated_dataset",
+          "schema_id": "serie.dgp_bank_safetensors.v1"
+        }
+      },
+      "outputs": {
+        "materialized_cell": {
+          "role": "materialized_cell",
+          "schema_id": "serie.materialized_cell_safetensors.v1"
+        }
+      }
+    },
+    {
+      "id": "train",
+      "handler": "fern.train.current",
+      "runner": "python_module",
+      "entrypoint": "fr_tr",
+      "parameters": {},
+      "inputs": {
+        "training_worker_request": {
+          "source": { "kind": "external_artifact" },
+          "materialization_requirement": "bytes_required",
+          "role": "training_worker_request",
+          "schema_id": "fern.training_worker_request.v1"
+        },
+        "materialized_cell": {
+          "source": {
+            "kind": "stage_output",
+            "stage_id": "materialize",
+            "output": "materialized_cell"
+          },
+          "materialization_requirement": "bytes_required",
+          "role": "materialized_cell",
+          "schema_id": "serie.materialized_cell_safetensors.v1"
+        }
+      },
+      "outputs": {
+        "raw_forecast": {
+          "role": "raw_forecast",
+          "schema_id": "fern.raw_forecast.v1"
+        },
+        "postprocess_spec": {
+          "role": "postprocess_spec",
+          "schema_id": "fern.postprocess_spec.v1"
+        },
+        "model_checkpoint": {
+          "role": "model_checkpoint",
+          "schema_id": "fern.model_checkpoint_safetensors.v1"
+        }
+      }
+    },
+    {
+      "id": "postprocess",
+      "handler": "fern.postprocess",
+      "runner": "python_module",
+      "entrypoint": "fr_tr",
+      "parameters": {},
+      "inputs": {
+        "raw_forecast": {
+          "source": {
+            "kind": "stage_output",
+            "stage_id": "train",
+            "output": "raw_forecast"
+          },
+          "materialization_requirement": "bytes_required",
+          "role": "raw_forecast",
+          "schema_id": "fern.raw_forecast.v1"
+        },
+        "postprocess_spec": {
+          "source": {
+            "kind": "stage_output",
+            "stage_id": "train",
+            "output": "postprocess_spec"
+          },
+          "materialization_requirement": "bytes_required",
+          "role": "postprocess_spec",
+          "schema_id": "fern.postprocess_spec.v1"
+        }
+      },
+      "outputs": {
+        "point_forecast": {
+          "role": "legacy_point_forecast",
+          "schema_id": "fern.legacy_point_forecast.v1"
+        },
+        "sequence_forecast": {
+          "role": "sequence_forecast",
+          "schema_id": "fern.sequence_forecast.v1"
+        },
+        "metrics": {
+          "role": "metrics",
+          "schema_id": "fern.sequence_forecast_metrics.v1"
+        }
+      }
+    }
+  ],
+  "retry": {
+    "materialize": { "max_total_attempts": 2 },
+    "train": { "max_total_attempts": 2 },
+    "postprocess": { "max_total_attempts": 2 }
+  },
+  "exports": {
+    "model_checkpoint": {
+      "stage_id": "train",
+      "output": "model_checkpoint",
+      "materialization_requirement": "bytes_required"
+    },
+    "point_forecast": {
+      "stage_id": "postprocess",
+      "output": "point_forecast",
+      "materialization_requirement": "bytes_required"
+    },
+    "metrics": {
+      "stage_id": "postprocess",
+      "output": "metrics",
+      "materialization_requirement": "bytes_required"
+    },
+    "sequence_forecast": {
+      "stage_id": "postprocess",
+      "output": "sequence_forecast",
+      "materialization_requirement": "bytes_required"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "fern.run_plan_registration_rust_golden.v1",
+  "note": "Raw complete stdout from each named old-Rust executable test after all of that test's source assertions passed. The temporary capture print and intentional failure were removed immediately after capture.",
+  "oracle": {
+    "crate": "fern_run",
+    "source_commit": "c2084f3dad85a2d9f4d2b68982e9aced50723ac0",
+    "source_tests": [
+      "stage_driven_registration_without_parts_leaves_no_plan",
+      "stage_driven_registration_is_atomic",
+      "changed_request_refuses_and_does_not_rewrite"
+    ],
+    "source_sha256": {
+      "fern_run/src/run_plan.rs": "sha256:f50b2f0467b5e787fda0afc5c83755fa00b127af25710fea07507d2e63bd485a",
+      "fern_run/src/stage_attempt.rs": "sha256:f1083c81ff4d8fe92ce35fff722098ba053897f3cb904b1a7931f7f5078b0129",
+      "fern_run/tests/stage_plan_lower.rs": "sha256:52d5721dc3fcbc0fb6c9842cd5672ce3bdc4c699b3dab36c81d855729a71bcf5"
+    }
+  },
+  "outputs": {
+    "stage_driven_registration_without_parts_leaves_no_plan": "{\"refusal_matches\":true,\"run_plans\":0}\n",
+    "stage_driven_registration_is_atomic": "{\"run_plans\":1,\"stage_plans\":1,\"artifact_blob_locations\":2}\n",
+    "changed_request_refuses_and_does_not_rewrite": "{\"refusal_matches\":true,\"run_plans\":1,\"stage_plan_instances\":1}\n"
+  }
+}

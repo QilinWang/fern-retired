@@ -1,0 +1,9 @@
+﻿──────────────────────────────── Fern · failed ─────────────────────────────────
+中文研究 [red]literal[/] Ω
+a-long-study-name-with-many-components-to-wrap-without-losing-the-result
+ALERT Failed: 中文研究 [red]literal[/] Ω
+a-long-study-name-with-many-components-to-wrap-without-losing-the-result
+Current: training stopped
+Next: inspect failure
+Prerequisites: inputs verified
+Ctrl+C stops this observation, not the experiment.

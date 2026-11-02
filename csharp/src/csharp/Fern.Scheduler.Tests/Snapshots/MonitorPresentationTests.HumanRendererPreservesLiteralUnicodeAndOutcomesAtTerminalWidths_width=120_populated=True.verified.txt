@@ -1,0 +1,16 @@
+﻿──────────────────────────────────────────────────── Fern · failed ─────────────────────────────────────────────────────
+中文研究 [red]literal[/] Ω a-long-study-name-with-many-components-to-wrap-without-losing-the-result
+ALERT Failed: 中文研究 [red]literal[/] Ω a-long-study-name-with-many-components-to-wrap-without-losing-the-result
+Cell attempts: 2/2 declared; 1 completed
+╭──────┬─────────────────┬───────────────┬───────────────────╮
+│ Cell │ Attempt / state │ Site / worker │ Accepted phase    │
+├──────┼─────────────────┼───────────────┼───────────────────┤
+│ c1   │ 1 / completed   │ site          │ 0/train committed │
+│      │                 │ known         │                   │
+│ c2   │ 1 / failed      │ site          │ 0/train committed │
+│      │                 │ known         │                   │
+╰──────┴─────────────────┴───────────────┴───────────────────╯
+Current: training stopped
+Next: inspect failure
+Prerequisites: inputs verified
+Ctrl+C stops this observation, not the experiment.

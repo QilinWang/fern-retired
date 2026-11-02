@@ -1,0 +1,23 @@
+[package]
+name = "fern-artifact"
+version = "0.1.0"
+edition = "2024"
+description = "Versioned artifact, ScientificCase, and worker-handoff contracts for Fern."
+publish = false
+
+[lib]
+name = "fern_artifact"
+path = "src/lib.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+safetensors = "0.8.0"
+arrow-array = "56"
+arrow-buffer = "56"
+arrow-ipc = "56"
+arrow-schema = "56"
+fern-experiment-types = { path = "../fern-experiment-types" }
+fern-json-contract = { path = "../fern-json-contract" }
+schemars = { version = "0.8", features = ["derive"] }

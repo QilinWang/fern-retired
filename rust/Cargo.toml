@@ -1,0 +1,38 @@
+[workspace]
+# The dashboard is a Bun/Elysia application outside Cargo. Its retired Axum/TUI
+# crate and the earlier Leptos sources are preserved under retired/fern_dash/.
+members = [
+    "crates/fern-experiment-authoring",
+    "crates/fern-experiment-types",
+    "crates/fern-json-contract",
+    "crates/fern-recipes",
+]
+default-members = [
+    "crates/fern-experiment-authoring",
+    "crates/fern-experiment-types",
+    "crates/fern-json-contract",
+    "crates/fern-recipes",
+]
+resolver = "2"
+
+# Bounded-disk local profiles: workspace code keeps line tables for backtraces;
+# dependency debuginfo is dropped entirely. Workspace
+# `.cargo/config.toml` owns the workstation tradeoff for incremental artifacts
+# and compile jobs, so profiles do not carry a contradictory second setting.
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+debug = false
+
+[profile.test]
+debug = "line-tables-only"
+
+[profile.test.package."*"]
+debug = false
+
+# Installed binaries come from the ordinary release directory. Keep that
+# default deploy source compact without requiring a special remembered build
+# command; immutable deployment receipts still hash the resulting bytes.
+[profile.release]
+strip = "symbols"

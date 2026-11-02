@@ -1,0 +1,13 @@
+﻿collect-study: complete; study=研究 [red]literal[/]; plan=plan-id
+units: 1 published, 1 reused, 1 missing; into=/units
+missing: third: no committed unit
+problem: [blue]problem[/]
+next: use Python study collect with this units root for scientific scores and 
+reports.
+
+╭───────────────────┬────────────┬──────────────╮
+│ Cell              │ Collection │ Artifacts    │
+├───────────────────┼────────────┼──────────────┤
+│ z-cell [red]一[/] │ published  │ unit_results │
+│ a-cell            │ reused     │              │
+╰───────────────────┴────────────┴──────────────╯

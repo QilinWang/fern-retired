@@ -1,0 +1,682 @@
+{
+  "cartesian": {
+    "cells": [
+      {
+        "coordinate_json": "{\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.0,\"noise_draw\":{\"ordinal\":0,\"seed\":1305264456,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":803958421,\"seed_base\":42}}",
+        "target_ordinal": 0
+      },
+      {
+        "coordinate_json": "{\"horizon\":64,\"model_seed\":2,\"noise_dose\":0.0,\"noise_draw\":{\"ordinal\":0,\"seed\":1305264456,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":803958421,\"seed_base\":42}}",
+        "target_ordinal": 1
+      }
+    ],
+    "input_grid": {
+      "horizon": [
+        64
+      ],
+      "model_seed": [
+        1,
+        2
+      ],
+      "noise_dose": [
+        0.0
+      ],
+      "noise_draw": [
+        {
+          "ordinal": 0,
+          "seed": 1305264456,
+          "seed_base": 1000
+        }
+      ],
+      "trajectory_draw": [
+        {
+          "ordinal": 0,
+          "seed": 803958421,
+          "seed_base": 42
+        }
+      ]
+    }
+  },
+  "explicit_draw_pairs": {
+    "cells": [
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":0,\"seed\":200,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":100,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.0}",
+        "noise_draw_ordinal": 0,
+        "target_ordinal": 0,
+        "trajectory_draw_ordinal": 0
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":0,\"seed\":200,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":100,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.1}",
+        "noise_draw_ordinal": 0,
+        "target_ordinal": 1,
+        "trajectory_draw_ordinal": 0
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":0,\"seed\":200,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":100,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.2}",
+        "noise_draw_ordinal": 0,
+        "target_ordinal": 2,
+        "trajectory_draw_ordinal": 0
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":0,\"seed\":200,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":100,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.4}",
+        "noise_draw_ordinal": 0,
+        "target_ordinal": 3,
+        "trajectory_draw_ordinal": 0
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":0,\"seed\":200,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":100,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.6}",
+        "noise_draw_ordinal": 0,
+        "target_ordinal": 4,
+        "trajectory_draw_ordinal": 0
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":0,\"seed\":200,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":100,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.8}",
+        "noise_draw_ordinal": 0,
+        "target_ordinal": 5,
+        "trajectory_draw_ordinal": 0
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":0,\"seed\":200,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":100,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":1.0}",
+        "noise_draw_ordinal": 0,
+        "target_ordinal": 6,
+        "trajectory_draw_ordinal": 0
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":1,\"seed\":201,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":1,\"seed\":101,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.0}",
+        "noise_draw_ordinal": 1,
+        "target_ordinal": 7,
+        "trajectory_draw_ordinal": 1
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":1,\"seed\":201,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":1,\"seed\":101,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.1}",
+        "noise_draw_ordinal": 1,
+        "target_ordinal": 8,
+        "trajectory_draw_ordinal": 1
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":1,\"seed\":201,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":1,\"seed\":101,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.2}",
+        "noise_draw_ordinal": 1,
+        "target_ordinal": 9,
+        "trajectory_draw_ordinal": 1
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":1,\"seed\":201,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":1,\"seed\":101,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.4}",
+        "noise_draw_ordinal": 1,
+        "target_ordinal": 10,
+        "trajectory_draw_ordinal": 1
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":1,\"seed\":201,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":1,\"seed\":101,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.6}",
+        "noise_draw_ordinal": 1,
+        "target_ordinal": 11,
+        "trajectory_draw_ordinal": 1
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":1,\"seed\":201,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":1,\"seed\":101,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.8}",
+        "noise_draw_ordinal": 1,
+        "target_ordinal": 12,
+        "trajectory_draw_ordinal": 1
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":1,\"seed\":201,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":1,\"seed\":101,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":1.0}",
+        "noise_draw_ordinal": 1,
+        "target_ordinal": 13,
+        "trajectory_draw_ordinal": 1
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":2,\"seed\":202,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":2,\"seed\":102,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.0}",
+        "noise_draw_ordinal": 2,
+        "target_ordinal": 14,
+        "trajectory_draw_ordinal": 2
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":2,\"seed\":202,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":2,\"seed\":102,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.1}",
+        "noise_draw_ordinal": 2,
+        "target_ordinal": 15,
+        "trajectory_draw_ordinal": 2
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":2,\"seed\":202,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":2,\"seed\":102,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.2}",
+        "noise_draw_ordinal": 2,
+        "target_ordinal": 16,
+        "trajectory_draw_ordinal": 2
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":2,\"seed\":202,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":2,\"seed\":102,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.4}",
+        "noise_draw_ordinal": 2,
+        "target_ordinal": 17,
+        "trajectory_draw_ordinal": 2
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":2,\"seed\":202,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":2,\"seed\":102,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.6}",
+        "noise_draw_ordinal": 2,
+        "target_ordinal": 18,
+        "trajectory_draw_ordinal": 2
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":2,\"seed\":202,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":2,\"seed\":102,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.8}",
+        "noise_draw_ordinal": 2,
+        "target_ordinal": 19,
+        "trajectory_draw_ordinal": 2
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":2,\"seed\":202,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":2,\"seed\":102,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":1.0}",
+        "noise_draw_ordinal": 2,
+        "target_ordinal": 20,
+        "trajectory_draw_ordinal": 2
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":3,\"seed\":203,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":3,\"seed\":103,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.0}",
+        "noise_draw_ordinal": 3,
+        "target_ordinal": 21,
+        "trajectory_draw_ordinal": 3
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":3,\"seed\":203,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":3,\"seed\":103,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.1}",
+        "noise_draw_ordinal": 3,
+        "target_ordinal": 22,
+        "trajectory_draw_ordinal": 3
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":3,\"seed\":203,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":3,\"seed\":103,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.2}",
+        "noise_draw_ordinal": 3,
+        "target_ordinal": 23,
+        "trajectory_draw_ordinal": 3
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":3,\"seed\":203,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":3,\"seed\":103,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.4}",
+        "noise_draw_ordinal": 3,
+        "target_ordinal": 24,
+        "trajectory_draw_ordinal": 3
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":3,\"seed\":203,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":3,\"seed\":103,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.6}",
+        "noise_draw_ordinal": 3,
+        "target_ordinal": 25,
+        "trajectory_draw_ordinal": 3
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":3,\"seed\":203,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":3,\"seed\":103,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.8}",
+        "noise_draw_ordinal": 3,
+        "target_ordinal": 26,
+        "trajectory_draw_ordinal": 3
+      },
+      {
+        "coordinate_json": "{\"draw_pair\":{\"noise_draw\":{\"ordinal\":3,\"seed\":203,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":3,\"seed\":103,\"seed_base\":42}},\"horizon\":64,\"model_seed\":1,\"noise_dose\":1.0}",
+        "noise_draw_ordinal": 3,
+        "target_ordinal": 27,
+        "trajectory_draw_ordinal": 3
+      }
+    ],
+    "input_grid": {
+      "draw_pair": [
+        {
+          "noise_draw": {
+            "ordinal": 0,
+            "seed": 200,
+            "seed_base": 1000
+          },
+          "trajectory_draw": {
+            "ordinal": 0,
+            "seed": 100,
+            "seed_base": 42
+          }
+        },
+        {
+          "noise_draw": {
+            "ordinal": 1,
+            "seed": 201,
+            "seed_base": 1000
+          },
+          "trajectory_draw": {
+            "ordinal": 1,
+            "seed": 101,
+            "seed_base": 42
+          }
+        },
+        {
+          "noise_draw": {
+            "ordinal": 2,
+            "seed": 202,
+            "seed_base": 1000
+          },
+          "trajectory_draw": {
+            "ordinal": 2,
+            "seed": 102,
+            "seed_base": 42
+          }
+        },
+        {
+          "noise_draw": {
+            "ordinal": 3,
+            "seed": 203,
+            "seed_base": 1000
+          },
+          "trajectory_draw": {
+            "ordinal": 3,
+            "seed": 103,
+            "seed_base": 42
+          }
+        }
+      ],
+      "horizon": [
+        64
+      ],
+      "model_seed": [
+        1
+      ],
+      "noise_dose": [
+        0.0,
+        0.1,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ]
+    }
+  },
+  "factorial": {
+    "cells": [
+      {
+        "coordinate_json": "{\"brenier_scale_ceiling\":8.5,\"encoder_layout\":\"all_complex\",\"free_scale_processing\":\"identity\"}",
+        "weights": {
+          "brenier_bound": -1,
+          "encoder": -1,
+          "encoder_x_brenier_bound": 1,
+          "encoder_x_free_scale": 1,
+          "encoder_x_free_scale_x_brenier_bound": -1,
+          "free_scale": -1,
+          "free_scale_x_brenier_bound": 1
+        }
+      },
+      {
+        "coordinate_json": "{\"brenier_scale_ceiling\":4.5,\"encoder_layout\":\"all_complex\",\"free_scale_processing\":\"identity\"}",
+        "weights": {
+          "brenier_bound": 1,
+          "encoder": -1,
+          "encoder_x_brenier_bound": -1,
+          "encoder_x_free_scale": 1,
+          "encoder_x_free_scale_x_brenier_bound": 1,
+          "free_scale": -1,
+          "free_scale_x_brenier_bound": -1
+        }
+      },
+      {
+        "coordinate_json": "{\"brenier_scale_ceiling\":8.5,\"encoder_layout\":\"all_complex\",\"free_scale_processing\":\"soft_clamped\"}",
+        "weights": {
+          "brenier_bound": -1,
+          "encoder": -1,
+          "encoder_x_brenier_bound": 1,
+          "encoder_x_free_scale": -1,
+          "encoder_x_free_scale_x_brenier_bound": 1,
+          "free_scale": 1,
+          "free_scale_x_brenier_bound": -1
+        }
+      },
+      {
+        "coordinate_json": "{\"brenier_scale_ceiling\":4.5,\"encoder_layout\":\"all_complex\",\"free_scale_processing\":\"soft_clamped\"}",
+        "weights": {
+          "brenier_bound": 1,
+          "encoder": -1,
+          "encoder_x_brenier_bound": -1,
+          "encoder_x_free_scale": -1,
+          "encoder_x_free_scale_x_brenier_bound": -1,
+          "free_scale": 1,
+          "free_scale_x_brenier_bound": 1
+        }
+      },
+      {
+        "coordinate_json": "{\"brenier_scale_ceiling\":8.5,\"encoder_layout\":\"interleaved\",\"free_scale_processing\":\"identity\"}",
+        "weights": {
+          "brenier_bound": -1,
+          "encoder": 1,
+          "encoder_x_brenier_bound": -1,
+          "encoder_x_free_scale": -1,
+          "encoder_x_free_scale_x_brenier_bound": 1,
+          "free_scale": -1,
+          "free_scale_x_brenier_bound": 1
+        }
+      },
+      {
+        "coordinate_json": "{\"brenier_scale_ceiling\":4.5,\"encoder_layout\":\"interleaved\",\"free_scale_processing\":\"identity\"}",
+        "weights": {
+          "brenier_bound": 1,
+          "encoder": 1,
+          "encoder_x_brenier_bound": 1,
+          "encoder_x_free_scale": -1,
+          "encoder_x_free_scale_x_brenier_bound": -1,
+          "free_scale": -1,
+          "free_scale_x_brenier_bound": -1
+        }
+      },
+      {
+        "coordinate_json": "{\"brenier_scale_ceiling\":8.5,\"encoder_layout\":\"interleaved\",\"free_scale_processing\":\"soft_clamped\"}",
+        "weights": {
+          "brenier_bound": -1,
+          "encoder": 1,
+          "encoder_x_brenier_bound": -1,
+          "encoder_x_free_scale": 1,
+          "encoder_x_free_scale_x_brenier_bound": -1,
+          "free_scale": 1,
+          "free_scale_x_brenier_bound": -1
+        }
+      },
+      {
+        "coordinate_json": "{\"brenier_scale_ceiling\":4.5,\"encoder_layout\":\"interleaved\",\"free_scale_processing\":\"soft_clamped\"}",
+        "weights": {
+          "brenier_bound": 1,
+          "encoder": 1,
+          "encoder_x_brenier_bound": 1,
+          "encoder_x_free_scale": 1,
+          "encoder_x_free_scale_x_brenier_bound": 1,
+          "free_scale": 1,
+          "free_scale_x_brenier_bound": 1
+        }
+      }
+    ],
+    "input_design": {
+      "contrasts": [
+        {
+          "factors": [
+            "brenier_bound"
+          ],
+          "name": "brenier_bound"
+        },
+        {
+          "factors": [
+            "encoder"
+          ],
+          "name": "encoder"
+        },
+        {
+          "factors": [
+            "brenier_bound",
+            "encoder"
+          ],
+          "name": "encoder_x_brenier_bound"
+        },
+        {
+          "factors": [
+            "encoder",
+            "free_scale"
+          ],
+          "name": "encoder_x_free_scale"
+        },
+        {
+          "factors": [
+            "brenier_bound",
+            "encoder",
+            "free_scale"
+          ],
+          "name": "encoder_x_free_scale_x_brenier_bound"
+        },
+        {
+          "factors": [
+            "free_scale"
+          ],
+          "name": "free_scale"
+        },
+        {
+          "factors": [
+            "brenier_bound",
+            "free_scale"
+          ],
+          "name": "free_scale_x_brenier_bound"
+        }
+      ],
+      "factors": [
+        {
+          "levels": [
+            8.5,
+            4.5
+          ],
+          "model_knob": "brenier_scale_ceiling",
+          "name": "brenier_bound"
+        },
+        {
+          "levels": [
+            "all_complex",
+            "interleaved"
+          ],
+          "model_knob": "encoder_layout",
+          "name": "encoder"
+        },
+        {
+          "levels": [
+            "identity",
+            "soft_clamped"
+          ],
+          "model_knob": "free_scale_processing",
+          "name": "free_scale"
+        }
+      ]
+    },
+    "input_grid": {
+      "brenier_scale_ceiling": [
+        8.5,
+        4.5
+      ],
+      "encoder_layout": [
+        "all_complex",
+        "interleaved"
+      ],
+      "free_scale_processing": [
+        "identity",
+        "soft_clamped"
+      ]
+    },
+    "missing_level_refusal": "factor \"encoder\" grid axis must contain exactly its two declared levels"
+  },
+  "factorial_overlay": {
+    "base_model_knob": 8.5,
+    "cells": [
+      {
+        "brenier_scale_ceiling": 8.5,
+        "coordinate_json": "{\"brenier_scale_ceiling\":8.5,\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.0,\"noise_draw\":{\"ordinal\":0,\"seed\":1305264456,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":803958421,\"seed_base\":42}}",
+        "target_ordinal": 0
+      },
+      {
+        "brenier_scale_ceiling": 4.5,
+        "coordinate_json": "{\"brenier_scale_ceiling\":4.5,\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.0,\"noise_draw\":{\"ordinal\":0,\"seed\":1305264456,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":803958421,\"seed_base\":42}}",
+        "target_ordinal": 1
+      }
+    ],
+    "input_design": {
+      "contrasts": [
+        {
+          "factors": [
+            "paper_bounds"
+          ],
+          "name": "paper_bounds"
+        }
+      ],
+      "factors": [
+        {
+          "levels": [
+            8.5,
+            4.5
+          ],
+          "model_knob": "brenier_scale_ceiling",
+          "name": "paper_bounds"
+        }
+      ]
+    },
+    "input_grid": {
+      "brenier_scale_ceiling": [
+        8.5,
+        4.5
+      ],
+      "horizon": [
+        64
+      ],
+      "model_seed": [
+        1
+      ],
+      "noise_dose": [
+        0.0
+      ],
+      "noise_draw": [
+        {
+          "ordinal": 0,
+          "seed": 1305264456,
+          "seed_base": 1000
+        }
+      ],
+      "trajectory_draw": [
+        {
+          "ordinal": 0,
+          "seed": 803958421,
+          "seed_base": 42
+        }
+      ]
+    }
+  },
+  "note": "Old fern_run executable output for the pure C# RecipePlanningV2 candidate. Exact target/config identity and worker lowering are intentionally outside this boundary.",
+  "oracle": {
+    "crate": "fern_run",
+    "source_commit": "6412da27f2fa18591c847173cd387be7e1075e9b",
+    "source_sha256": {
+      "crates/fern-experiment-authoring/src/experiment_composition.rs": "sha256:84c6402351229554d349367e8cad4e8ede31e802b588aff63af5863b61309bb3",
+      "crates/fern-recipes/src/composition.rs": "sha256:74eac6f54c2f0120c2b5df23735f5a37fe44e0bef350b4149e506db4803466ec",
+      "fern_run/src/experiment_v2.rs": "sha256:a8c2c81f5d393dca537a55a872205d09b920e54a13af2075fd4f7912416c0e21",
+      "fern_run/tests/stage_plan_lower.rs": "sha256:04f454922b29e95f595a18eef5db8a069ca05996ec90757b243b18f27db16f63"
+    },
+    "test": "write_recipe_planning_v2_golden_for_csharp"
+  },
+  "pairing": {
+    "control_cells": [
+      {
+        "coordinate_json": "{\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.0,\"noise_draw\":{\"ordinal\":0,\"seed\":1305264456,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":803958421,\"seed_base\":42}}",
+        "target_ordinal": 0
+      },
+      {
+        "coordinate_json": "{\"horizon\":64,\"model_seed\":2,\"noise_dose\":0.0,\"noise_draw\":{\"ordinal\":0,\"seed\":1305264456,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":803958421,\"seed_base\":42}}",
+        "target_ordinal": 1
+      }
+    ],
+    "control_input_grid": {
+      "horizon": [
+        64
+      ],
+      "model_seed": [
+        1,
+        2
+      ],
+      "noise_dose": [
+        0.0
+      ],
+      "noise_draw": [
+        {
+          "ordinal": 0,
+          "seed": 1305264456,
+          "seed_base": 1000
+        }
+      ],
+      "trajectory_draw": [
+        {
+          "ordinal": 0,
+          "seed": 803958421,
+          "seed_base": 42
+        }
+      ]
+    },
+    "mismatch_refusal": "pair-ablation: fern-experiment: compiled_ablation.coordinates: paired units must be exactly one control and one treatment per shared coordinates; missing treatment for 1 control coordinate set(s), extra treatment for 1 coordinate set(s)",
+    "pairs": [
+      {
+        "control_target_ordinal": 0,
+        "coordinate_json": "{\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.0,\"noise_draw\":{\"ordinal\":0,\"seed\":1305264456,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":803958421,\"seed_base\":42}}",
+        "treatment_target_ordinal": 1
+      },
+      {
+        "control_target_ordinal": 1,
+        "coordinate_json": "{\"horizon\":64,\"model_seed\":2,\"noise_dose\":0.0,\"noise_draw\":{\"ordinal\":0,\"seed\":1305264456,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":803958421,\"seed_base\":42}}",
+        "treatment_target_ordinal": 0
+      }
+    ],
+    "treatment_cells": [
+      {
+        "coordinate_json": "{\"horizon\":64,\"model_seed\":2,\"noise_dose\":0.0,\"noise_draw\":{\"ordinal\":0,\"seed\":1305264456,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":803958421,\"seed_base\":42}}",
+        "target_ordinal": 0
+      },
+      {
+        "coordinate_json": "{\"horizon\":64,\"model_seed\":1,\"noise_dose\":0.0,\"noise_draw\":{\"ordinal\":0,\"seed\":1305264456,\"seed_base\":1000},\"trajectory_draw\":{\"ordinal\":0,\"seed\":803958421,\"seed_base\":42}}",
+        "target_ordinal": 1
+      }
+    ],
+    "treatment_input_grid": {
+      "horizon": [
+        64
+      ],
+      "model_seed": [
+        2,
+        1
+      ],
+      "noise_dose": [
+        0.0
+      ],
+      "noise_draw": [
+        {
+          "ordinal": 0,
+          "seed": 1305264456,
+          "seed_base": 1000
+        }
+      ],
+      "trajectory_draw": [
+        {
+          "ordinal": 0,
+          "seed": 803958421,
+          "seed_base": 42
+        }
+      ]
+    }
+  },
+  "schema": "fern.recipe_planning_v2_rust_golden.v1",
+  "source_tests": [
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/composition.rs",
+      "test_name": "rossler_factorial_is_one_complete_cube_with_seven_signed_partitions"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "crates/fern-recipes/src/composition.rs",
+      "test_name": "factorial_refuses_a_missing_level_before_workload_counting"
+    },
+    {
+      "proof_kind": "assertion_transcription_only",
+      "source_path": "crates/fern-experiment-authoring/src/experiment_composition.rs",
+      "test_name": "grid_preview_refuses_a_twenty_eight_cell_idea_over_budget"
+    },
+    {
+      "proof_kind": "assertion_transcription_only",
+      "source_path": "crates/fern-experiment-authoring/src/experiment_composition.rs",
+      "test_name": "workload_prints_receipted_gpu_time_and_enforces_its_budget"
+    },
+    {
+      "proof_kind": "assertion_transcription_only",
+      "source_path": "fern_run/src/experiment_v2.rs",
+      "test_name": "executable_grid_refuses_an_implicit_draw_seed"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "fern_run/src/experiment_v2.rs",
+      "test_name": "explicit_draw_pairs_do_not_expand_to_a_cross_product"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "fern_run/tests/stage_plan_lower.rs",
+      "test_name": "factorial_axis_purely_overrides_one_existing_model_knob_per_cell"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "fern_run/tests/stage_plan_lower.rs",
+      "test_name": "pairing_joins_by_coordinates_not_array_zip"
+    },
+    {
+      "proof_kind": "rust_executable_full_output",
+      "source_path": "fern_run/tests/stage_plan_lower.rs",
+      "test_name": "pairing_refuses_missing_or_extra_coordinates"
+    }
+  ]
+}

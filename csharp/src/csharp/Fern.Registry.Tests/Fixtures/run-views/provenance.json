@@ -1,0 +1,28 @@
+{
+  "current_projection": "2026-09-08: audit.json is the recorded capture with only recipe_name and recipe_hash fields removed; rows/lane.sql removes only those columns and their values. The audit schema advances from fern.run_registry_audit.v1 to v2. All other values and historical labels are preserved. This is a current-schema projection, not a fresh executable capture.",
+  "what": "The three operator run views that read the runs table once per status, as the newest existing fern-run printed them over one fixture lane, plus the measured number of fern-registry children each one spawned.",
+  "old_executable": {
+    "path": "target/debug/fern-run",
+    "sha256": "4e385287b3a3c5b263756fa513357de8b504e787671886e53dd28b34a931ff21",
+    "mtime": "2026-08-27T19:39:59.399107379-04:00",
+    "source_pinned_at": "084dbbea6cae2a46f187f1ba0762de35d3b732dc",
+    "binary_predates_the_pin": true,
+    "the_only_change_since_the_pin": "18305388 added a deadline argument to every C# handoff: +5 lines in run_views.rs and +2 in experiment_contrast_commands.rs, all of them `crate::CSHARP_REGISTRY_PROCESS_DEADLINE,` passed to an existing call. No view, request, report or status list changed, so the golden is the same contract at the pin and at HEAD."
+  },
+  "capture": {
+    "lane": "rows/lane.sql loaded into a database created by the production migration chain (tools/fern-control cmd/fern-home claim-scheduler): nine rows covering all five lifecycle statuses, one drifted row whose success_hash and run_hash differ, one abandoned-looking pending row that carries a success_hash and must therefore NOT be reported abandoned, and a spread of source and artifacts values for the storage grouping.",
+    "commands": [
+      "fern-run audit-run-registry --db <lane> -> audit.json",
+      "fern-run summarize-run-storage --db <lane> --format json -> summarize.json",
+      "fern-run inspect-run-artifacts --db <lane> --format json -> inspect.json"
+    ],
+    "all_exited": 0,
+    "csharp_registry_built_at": "2026-08-27T23:23:45-04:00"
+  },
+  "what_the_goldens_pin": {
+    "audit.json": "drifted 1 (run-drift), failed 1, stale 1, abandoned 2 (run-pending and run-running, NOT run-pending-kept, which has a success_hash). Each entry is a full 47-field run row, so this golden also pins that the C# row projection and the Rust RunRow agree field for field.",
+    "summarize.json": "six (source, artifacts) groups over nine rows, in the BTreeMap order Rust emitted them.",
+    "inspect.json": "four records, the rows that carry an artifact_dir. The artifact inspection itself reads the filesystem and stays in Rust; only the row set moves."
+  },
+  "spawn_counts": "spawn-counts.json, measured by putting a counting wrapper on FERN_REGISTRY."
+}

@@ -1,0 +1,32 @@
+[package]
+name = "fern-experiment-authoring"
+version = "0.1.0"
+edition = "2024"
+description = "Resolve a V2 experiment draft into a checked manifest, and probe the implementation it names."
+license = "MIT"
+publish = false
+
+[[bin]]
+name = "fern-experiment"
+path = "src/main.rs"
+
+# The import boundary IS the reason this crate exists. Its two modules lived in
+# fern-recipes, which fern-scheduler and fern-worker depend on for the COMPILED
+# types they execute — so the scheduler was compiling the authoring path, the
+# Python probe and jsonschema for code it never calls. Authoring is what turns a
+# draft into a Plan; a scheduler only ever runs a Plan that already exists.
+# Splitting on that line is what stops one from building the other.
+[dependencies]
+anyhow = "1"
+clap = { version = "4.5", features = ["derive"] }
+fern-experiment-types = { path = "../fern-experiment-types" }
+fern-json-contract = { path = "../fern-json-contract" }
+fern-recipes = { path = "../fern-recipes" }
+jsonschema = { version = "0.49.9", default-features = false }
+schemars = { version = "0.8", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+tempfile = "3"
+
+[dev-dependencies]

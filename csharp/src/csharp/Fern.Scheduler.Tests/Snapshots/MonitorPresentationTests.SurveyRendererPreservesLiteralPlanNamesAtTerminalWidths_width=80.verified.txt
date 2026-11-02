@@ -1,0 +1,8 @@
+﻿╭──────────┬───────────────────┬─────────┬──────────────┬─────────────────╮
+│ State    │ Plan              │ Id      │ Profile      │ Now             │
+├──────────┼───────────────────┼─────────┼──────────────┼─────────────────┤
+│ running  │ 研究 [red]live[/] │ id-live │ local-4070   │ training        │
+│ complete │ done-plan         │ id-done │ runpod-a4500 │ no current Cell │
+╰──────────┴───────────────────┴─────────┴──────────────┴─────────────────╯
+
+2 plan(s), 1 live. Detail: fern-run monitor --plan <id>

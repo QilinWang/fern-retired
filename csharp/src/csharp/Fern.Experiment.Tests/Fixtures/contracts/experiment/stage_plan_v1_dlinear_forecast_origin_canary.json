@@ -1,0 +1,101 @@
+{
+  "schema": "fern.stage_plan.v1",
+  "subject": {
+    "kind": "fern.compiled_experiment",
+    "identity": "dlinear-forecast-origin-canary",
+    "content_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "stages": [
+    {
+      "id": "train",
+      "handler": "fern.train.current",
+      "implementation": {
+        "runner": "python_module",
+        "entrypoint": "fr_tr",
+        "implementation_digest": "sha256:b097dcc64944f445c989e5feba17fee1ab6e237be23741909ec43c0a13365416"
+      },
+      "parameters": {},
+      "inputs": {
+        "training_worker_request": {
+          "source": { "kind": "external_artifact" },
+          "materialization_requirement": "bytes_required",
+          "role": "training_worker_request",
+          "schema_id": "fern.training_worker_request.v1"
+        }
+      },
+      "outputs": {
+        "raw_forecast": {
+          "role": "raw_forecast",
+          "schema_id": "fern.raw_forecast.v1"
+        },
+        "postprocess_spec": {
+          "role": "postprocess_spec",
+          "schema_id": "fern.postprocess_spec.v1"
+        }
+      }
+    },
+    {
+      "id": "postprocess",
+      "handler": "fern.postprocess",
+      "implementation": {
+        "runner": "python_module",
+        "entrypoint": "fr_tr",
+        "implementation_digest": "sha256:b097dcc64944f445c989e5feba17fee1ab6e237be23741909ec43c0a13365416"
+      },
+      "parameters": {},
+      "inputs": {
+        "raw_forecast": {
+          "source": {
+            "kind": "stage_output",
+            "stage_id": "train",
+            "output": "raw_forecast"
+          },
+          "materialization_requirement": "bytes_required",
+          "role": "raw_forecast",
+          "schema_id": "fern.raw_forecast.v1"
+        },
+        "postprocess_spec": {
+          "source": {
+            "kind": "stage_output",
+            "stage_id": "train",
+            "output": "postprocess_spec"
+          },
+          "materialization_requirement": "bytes_required",
+          "role": "postprocess_spec",
+          "schema_id": "fern.postprocess_spec.v1"
+        }
+      },
+      "outputs": {
+        "point_forecast": {
+          "role": "dense_point_forecast",
+          "schema_id": "fern.legacy_point_forecast.v1"
+        },
+        "sequence_forecast": {
+          "role": "sequence_forecast",
+          "schema_id": "fern.sequence_forecast.v1"
+        },
+        "metrics": {
+          "role": "metrics",
+          "schema_id": "fern.sequence_forecast_metrics.v1"
+        }
+      }
+    }
+  ],
+  "exports": {
+    "canary_point_forecast": {
+      "stage_id": "postprocess",
+      "output": "point_forecast",
+      "materialization_requirement": "bytes_required"
+    },
+    "canary_metrics": {
+      "stage_id": "postprocess",
+      "output": "metrics",
+      "materialization_requirement": "bytes_required"
+    },
+    "canary_sequence_forecast": {
+      "stage_id": "postprocess",
+      "output": "sequence_forecast",
+      "materialization_requirement": "bytes_required"
+    }
+  }
+}

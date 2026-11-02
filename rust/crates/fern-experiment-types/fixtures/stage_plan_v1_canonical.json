@@ -1,0 +1,104 @@
+{
+  "schema": "fern.stage_plan.v1",
+  "subject": {
+    "kind": "fern.compiled_experiment",
+    "identity": "canonical-stage-plan-fixture",
+    "content_digest": "sha256:1592fac4499ae692a137e5bb68389dbf64b0c4aaa83f30160e00f71c9282be47"
+  },
+  "stages": [
+    {
+      "id": "train",
+      "handler": "fern.train",
+      "implementation": {
+        "runner": "python_module",
+        "entrypoint": "fr_tr",
+        "implementation_digest": "sha256:b2bc461a2517a6c44fb6c6b77a33a5d4dd31b397cd6a9c4deb6a650b04e9b8dc"
+      },
+      "parameters": {
+        "model": "fern",
+        "replica": 0
+      },
+      "inputs": {
+        "compiled_experiment": {
+          "source": {
+            "kind": "external_artifact"
+          },
+          "materialization_requirement": "bytes_required",
+          "role": "compiled_experiment",
+          "schema_id": "fern.compiled_experiment.v1"
+        }
+      },
+      "outputs": {
+        "raw_forecast": {
+          "role": "raw_forecast",
+          "schema_id": "fern.raw_forecast.v1"
+        }
+      }
+    },
+    {
+      "id": "acceptance_score",
+      "handler": "fern.acceptance_score",
+      "implementation": {
+        "runner": "rust_binary",
+        "entrypoint": "fern-stat",
+        "implementation_digest": "sha256:06e8dffd478e006c7c000b502410e14d8894bb77ab0f3b7bbc8a02890d1b3df7"
+      },
+      "parameters": {},
+      "inputs": {
+        "raw_forecast": {
+          "source": {
+            "kind": "stage_output",
+            "stage_id": "train",
+            "output": "raw_forecast"
+          },
+          "materialization_requirement": "bytes_required",
+          "role": "raw_forecast",
+          "schema_id": "fern.raw_forecast.v1"
+        }
+      },
+      "outputs": {
+        "score_receipt": {
+          "role": "score_receipt",
+          "schema_id": "fern.score_receipt.v1"
+        }
+      }
+    },
+    {
+      "id": "scientific_analysis",
+      "handler": "fern.scientific_analysis",
+      "implementation": {
+        "runner": "python_module",
+        "entrypoint": "fern_analysis",
+        "implementation_digest": "sha256:78e5321dcba23ec4ab927ee958ab3a7e344da52fbaeedc9ad78f7f55ee93e91a"
+      },
+      "parameters": {
+        "report": "canonical"
+      },
+      "inputs": {
+        "score_receipt": {
+          "source": {
+            "kind": "stage_output",
+            "stage_id": "acceptance_score",
+            "output": "score_receipt"
+          },
+          "materialization_requirement": "identity_only",
+          "role": "score_receipt",
+          "schema_id": "fern.score_receipt.v1"
+        }
+      },
+      "outputs": {
+        "analysis_report": {
+          "role": "analysis_report",
+          "schema_id": "fern.analysis_report.v1"
+        }
+      }
+    }
+  ],
+  "exports": {
+    "canonical_analysis_report": {
+      "stage_id": "scientific_analysis",
+      "output": "analysis_report",
+      "materialization_requirement": "bytes_required"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "architecture_card_schema": "fern.model_architecture.v1",
+  "architectures": {
+    "dlinear_shared_runtime_positive": {
+      "architecture_hash": "architecture:sha256:e578957fbe2da5254a6010ebb5d759de6af0ec36acc4acf62f6f24bae2848db6",
+      "canonical_json": "{\"schema\":\"fern.model_architecture.v1\",\"body\":{\"family\":\"d_linear\",\"architecture\":{\"schema_version\":1,\"shape\":{\"context_length\":336,\"horizon_length\":64,\"channel_contract\":{\"kind\":\"runtime_positive\"}},\"moving_average_window\":25,\"individual_per_channel\":false,\"stride\":1}}}"
+    },
+    "external_example_forecaster": {
+      "architecture_hash": "architecture:sha256:e7a998a6cd92e40fd1b3681773233fafdcbd0b2f27290e72b414ef191c7e63a9",
+      "canonical_json": "{\"schema\":\"fern.model_architecture.v1\",\"body\":{\"family\":\"external\",\"architecture\":{\"plugin_id\":\"example.forecaster\",\"plugin_schema_version\":3,\"plugin_schema_hash\":\"architecture-schema:sha256:4ead68be6c84ecbcfb3323167eb90cd491fa5e2be747311083ef2674f583d684\",\"canonical_config_json\":\"{\\\"depth\\\":4,\\\"width\\\":128}\",\"capabilities\":{\"training\":\"fixed_weights\",\"native_output\":\"quantiles\",\"has_native_point_head\":false,\"supports_channel_independence\":true}}}}"
+    },
+    "fern_current_single_gaussian": {
+      "architecture_hash": "architecture:sha256:e057ab38e39d81c0cbe67b1d65b810ac5f65507dce0952e54ccd5673e29873cf",
+      "canonical_json": "{\"schema\":\"fern.model_architecture.v1\",\"body\":{\"family\":\"fern\",\"architecture\":{\"schema_version\":1,\"architecture_variant\":\"all_complex_unclamped_wide\",\"shape\":{\"context_length\":336,\"horizon_length\":64,\"channel_contract\":{\"kind\":\"runtime_positive\"}},\"hidden_width\":128,\"augmented_width\":128,\"block_size\":24,\"density_variant\":\"single_gaussian\",\"mixture_component_count\":1,\"sparse_active_component_count\":null,\"mixture_relative_std_floor_ppm\":null,\"operator\":\"householder\",\"householder_reflection_count\":24,\"coupling_patch\":{\"length\":64,\"patch_length\":64,\"group_count\":1},\"brenier_patch\":{\"length\":64,\"patch_length\":32,\"group_count\":2},\"factory_schemas\":\"v1\",\"reversible_instance_norm\":{\"enabled\":false,\"affine\":true,\"subtract_last\":false}}}}"
+    }
+  },
+  "implementation_card_schema": "fern.model_implementation.v1",
+  "implementations": {
+    "python_torch_over_fern_current": {
+      "canonical_json": "{\"schema\":\"fern.model_implementation.v1\",\"architecture_hash\":\"architecture:sha256:e057ab38e39d81c0cbe67b1d65b810ac5f65507dce0952e54ccd5673e29873cf\",\"source_bundle_hash\":\"source-bundle:sha256:5f4983e4ffa57b16cbf269953d3f617cf359b02994037c4de75c8c63c3280e26\",\"dependency_lock_hash\":\"dependency-lock:sha256:f7d919957daac18c5140a1f2f227e6ca9970f0b7599bdcc617c7d998ef8a9b65\",\"runtime\":\"python_torch\",\"numerical_backend\":\"torch_eager\",\"worker_protocol_version\":4,\"numerical_policy\":{\"parameter_dtype\":\"float32\",\"autocast_dtype\":null,\"float32_matmul_precision\":\"high\",\"cuda_matmul_allow_tf32\":true,\"cudnn_allow_tf32\":true,\"deterministic_algorithms\":false,\"cudnn_deterministic\":false,\"cudnn_benchmark\":false},\"active_feature_flags\":[\"fern-v1\",\"paper-worker\"]}",
+      "implementation_hash": "implementation:sha256:f8821620ab5e0966ed9659bf7e1f9f891cba4f14bf7c217f4c25cf933dd7c840"
+    }
+  },
+  "note": "hash = sha256 over `card_schema \\0 canonical_json`; canonical_json is serde_json::to_string -- keys in DECLARATION order, absent optionals written as null. This is NOT the sorted-key rule stage_plan uses.",
+  "schema": "fern.card_identity_golden.v1"
+}

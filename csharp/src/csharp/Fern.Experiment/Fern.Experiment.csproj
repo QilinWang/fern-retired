@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- The generated training-schema binding declares C# unions (preview). -->
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- The resolved training configuration is the generated binding of specs/training/fern/v2. -->
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Fern.Experiment.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Source model policy is authored as TOML.  Use the maintained parser,
+         then apply Fern's closed schema below; do not grow a custom parser. -->
+    <PackageReference Include="Tomlyn" />
+  </ItemGroup>
+</Project>

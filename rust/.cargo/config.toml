@@ -1,0 +1,13 @@
+[target.x86_64-unknown-linux-gnu]
+linker = "clang"
+# mold is the default again after a fresh fern-run link and launch check on
+# 2026-08-13.  The same-shape link took about 37 s with mold and 47 s with lld.
+rustflags = ["-C", "link-arg=-fuse-ld=mold"]
+
+[build]
+# This workstation has enough WSL storage for incremental artifacts. Keeping
+# them makes repeated nextest loops materially faster. The owner raised the
+# normal workspace limit to three compile jobs after the integration-test
+# harness consolidation reduced redundant linking.
+incremental = true
+jobs = 3
