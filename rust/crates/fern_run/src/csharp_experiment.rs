@@ -656,9 +656,16 @@ pub fn resolve_dataset_source_capabilities(
         if receipt.sources.is_empty() {
             return Err("resolve-dataset-source-capabilities returned an empty installed catalog".to_string());
         }
-        let names = receipt.sources.iter().map(|source| source.source_name.as_str()).collect::<Vec<_>>();
+        let names = receipt
+            .sources
+            .iter()
+            .map(|source| source.source_name.as_str())
+            .collect::<Vec<_>>();
         if names.windows(2).any(|pair| pair[0] >= pair[1]) {
-            return Err("resolve-dataset-source-capabilities did not return a strictly sorted unique complete catalog".to_string());
+            return Err(
+                "resolve-dataset-source-capabilities did not return a strictly sorted unique complete catalog"
+                    .to_string(),
+            );
         }
     } else {
         let received_names = receipt
@@ -790,8 +797,8 @@ pub fn recipe_catalog_command_bytes(operation: &str, format: &str) -> Result<Vec
     };
     let response = run_bytes(operation, &RecipeCatalogCommandRequest { format })?;
     if format == "json" {
-        let receipt: Value = serde_json::from_slice(&response)
-            .map_err(|error| format!("{operation} receipt is not JSON: {error}"))?;
+        let receipt: Value =
+            serde_json::from_slice(&response).map_err(|error| format!("{operation} receipt is not JSON: {error}"))?;
         if receipt["schema"] != schema || !receipt[collection].is_array() {
             return Err(format!("{operation} returned an incomplete {schema} receipt"));
         }
@@ -901,7 +908,9 @@ pub fn select_catalog_recipes(
         ));
     }
     if receipt.recipes.is_empty() {
-        return Err(format!("select-recipes returned no recipes for {expected_kind} {expected_name:?}"));
+        return Err(format!(
+            "select-recipes returned no recipes for {expected_kind} {expected_name:?}"
+        ));
     }
     receipt
         .recipes
@@ -1499,6 +1508,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore = "the historical research fixture is not included in the public archive"]
     fn real_csharp_child_reads_stored_config_identity_without_rust_rehashing() {
         let _lock = FERN_EXPERIMENT_ENV_LOCK.lock().unwrap();
         let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
@@ -1506,8 +1516,10 @@ mod tests {
             .unwrap()
             .to_path_buf();
         let golden: Value = serde_json::from_slice(
-            &std::fs::read(root.join("crates/fern-experiment-types/fixtures/config_identity_registered_scheme_1_to_2_golden.json"))
-                .unwrap(),
+            &std::fs::read(
+                root.join("crates/fern-experiment-types/fixtures/config_identity_registered_scheme_1_to_2_golden.json"),
+            )
+            .unwrap(),
         )
         .unwrap();
         let entry = &golden["configs"][0];
@@ -1522,6 +1534,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore = "the historical research fixtures are not included in the public archive"]
     fn real_csharp_child_reads_the_complete_recipe_and_preset_catalogs() {
         let _lock = FERN_EXPERIMENT_ENV_LOCK.lock().unwrap();
         let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
@@ -1529,18 +1542,19 @@ mod tests {
             .unwrap()
             .to_path_buf();
         let fixture_root = root.join("crates/fern-recipes/fixtures");
-        let recipes: Value = serde_json::from_slice(
-            &std::fs::read(fixture_root.join("recipe_catalog_identity_golden.json")).unwrap(),
-        )
-        .unwrap();
+        let recipes: Value =
+            serde_json::from_slice(&std::fs::read(fixture_root.join("recipe_catalog_identity_golden.json")).unwrap())
+                .unwrap();
         let recipe_response = recipe_catalog_command_bytes("list-recipes", "json").unwrap();
         let recipe_report: Value = serde_json::from_slice(&recipe_response).unwrap();
-        assert_eq!(recipe_report, recipes["catalog"], "list-recipes must preserve complete recipe output");
+        assert_eq!(
+            recipe_report, recipes["catalog"],
+            "list-recipes must preserve complete recipe output"
+        );
 
-        let presets: Value = serde_json::from_slice(
-            &std::fs::read(fixture_root.join("recipe_preset_catalog_golden.json")).unwrap(),
-        )
-        .unwrap();
+        let presets: Value =
+            serde_json::from_slice(&std::fs::read(fixture_root.join("recipe_preset_catalog_golden.json")).unwrap())
+                .unwrap();
         let preset_response = recipe_catalog_command_bytes("list-presets", "json").unwrap();
         let preset_report: Value = serde_json::from_slice(&preset_response).unwrap();
         assert_eq!(preset_report["schema"], "fern.preset_catalog.v1");
@@ -1562,7 +1576,10 @@ mod tests {
         let catalog_response = recipe_catalog_command_bytes("catalog", "json").unwrap();
         let catalog_report: Value = serde_json::from_slice(&catalog_response).unwrap();
         assert_eq!(catalog_report["schema"], "fern.experiment_catalog.v1");
-        assert_eq!(catalog_report["presets"].as_array().unwrap().len(), expected_presets.len());
+        assert_eq!(
+            catalog_report["presets"].as_array().unwrap().len(),
+            expected_presets.len()
+        );
         assert_eq!(catalog_report["presets"][0]["preset"], expected_presets[0]["name"]);
         assert_eq!(
             catalog_report["presets"][0]["recipe_count"],
@@ -1602,14 +1619,10 @@ mod tests {
         .into_iter()
         .next()
         .unwrap();
-        let identity = resolve_recipe_run_targets_from_blueprint(
-            &recipe,
-            crate::resolved_cfg::DeviceKind::Cpu,
-            42,
-            1000,
-        )
-        .unwrap()
-        .recipe_identity;
+        let identity =
+            resolve_recipe_run_targets_from_blueprint(&recipe, crate::resolved_cfg::DeviceKind::Cpu, 42, 1000)
+                .unwrap()
+                .recipe_identity;
 
         let mut missing_model = fern_recipes::recipe_handler_capabilities();
         missing_model.models.retain(|model| model.name != "fern");
@@ -1617,12 +1630,11 @@ mod tests {
             missing_recipe_handler_names_via_csharp(&identity, &missing_model).unwrap(),
             [r#"model: "fern""#]
         );
-        assert!(missing_recipe_handler_names_via_csharp(
-            &identity,
-            &fern_recipes::recipe_handler_capabilities(),
-        )
-        .unwrap()
-        .is_empty());
+        assert!(
+            missing_recipe_handler_names_via_csharp(&identity, &fern_recipes::recipe_handler_capabilities(),)
+                .unwrap()
+                .is_empty()
+        );
     }
 
     #[test]
@@ -1630,7 +1642,11 @@ mod tests {
         let _lock = FERN_EXPERIMENT_ENV_LOCK.lock().unwrap();
         let complete = resolve_dataset_source_capabilities(&[]).unwrap();
         assert_eq!(complete.len(), 79);
-        assert!(complete.windows(2).all(|pair| pair[0].source_name < pair[1].source_name));
+        assert!(
+            complete
+                .windows(2)
+                .all(|pair| pair[0].source_name < pair[1].source_name)
+        );
         let selected = resolve_dataset_source_capabilities(&["etth1", "lg_ssm"]).unwrap();
         assert_eq!(selected.len(), 2);
         assert_eq!(selected[0].source_name, "etth1");
@@ -1638,13 +1654,17 @@ mod tests {
         assert!(!selected[0].source_is_stochastic);
         assert_eq!(selected[0].draw_design, "noise_only");
         assert_eq!(selected[1].source_name, "lg_ssm");
-        assert_eq!(selected[1].draw_kind, fern_recipes::SourceDrawKind::StochasticTrajectory);
+        assert_eq!(
+            selected[1].draw_kind,
+            fern_recipes::SourceDrawKind::StochasticTrajectory
+        );
         assert!(selected[1].source_is_stochastic);
         assert_eq!(selected[1].draw_design, "joint");
         assert!(resolve_dataset_source_capability("lorenz_ic_16").is_err());
     }
 
     #[test]
+    #[ignore = "the historical research fixture is not included in the public archive"]
     fn real_csharp_child_applies_loss_and_fern_patch_overlays() {
         let _lock = FERN_EXPERIMENT_ENV_LOCK.lock().unwrap();
         let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
@@ -1652,8 +1672,10 @@ mod tests {
             .unwrap()
             .to_path_buf();
         let golden: Value = serde_json::from_slice(
-            &std::fs::read(root.join("crates/fern-experiment-types/fixtures/config_identity_registered_scheme_1_to_2_golden.json"))
-                .unwrap(),
+            &std::fs::read(
+                root.join("crates/fern-experiment-types/fixtures/config_identity_registered_scheme_1_to_2_golden.json"),
+            )
+            .unwrap(),
         )
         .unwrap();
         let entry = golden["configs"]
@@ -1661,7 +1683,8 @@ mod tests {
             .unwrap()
             .iter()
             .find(|entry| {
-                serde_json::from_str::<Value>(entry["config_json"].as_str().unwrap()).unwrap()["model"]["type"] == "fern"
+                serde_json::from_str::<Value>(entry["config_json"].as_str().unwrap()).unwrap()["model"]["type"]
+                    == "fern"
             })
             .unwrap();
         let stored = entry["config_json"].as_str().unwrap();
@@ -1669,7 +1692,8 @@ mod tests {
         parsed["loss"]["probability"]["num_train_samples"] = 5.into();
         parsed["loss"]["probability"]["num_eval_samples"] = 9.into();
         let loss = serde_json::to_string(&parsed["loss"]).unwrap();
-        let response = apply_config_overlays_bytes(stored.as_bytes(), Some(&loss), Some(r#"{"L":96,"P":24,"G":4}"#)).unwrap();
+        let response =
+            apply_config_overlays_bytes(stored.as_bytes(), Some(&loss), Some(r#"{"L":96,"P":24,"G":4}"#)).unwrap();
         let report: Value = serde_json::from_slice(&response).unwrap();
         assert_eq!(report["identity_scheme"], 2);
         assert_eq!(report["loss"]["probability"]["num_train_samples"], 5);

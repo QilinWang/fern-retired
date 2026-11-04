@@ -27,8 +27,8 @@ use serde::{Deserialize, Serialize};
 use serde_json::Value;
 use sha2::{Digest, Sha256};
 
-use crate::csharp_resolution_warnings::static_handler_capabilities_v2_via_csharp;
 use crate::ExperimentCompositionError;
+use crate::csharp_resolution_warnings::static_handler_capabilities_v2_via_csharp;
 use crate::experiment_composition::{canonical_json_bytes, normalize_capabilities};
 
 const MAX_IMPLEMENTATION_FILE_BYTES: u64 = 32 * 1024 * 1024;
@@ -1273,14 +1273,15 @@ mod tests {
     /// this failing. Both halves of that pair have to agree about whether an
     /// absent optional field is written, and only an artifact minted under the
     /// earlier shape can prove they still do.
-    const BUNDLE_MINTED_BEFORE_STAGE_PIPELINE_TEMPLATE: &str = include_str!(
-        "../../../docs/implementation-bundles/56924c6d76120ba6001e681560c73a66d66f51050a26d646c2916fb0a5b3fb2c.json"
-    );
-
     #[test]
+    #[ignore = "the historical research bundle is not included in the public archive"]
     fn a_bundle_minted_before_an_optional_field_still_derives_its_own_identity() {
+        let fixture_path =
+            Path::new(env!("CARGO_MANIFEST_DIR")).join("../../private-fixtures/legacy-implementation-bundle.json");
+        let fixture = fs::read_to_string(fixture_path)
+            .expect("the historical research bundle is not included in the public archive");
         let resolution: ImplementationBundleResolutionV2 =
-            serde_json::from_str(BUNDLE_MINTED_BEFORE_STAGE_PIPELINE_TEMPLATE).expect("stored bundle parses");
+            serde_json::from_str(&fixture).expect("stored bundle parses");
         assert!(
             resolution.capabilities.stage_pipeline_template.is_none(),
             "this fixture is only meaningful while the optional field is absent from it"

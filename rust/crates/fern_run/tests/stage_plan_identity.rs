@@ -8,7 +8,6 @@ use fern_run::stage_attempt::{
 };
 
 const LEGACY_ONE_CELL: &str = "legacy-one-cell";
-const FIXTURE: &str = include_str!("fixtures/stage_plan_identity_campaign_home.json");
 
 #[derive(serde::Deserialize)]
 struct StoredInput {
@@ -158,8 +157,13 @@ fn a_single_training_worker_request_is_the_prefixed_input_sha256() {
 }
 
 #[test]
+#[ignore = "the historical research fixture is not included in the public archive"]
 fn campaign_home_stored_identities_recompute() {
-    let rows: Vec<StoredInstance> = serde_json::from_str(FIXTURE).unwrap();
+    let fixture_path =
+        std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/stage_plan_identity_campaign_home.json");
+    let fixture = std::fs::read_to_string(fixture_path)
+        .expect("the historical research fixture is not included in the public archive");
+    let rows: Vec<StoredInstance> = serde_json::from_str(&fixture).unwrap();
     assert_eq!(rows.len(), 40, "campaign Home held 40 Stage-plan instances at capture");
 
     let mut subject_reproduced = 0usize;

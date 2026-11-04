@@ -64,6 +64,12 @@ or that an agent independently chose the scientific settings.
 
 ### Test snapshot
 
+**Privacy update:** selected historical research configurations, research-derived
+fixtures and an implementation bundle were removed from this public archive.
+The identified Rust tests that require those artifacts are marked ignored;
+other indirect dependencies have not all been ruled out. The figures below were
+recorded **before** that removal; they are not a fresh test of this version.
+
 In one recorded run on the archive export, the C# Registry suite passed
 **337 / 337** tests; the C# Scheduler suite passed **507 / 619**. The 112
 remaining Scheduler tests reported a missing Gleam shipment entrypoint. Other
@@ -72,17 +78,16 @@ conditions are [below](#test-status). These are historical results, not a claim
 of current CI or a fresh run.
 
 **Status: retired on 2026-09-28 and not maintained.** This code is published as
-an archive. It builds, and the test suites that need nothing but this repository
-pass. No issue will be fixed and no pull request will be merged. The running
-system is Gleam Home and Scheduler with a Gleam Site Node executing Python
-science stages.
+an archive with research artifacts omitted. No issue will be fixed and no pull
+request will be merged. The later system uses Gleam Home and Scheduler with a
+Gleam Site Node executing Python science stages.
 
 ## What is inside
 
-| Directory | What it is                                                                                                                                                   |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `csharp/` | the last complete C# tree at the paths it had when it was retired: 464 files, ten projects, the registry and scheduler with their tests                      |
-| `rust/`   | the last complete Rust workspace: `Cargo.toml`, `Cargo.lock`, 13 crates in the tree and four of them workspace members that `cargo build --workspace` builds |
+| Directory | What it is                                                                                                                          |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `csharp/` | retired C# source at its historical paths, including the registry and scheduler with tests; selected research artifacts are omitted |
+| `rust/`   | retired Rust source with `Cargo.toml`, `Cargo.lock`, 13 crates and four workspace members; selected research fixtures are omitted   |
 
 The C# tree keeps its original layout, so the solution is
 `csharp/src/csharp/Fern.sln` and project references stay relative to it.
@@ -94,7 +99,7 @@ cd csharp/src/csharp && dotnet build Fern.sln     # .NET 11 preview SDK, pinned 
 cd rust && cargo build --workspace               # Rust 1.97, dependencies pinned in Cargo.lock
 ```
 
-Measured on a clean export: the C# solution builds in about 20 s with 0 errors
+Measured on a clean export before the privacy update: the C# solution built in about 20 s with 0 errors
 and 4 warnings, and the Rust workspace in about 37 s with 0 errors. The four C#
 warnings come from `Fern.BuildIdentity.targets`, which asks git for a commit
 hash; outside a checkout of the original repository it reports the missing
@@ -102,9 +107,10 @@ identity and nothing else.
 
 ## Test status
 
-The suites that need a sibling tree fail here, and only for that reason: those
-trees are not part of this archive. The numbers below are from one run on the
-export.
+The numbers below are from one run on the original export, before the privacy
+update. Some suites then needed sibling trees that were not part of the archive;
+other historical research fixtures have since been removed as described above.
+The full suites have not been rerun on this redacted version.
 
 | Suite                            | Result          | What it needs that this repository does not contain                                      |
 | -------------------------------- | --------------- | ---------------------------------------------------------------------------------------- |
@@ -122,9 +128,9 @@ cd rust && cargo test --workspace --no-fail-fast
 
 ## Running the commands
 
-Both command-line entrances start and parse their arguments; they then want the
-registry or the configuration they were built against, which lived outside this
-repository.
+On the historical export, both command-line entrances started and parsed their
+arguments; they then needed the registry or configuration that lived outside
+this repository. These commands have not been rechecked after the privacy update.
 
 ```sh
 dotnet run --project csharp/src/csharp/Fern.Registry.Cli -- --help
