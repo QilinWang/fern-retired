@@ -1,4 +1,75 @@
-# Fern: the retired C# and Rust implementations
+# Fern: experiments, execution, and the systems behind them
+
+**A research system has to do more than train a model.** It has to keep a
+declared experiment connected to the machine that ran it and to the result a
+researcher accepts. This archive preserves the retired C# and Rust parts of
+Fern's research infrastructure: experiment authoring, scheduling, registry
+state, workers, and their tests.
+
+**Archive status:** the C# and Rust implementations were retired on
+2026-09-28 and are not maintained. This is a historical code archive, not a
+drop-in copy of the current Fern platform.
+
+```mermaid
+flowchart LR
+    Research["Research question<br/>and experiment configuration"]
+    Archive["Retired implementations<br/>Rust + C#"]
+    Current["Later platform<br/>Gleam Home + Site"]
+    Science["Python science stages<br/>and recorded results"]
+    Research --> Archive
+    Archive -. "responsibilities moved" .-> Current
+    Current --> Science
+```
+
+### A failure worth reading: a replaced supervisor
+
+A machine can lose its lease and a replacement supervisor can take over. What
+stops the old supervisor from starting work as if it still held that lease?
+The archived registry uses a **fencing epoch**: an attempt carrying an expired,
+replaced, or ended supervisor's epoch is refused; a claim with the current
+epoch can proceed. The same test also records a compatibility boundary:
+claims that name no epoch are handled as before.
+
+[Read the supervisor test](csharp/src/csharp/Fern.Registry.Tests/SupervisorOfficeTests.cs)
+· [Read the scheduler decision](csharp/src/csharp/Fern.Scheduler/SchedulerDecision.cs)
+· [Read the registry access code](csharp/src/csharp/Fern.Registry/RegistryAccess.cs)
+
+The test is evidence of the behavior it exercises; it is not a claim that every
+possible stale write or distributed failure was tested.
+
+### See a study run through the later platform
+
+<a href="https://github.com/QilinWang/QilinWang/blob/main/showcase/fern-experiment-system.md">
+  <img src="https://raw.githubusercontent.com/QilinWang/QilinWang/main/assets/fern-experiment-flow.png" alt="A real study from configuration and scheduling to two accepted results" width="820">
+</a>
+
+**2 of 2 cells accepted** in one documented study. Follow its configuration,
+registration, execution and result records in the [experiment-system case
+study](https://github.com/QilinWang/QilinWang/blob/main/showcase/fern-experiment-system.md).
+That study used the **later Gleam Home / Site and Python platform**, not the
+retired C# and Rust implementation in this archive. Acceptance records an
+execution and result state; it is not by itself a scientific conclusion or a
+public one-command reproduction.
+
+### My contribution and AI collaboration
+
+I developed Fern's original model and training code. For the later experiment
+platform, I directed research priorities and approved scientific settings,
+worked through scheduling and resource-management failures, and worked with AI
+coding agents to build and harden the system. Claude Code and Codex contributed
+to broader platform work; for the linked study, Claude Opus 5.5 prepared the
+study cards and coordinated registration under my scientific and scheduling
+direction. These roles do not imply that I hand-wrote every archived component
+or that an agent independently chose the scientific settings.
+
+### Test snapshot
+
+In one recorded run on the archive export, the C# Registry suite passed
+**337 / 337** tests; the C# Scheduler suite passed **507 / 619**. The 112
+remaining Scheduler tests reported a missing Gleam shipment entrypoint. Other
+Rust suites also have recorded missing dependencies; the full table and build
+conditions are [below](#test-status). These are historical results, not a claim
+of current CI or a fresh run.
 
 **Status: retired on 2026-09-28 and not maintained.** This code is published as
 an archive. It builds, and the test suites that need nothing but this repository
@@ -8,10 +79,10 @@ science stages.
 
 ## What is inside
 
-| Directory | What it is |
-|---|---|
-| `csharp/` | the last complete C# tree at the paths it had when it was retired: 464 files, ten projects, the registry and scheduler with their tests |
-| `rust/` | the last complete Rust workspace: `Cargo.toml`, `Cargo.lock`, 13 crates in the tree and four of them workspace members that `cargo build --workspace` builds |
+| Directory | What it is                                                                                                                                                   |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `csharp/` | the last complete C# tree at the paths it had when it was retired: 464 files, ten projects, the registry and scheduler with their tests                      |
+| `rust/`   | the last complete Rust workspace: `Cargo.toml`, `Cargo.lock`, 13 crates in the tree and four of them workspace members that `cargo build --workspace` builds |
 
 The C# tree keeps its original layout, so the solution is
 `csharp/src/csharp/Fern.sln` and project references stay relative to it.
@@ -35,14 +106,14 @@ The suites that need a sibling tree fail here, and only for that reason: those
 trees are not part of this archive. The numbers below are from one run on the
 export.
 
-| Suite | Result | What it needs that this repository does not contain |
-|---|---|---|
-| C# `Fern.Registry.Tests` | 337 of 337 pass | nothing |
-| C# `Fern.Scheduler.Tests` | 507 of 619 pass | the built Gleam scheduler shipment (112 tests report `no Gleam shipment entrypoint`) |
-| Rust `fern-experiment-types` | 41 of 41 pass | nothing |
-| Rust `fern-json-contract` | 5 of 5 pass | nothing |
-| Rust `fern-recipes` | 25 of 26 pass | `fr_core.py`, the reviewed Python worker source |
-| Rust `fern-experiment-authoring` | 5 of 44 pass | the C# `fern-experiment` command-line binary, built at the path it had before retirement |
+| Suite                            | Result          | What it needs that this repository does not contain                                      |
+| -------------------------------- | --------------- | ---------------------------------------------------------------------------------------- |
+| C# `Fern.Registry.Tests`         | 337 of 337 pass | nothing                                                                                  |
+| C# `Fern.Scheduler.Tests`        | 507 of 619 pass | the built Gleam scheduler shipment (112 tests report `no Gleam shipment entrypoint`)     |
+| Rust `fern-experiment-types`     | 41 of 41 pass   | nothing                                                                                  |
+| Rust `fern-json-contract`        | 5 of 5 pass     | nothing                                                                                  |
+| Rust `fern-recipes`              | 25 of 26 pass   | `fr_core.py`, the reviewed Python worker source                                          |
+| Rust `fern-experiment-authoring` | 5 of 44 pass    | the C# `fern-experiment` command-line binary, built at the path it had before retirement |
 
 ```sh
 cd csharp/src/csharp && dotnet test Fern.sln
@@ -62,14 +133,14 @@ cargo run -p fern-experiment-authoring --bin fern-experiment -- --help
 
 ## What replaced what
 
-| Old responsibility | Current owner |
-|---|---|
-| Registry scheduling, study and source registration, queue, retries, site terms and claims | Gleam Home and Scheduler |
-| C# `RunStudyCells` to `ResidentWorkerHost` to `fern-site` phase RPC | Gleam Site Node cells, stage calls, Python stages |
-| Human views, actions and results | Gleam CLI, Home, Lustre Dashboard; Python result store |
-| Artifact hold, GC, location and relocation (six `RegistryCli` verbs) | retired with no replacement; it had no current caller |
-| Provider lifecycle, runtime selection and the .NET set installer | Gleam Home machine install, start and check |
-| CI, release and nightly | Gleam packages and bundled OTP releases |
+| Old responsibility                                                                        | Current owner                                          |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| Registry scheduling, study and source registration, queue, retries, site terms and claims | Gleam Home and Scheduler                               |
+| C# `RunStudyCells` to `ResidentWorkerHost` to `fern-site` phase RPC                       | Gleam Site Node cells, stage calls, Python stages      |
+| Human views, actions and results                                                          | Gleam CLI, Home, Lustre Dashboard; Python result store |
+| Artifact hold, GC, location and relocation (six `RegistryCli` verbs)                      | retired with no replacement; it had no current caller  |
+| Provider lifecycle, runtime selection and the .NET set installer                          | Gleam Home machine install, start and check            |
+| CI, release and nightly                                                                   | Gleam packages and bundled OTP releases                |
 
 The full boundary table, with the evidence and the limit of each line, is the
 retirement inventory in the Fern repository
@@ -83,10 +154,9 @@ wholesale. Publishing it makes that decision checkable instead of merely
 described: the source is here, the table above says what each part became, and
 the Fern repository records how the export was assembled and what was removed.
 
-Two details show what the repository was: `csharp/src/csharp/Fern.Registry/SerdeJsonRendering.cs`
-reproduces the byte layout of Rust's `serde_json` output, including the sorted
-keys that come from `BTreeMap`, because identity strings were hashed across two
-implementations and had to match exactly; and
+Two details show what the repository was: [`csharp/src/csharp/Fern.Experiment/SerdeJson.cs`](csharp/src/csharp/Fern.Experiment/SerdeJson.cs)
+contains an implementation intended to match Rust `serde_json::Value` bytes
+for a configuration identity preimage, including sorted object keys; and
 `rust/crates/fern-recipes/src/dataset_catalog.rs` embeds a dataset catalogue
 that lived in the C# tree, so the two implementations were built against each
 other.
