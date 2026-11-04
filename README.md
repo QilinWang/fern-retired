@@ -1,5 +1,12 @@
 # Fern: experiments, execution, and the systems behind them
 
+[![A retired C# registry test: an attempt claim using a replaced supervisor's epoch is refused, while the current supervisor's epoch is accepted](docs/media/fencing-epoch.png)](csharp/src/csharp/Fern.Registry.Tests/SupervisorOfficeTests.cs)
+
+**When a supervisor is replaced, which attempt claim can proceed?** In this
+historical test, the previous epoch is refused and the current epoch is
+accepted. A claim that names no epoch retains its prior behavior. Acceptance
+of a claim does not mean the work has run or finished.
+
 **A research system has to do more than train a model.** It has to keep a
 declared experiment connected to the machine that ran it and to the result a
 researcher accepts. This archive preserves the retired C# and Rust parts of
